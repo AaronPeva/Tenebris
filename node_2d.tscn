@@ -1,0 +1,102 @@
+[gd_scene load_steps=11 format=3 uid="uid://86xpch7auyjn"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_a1t5a"]
+[ext_resource type="Texture2D" uid="uid://cqxg34ji58jgc" path="res://Imagenes/1729089595254.png_image.png" id="1_rqo2n"]
+[ext_resource type="Texture2D" uid="uid://cvmi0smgr76ej" path="res://Imagenes/unnamed.png" id="2_ety1u"]
+[ext_resource type="Texture2D" uid="uid://c8aw7vmlwyihp" path="res://Imagenes/738371-middle.png" id="3_13m7t"]
+[ext_resource type="Script" path="res://addons/godot_card_layout/layouts/hand_layout/gcard_hand_layout.gd" id="4_xkxp5"]
+[ext_resource type="Texture2D" uid="uid://mcua603j00fg" path="res://Imagenes/image.png" id="5_2gul5"]
+[ext_resource type="Texture2D" uid="uid://bpbo8i8hqnlta" path="res://Imagenes/barra vacia de vida.png" id="6_dw35h"]
+[ext_resource type="Texture2D" uid="uid://beraux8ogasyv" path="res://Imagenes/barra de vida.png" id="7_1q04v"]
+[ext_resource type="Script" path="res://texture_button.gd" id="7_doktu"]
+[ext_resource type="Script" path="res://texture_button_2.gd" id="8_r3g7i"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_a1t5a")
+
+[node name="Fondo" type="TextureRect" parent="."]
+modulate = Color(0.633757, 0.633757, 0.633757, 1)
+self_modulate = Color(0.36283, 0.362829, 0.362829, 1)
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_rqo2n")
+expand_mode = 1
+
+[node name="Mesa" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -3.0
+offset_top = 199.0
+offset_right = 1150.0
+offset_bottom = 645.0
+texture = ExtResource("2_ety1u")
+
+[node name="En" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(555, 296)
+scale = Vector2(0.571111, 0.491436)
+texture = ExtResource("3_13m7t")
+
+[node name="GCardHandLayout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 497.0
+offset_top = 456.0
+offset_right = 706.0
+offset_bottom = 587.0
+script = ExtResource("4_xkxp5")
+
+[node name="TextureButton" type="TextureButton" parent="GCardHandLayout"]
+layout_mode = 0
+offset_left = -78.2172
+offset_top = 6.15582
+offset_right = 3.78277
+offset_bottom = 127.156
+rotation = -0.15708
+texture_normal = ExtResource("5_2gul5")
+script = ExtResource("7_doktu")
+
+[node name="TextureButton2" type="TextureButton" parent="GCardHandLayout"]
+layout_mode = 0
+offset_left = -39.2295
+offset_top = 1.54132
+offset_right = 42.7705
+offset_bottom = 122.541
+rotation = -0.0785398
+texture_normal = ExtResource("5_2gul5")
+script = ExtResource("8_r3g7i")
+
+[node name="TextureButton3" type="TextureButton" parent="GCardHandLayout"]
+layout_mode = 0
+offset_right = 82.0
+offset_bottom = 121.0
+texture_normal = ExtResource("5_2gul5")
+
+[node name="TextureButton4" type="TextureButton" parent="GCardHandLayout"]
+layout_mode = 0
+offset_left = 39.2295
+offset_top = 1.54132
+offset_right = 121.23
+offset_bottom = 122.541
+rotation = 0.0785398
+texture_normal = ExtResource("5_2gul5")
+
+[node name="TextureButton5" type="TextureButton" parent="GCardHandLayout"]
+layout_mode = 0
+offset_left = 78.2172
+offset_top = 6.15582
+offset_right = 160.217
+offset_bottom = 127.156
+rotation = 0.15708
+texture_normal = ExtResource("5_2gul5")
+
+[node name="vidaE" type="TextureProgressBar" parent="."]
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 349.0
+offset_bottom = 96.0
+max_value = 5.0
+value = 5.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_dw35h")
+texture_progress = ExtResource("7_1q04v")
