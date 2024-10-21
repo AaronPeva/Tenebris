@@ -40,55 +40,61 @@ texture = ExtResource("3_13m7t")
 [node name="GCardHandLayout" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 497.0
-offset_top = 456.0
-offset_right = 706.0
-offset_bottom = 587.0
+offset_left = 509.0
+offset_top = 422.0
+offset_right = 810.0
+offset_bottom = 553.0
 script = ExtResource("4_xkxp5")
+dynamic_radius = false
 
 [node name="TextureButton" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 0
-offset_left = -78.2172
-offset_top = 6.15582
-offset_right = 3.78277
-offset_bottom = 127.156
+offset_left = -156.434
+offset_top = 12.3116
+offset_right = -16.4345
+offset_bottom = 212.312
 rotation = -0.15708
 texture_normal = ExtResource("5_2gul5")
+stretch_mode = 0
 script = ExtResource("7_doktu")
 
 [node name="TextureButton2" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 0
-offset_left = -39.2295
-offset_top = 1.54132
-offset_right = 42.7705
-offset_bottom = 122.541
+offset_left = -78.4591
+offset_top = 3.08264
+offset_right = 61.5409
+offset_bottom = 203.083
 rotation = -0.0785398
 texture_normal = ExtResource("5_2gul5")
+stretch_mode = 0
 script = ExtResource("8_r3g7i")
 
 [node name="TextureButton3" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 0
-offset_right = 82.0
-offset_bottom = 121.0
+offset_right = 140.0
+offset_bottom = 200.0
 texture_normal = ExtResource("5_2gul5")
+stretch_mode = 0
 
 [node name="TextureButton4" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 0
-offset_left = 39.2295
-offset_top = 1.54132
-offset_right = 121.23
-offset_bottom = 122.541
+offset_left = 78.4591
+offset_top = 3.08264
+offset_right = 218.459
+offset_bottom = 203.083
 rotation = 0.0785398
 texture_normal = ExtResource("5_2gul5")
+stretch_mode = 0
 
 [node name="TextureButton5" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 0
-offset_left = 78.2172
-offset_top = 6.15582
-offset_right = 160.217
-offset_bottom = 127.156
+offset_left = 156.434
+offset_top = 12.3116
+offset_right = 296.434
+offset_bottom = 212.312
 rotation = 0.15708
 texture_normal = ExtResource("5_2gul5")
+stretch_mode = 0
 
 [node name="vidaE" type="TextureProgressBar" parent="."]
 offset_left = 29.0
