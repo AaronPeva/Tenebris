@@ -1,6 +1,10 @@
 extends TextureButton
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var curar : TextureProgressBar
+
+func _pressed() -> void:
+	curar.value += 1
+	if curar.value > 5:
+		curar.value = 5
+	queue_free()

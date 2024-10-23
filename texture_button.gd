@@ -5,7 +5,7 @@ extends TextureButton
 var vidaEnemigo : TextureProgressBar
 
 func _pressed() -> void:
-	vidaEnemigo.value -= 1
+	vidaEnemigo.value -= 2
 	if vidaEnemigo.value < 0:
 		vidaEnemigo.value = 0
 	queue_free()

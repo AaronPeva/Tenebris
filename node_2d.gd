@@ -5,6 +5,10 @@ extends Node2D
 func _ready() -> void:
 	$GCardHandLayout/TextureButton.vidaEnemigo = $vidaE
 	pass # Replace with function body.
+	$GCardHandLayout/TextureButton2.curar = $vidaE
+	
+	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

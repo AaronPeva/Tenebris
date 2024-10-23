@@ -26,4 +26,4 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ScriptEditorQoL/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/ai_algorithms/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/focus_camera_with_mouse/plugin.cfg", "res://addons/globalize-plugins/plugin.cfg", "res://addons/godot-game-settings-main/plugin.cfg", "res://addons/godot_card_layout/plugin.cfg", "res://addons/godottoolkit/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/ScriptEditorQoL/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/YouCanDoIt/plugin.cfg", "res://addons/ai_algorithms/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/focus_camera_with_mouse/plugin.cfg", "res://addons/globalize-plugins/plugin.cfg", "res://addons/godot-game-settings-main/plugin.cfg", "res://addons/godot_card_layout/plugin.cfg", "res://addons/godottoolkit/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/script-ide/plugin.cfg")

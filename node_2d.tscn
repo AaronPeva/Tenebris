@@ -54,7 +54,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_left = -156.434
 offset_top = 12.3116
-offset_right = -16.4355
+offset_right = -16.4365
 offset_bottom = 212.312
 rotation = -0.15708
 texture_normal = ExtResource("5_2gul5")
@@ -109,6 +109,18 @@ offset_left = 29.0
 offset_top = 17.0
 offset_right = 349.0
 offset_bottom = 96.0
+max_value = 5.0
+value = 5.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_dw35h")
+texture_progress = ExtResource("7_1q04v")
+metadata/_edit_use_anchors_ = true
+
+[node name="vidaA" type="TextureProgressBar" parent="."]
+offset_left = 801.0
+offset_top = 543.0
+offset_right = 1121.0
+offset_bottom = 622.0
 max_value = 5.0
 value = 5.0
 nine_patch_stretch = true
