@@ -4,7 +4,7 @@
 ## Simply add [Control]s as children to form the layout. Adding other nodes as children cause undefined behavior.
 ## [b]Important[/b]: Set the x value of pivot offset of the card object to card object's size/2 to correctly align the cards
 ## To make the layout more customized, create a custom control scene and use [GCardHandLayoutService] as a helper.
-class_name GCardHandLayout
+class_name Yago
 extends Control
 
 ## Emits when a card is hovered.
@@ -70,6 +70,8 @@ signal card_dragging_finished(card:Control, index:int)
 ## Plays when a card is hovered.
 @export var hover_sound:AudioStreamPlayer2D
 
+@onready var carta = $YagoBoton
+
 var gcard_hand_layout_service := GCardHandLayoutService.new()
 var _reset_position_tween:Tween
 var _mouse_in:bool = false
@@ -78,6 +80,11 @@ var _dragging_index:int = -100
 var _dragging_mouse_position:Vector2
 
 func _ready():
+	#var cards = get_children()
+	var nuevacarta = carta.duplicate()
+	add_child(nuevacarta)
+	#cards.push_back(carta)
+	#cards.append(load("res://yago_boton.gd").duplicate())
 	_dragging_index = -100
 	child_order_changed.connect(_on_child_order_changed)
 	_setup_cards()
