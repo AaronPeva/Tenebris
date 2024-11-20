@@ -84,6 +84,8 @@ func _ready():
 	if get_child_count() > 0:
 		_reset_positions_if_in_tree(false, false)
 
+	
+
 func _process(delta):
 	if Engine.is_editor_hint() || !enable_hover && !_dragging_card:
 		return
