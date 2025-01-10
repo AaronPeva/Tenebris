@@ -89,10 +89,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureButton" type="TextureButton" parent="GCardHandLayout"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -1.82768
-anchor_top = -0.00476622
-anchor_right = -1.82768
-anchor_bottom = -0.00476622
+anchor_left = -0.0982259
+anchor_top = -0.15505
+anchor_right = -0.0982226
+anchor_bottom = -0.15505
 offset_left = -156.434
 offset_top = 12.3116
 offset_right = -74.435
