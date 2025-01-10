@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://86xpch7auyjn"]
+[gd_scene load_steps=9 format=3 uid="uid://w5wwwqup3uhh"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_vvow1"]
 [ext_resource type="Texture2D" uid="uid://dkwqcoqwpiaga" path="res://Fondo prototipo.png" id="2_6jfwj"]
