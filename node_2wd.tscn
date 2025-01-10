@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmwjuhwp8da72"]
+[gd_scene load_steps=3 format=3 uid="uid://ccr7co21nqhub"]
 
 [ext_resource type="Script" path="res://node_2_prueba.gd" id="1_m2moa"]
 [ext_resource type="Script" path="res://addons/godot_card_layout/layouts/hand_layout/gcard_hand_layout.gd" id="2_3j5cq"]
