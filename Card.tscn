@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://mcua603j00fg" path="res://Imagenes/image.png" id="1_uws5m"]
 [ext_resource type="Script" path="res://dfdsfdsf.gd" id="2_supqc"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1
