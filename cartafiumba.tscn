@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://w5wwwqup3uhh"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_vvow1"]
+[ext_resource type="Script" path="res://carafiumba.gd" id="1_vvow1"]
 [ext_resource type="Texture2D" uid="uid://dkwqcoqwpiaga" path="res://Fondo prototipo.png" id="2_6jfwj"]
 [ext_resource type="Texture2D" uid="uid://ne7sfemdd8yq" path="res://DUOLINGO JEFE 1 MORAO.png" id="3_68bf6"]
 [ext_resource type="Texture2D" uid="uid://cy6660mhkbv4g" path="res://Mesa prototipo.png" id="3_jxyei"]
@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arfsh"]
 size = Vector2(220.625, 285.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2DCartaFiumba" type="Node2D"]
 position = Vector2(3, 1)
 script = ExtResource("1_vvow1")
 
