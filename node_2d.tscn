@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://86xpch7auyjn"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_a1t5a"]
-[ext_resource type="Texture2D" uid="uid://cqxg34ji58jgc" path="res://Imagenes/1729089595254.png_image.png" id="1_rqo2n"]
-[ext_resource type="Texture2D" uid="uid://cvmi0smgr76ej" path="res://Imagenes/unnamed.png" id="2_ety1u"]
-[ext_resource type="Texture2D" uid="uid://c8aw7vmlwyihp" path="res://Imagenes/738371-middle.png" id="3_13m7t"]
+[ext_resource type="Texture2D" uid="uid://dkwqcoqwpiaga" path="res://Fondo prototipo.png" id="2_kelwu"]
+[ext_resource type="Texture2D" uid="uid://cy6660mhkbv4g" path="res://Mesa prototipo.png" id="3_tipb5"]
+[ext_resource type="Texture2D" uid="uid://bm5jxgggnljvb" path="res://POLITOED MASON 1.png" id="4_vkxeq"]
 [ext_resource type="Script" path="res://enemigo.gd" id="5_2q3nt"]
 [ext_resource type="Script" path="res://jugador.gd" id="6_cjfyl"]
 [ext_resource type="Texture2D" uid="uid://t3tk5v4iw67d" path="res://MODELO SIN VIDA.png" id="7_e8rka"]
@@ -18,45 +18,48 @@
 script = ExtResource("1_a1t5a")
 
 [node name="Fondo" type="TextureRect" parent="."]
-modulate = Color(0.633757, 0.633757, 0.633757, 1)
-self_modulate = Color(0.36283, 0.362829, 0.362829, 1)
+self_modulate = Color(0.709498, 0.370302, 0.6831, 1)
 show_behind_parent = true
+texture_filter = 1
 offset_right = 1152.0
 offset_bottom = 647.0
-texture = ExtResource("1_rqo2n")
+texture = ExtResource("2_kelwu")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Mesa" type="TextureRect" parent="."]
+self_modulate = Color(0.847134, 0.0018719, 0.993998, 1)
 texture_filter = 1
-offset_left = -3.0
-offset_top = 199.0
+offset_left = 1.0
+offset_top = 14.0
 offset_right = 1150.0
 offset_bottom = 645.0
-texture = ExtResource("2_ety1u")
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("3_tipb5")
 
 [node name="Enemigo" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.686612, 0.996235, 1)
 show_behind_parent = true
-position = Vector2(555, 296)
-scale = Vector2(0.571111, 0.491436)
-texture = ExtResource("3_13m7t")
+texture_filter = 1
+position = Vector2(586, 260)
+scale = Vector2(5.14, 4.9)
+texture = ExtResource("4_vkxeq")
 script = ExtResource("5_2q3nt")
 
 [node name="Jugador" type="Sprite2D" parent="."]
 script = ExtResource("6_cjfyl")
 
 [node name="vidaE" type="TextureProgressBar" parent="."]
+self_modulate = Color(0.85098, 0.309804, 1, 1)
 top_level = true
 texture_filter = 1
 anchors_preset = -1
-anchor_top = 0.0524691
-anchor_right = 0.0486111
-anchor_bottom = 0.441358
-offset_left = -29.0
-offset_top = -161.0
-offset_right = 291.0
-offset_bottom = -82.0
+anchor_top = 0.044753
+anchor_right = 0.0546875
+anchor_bottom = 0.557099
+offset_left = -13.0
+offset_top = -180.0
+offset_right = 307.0
+offset_bottom = -101.0
 max_value = 10.0
 value = 10.0
 nine_patch_stretch = true
@@ -65,6 +68,7 @@ texture_progress = ExtResource("8_43bvj")
 metadata/_edit_use_anchors_ = true
 
 [node name="vidaA" type="TextureProgressBar" parent="."]
+self_modulate = Color(0.85098, 0.309804, 1, 1)
 top_level = true
 texture_filter = 1
 anchors_preset = -1
@@ -82,9 +86,9 @@ texture_progress = ExtResource("8_43bvj")
 metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_top = 335.0
-offset_right = 1152.0
-offset_bottom = 652.0
+offset_top = 441.0
+offset_right = 827.0
+offset_bottom = 687.0
 
 [node name="Button" type="Button" parent="."]
 offset_left = 984.0
