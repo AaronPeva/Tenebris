@@ -60,8 +60,9 @@ offset_left = -13.0
 offset_top = -180.0
 offset_right = 307.0
 offset_bottom = -101.0
-max_value = 10.0
-value = 10.0
+max_value = 5.0
+step = 0.0
+value = 5.0
 nine_patch_stretch = true
 texture_under = ExtResource("7_e8rka")
 texture_progress = ExtResource("8_43bvj")
@@ -100,20 +101,20 @@ expand_icon = true
 
 [node name="A1" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 1215.0
-offset_top = 26.0
-offset_right = 1363.0
-offset_bottom = 232.0
+offset_left = 532.0
+offset_top = 324.0
+offset_right = 680.0
+offset_bottom = 530.0
 texture_normal = ExtResource("12_lfsd4")
 stretch_mode = 0
 script = ExtResource("13_c7xu1")
 
 [node name="A2" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 1215.0
-offset_top = 264.0
-offset_right = 1363.0
-offset_bottom = 469.0
+offset_left = 747.0
+offset_top = 306.0
+offset_right = 895.0
+offset_bottom = 511.0
 texture_normal = ExtResource("13_uow60")
 stretch_mode = 0
 script = ExtResource("13_kbdaq")

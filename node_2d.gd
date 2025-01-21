@@ -51,7 +51,20 @@ func _conectar_cartas() -> void:
 			carta.pressed.connect(_cuandoJugadorClicka)
 
 # Función llamada cuando el jugador presiona una carta
+
 func _cuandoJugadorClicka() -> void:
 	if turnoJugador:
 		vidaEnemigo.value -= 1
+	#else:
 		turnoJugador = false
+		_esperarTurnoEnemigo()
+
+func _esperarTurnoEnemigo() -> void:
+	_turnoEnemigo()
+
+
+func _turnoEnemigo() -> void:
+	if not turnoJugador:
+		vidaJugador.value -= 1
+	#else:
+		turnoJugador = true

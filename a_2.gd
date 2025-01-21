@@ -1,18 +1,10 @@
 extends TextureButton
 
-# Referencia al nodo de vida del jugador
-var vidaJugador: TextureProgressBar
 
-# Método para asignar la vida del jugador
-func set_vida_jugador(nodo_vida: TextureProgressBar) -> void:
-	vidaJugador = nodo_vida
+var curar : TextureProgressBar
 
-# Resta vida al jugador al presionar
 func _pressed() -> void:
-	if vidaJugador:
-		vidaJugador.value -= 2
-		if vidaJugador.value < 0:
-			vidaJugador.value = 0
-		queue_free()  # Elimina esta carta
-	else:
-		print("Error: vidaJugador no está asignado.")
+	curar.value += 1
+	if curar.value > 5:
+		curar.value = 5
+	queue_free()
