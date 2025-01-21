@@ -10,7 +10,7 @@ extends Node2D
 @onready var cards = [ $A1, $A2 ]
 
 # Configuración
-const CARD_SIZE = Vector2(229, 252)
+const CARD_SIZE = Vector2(159, 182)
 const MAX_CARDS = 5  # Número máximo de cartas que se pueden apilar en el contenedor
 
 var turnoJugador = true
