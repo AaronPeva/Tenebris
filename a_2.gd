@@ -1,10 +1,11 @@
 extends TextureButton
 
+@onready var vidaJugador
 
-var curar : TextureProgressBar
+func _pressed2() -> void:
+	vidaJugador.value += 3
+	if vidaJugador.value > 5:
+		vidaJugador.value = 5
 
 func _pressed() -> void:
-	curar.value += 1
-	if curar.value > 5:
-		curar.value = 5
 	queue_free()

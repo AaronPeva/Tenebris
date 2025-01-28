@@ -1,11 +1,10 @@
 extends TextureButton
 
-
-# Called when the node enters the scene tree for the first time.
-var vidaEnemigo : TextureProgressBar
-
-func _pressed()-> void:
+@onready var vidaEnemigo
+func _pressed1()-> void:
 	vidaEnemigo.value -= 2
 	if vidaEnemigo.value < 0:
 		vidaEnemigo.value = 0
+
+func _pressed() -> void:
 	queue_free()
