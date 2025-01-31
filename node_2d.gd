@@ -18,8 +18,8 @@ var turnoJugador = true
 
 
 func _ready() -> void:
-	#$A1.vidaEnemigo = $vidaE
-	#$A2.vidaJugador = $vidaA
+	$A1.vidaEnemigo = $vidaE
+	$A2.vidaJugador = $vidaA
 	# Configuración inicial del GridContainer
 	grid_container.columns = 5  # Máximo de columnas
 	button.pressed.connect(_on_button_pressed)  # Conectar botón para añadir cartas
