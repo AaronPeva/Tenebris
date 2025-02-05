@@ -1,7 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drihgukpty1hy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pch5a"]
-load_path = "res://.godot/imported/image.png-a4f7e17c149fdb56a06405376b67e3b9.ctex"
 
 [sub_resource type="GDScript" id="GDScript_n8g7y"]
 script/source = "extends TextureButton

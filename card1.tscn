@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://r4qyes1tb6ki"]
+
+[ext_resource type="Texture2D" uid="uid://3lub2llomfpe" path="res://Imagenes/C6.png" id="1_4uvki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x0aj"]
+size = Vector2(23, 31.1411)
+
+[node name="card1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(133, 169)
+scale = Vector2(9, 9.473)
+texture = ExtResource("1_4uvki")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-6.78168e-06, -1.61678e-06)
+shape = SubResource("RectangleShape2D_8x0aj")
