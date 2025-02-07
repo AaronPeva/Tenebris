@@ -8,10 +8,6 @@
 
 config_version=5
 
-[La vida mejora, el godot no]
-
-config/ninetailsrabbit.lootie/update_notification_enabled=true
-
 [application]
 
 config/name="La vida mejora, el godot no"
@@ -22,8 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 LootieGlobal="*res://addons/ninetailsrabbit.lootie/src/lootie_global.gd"
-Cursor="*res://addons/awesome_custom_cursor/Autoloads/Cursor.tscn"
-Toolkit="*res://addons/godottoolkit/toolkit.gd"
 
 [display]
 
