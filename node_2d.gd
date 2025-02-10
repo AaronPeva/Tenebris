@@ -15,7 +15,11 @@ const MAX_CARDS = 5  # Número máximo de cartas que se pueden apilar en el cont
 
 var turnoJugador = true
 
+
+
 func _ready() -> void:
+	$A1.vidaEnemigo = $vidaE
+	$A2.vidaJugador = $vidaA
 	# Configuración inicial del GridContainer
 	grid_container.columns = 5  # Máximo de columnas
 	button.pressed.connect(_on_button_pressed)  # Conectar botón para añadir cartas
@@ -51,7 +55,20 @@ func _conectar_cartas() -> void:
 			carta.pressed.connect(_cuandoJugadorClicka)
 
 # Función llamada cuando el jugador presiona una carta
+
 func _cuandoJugadorClicka() -> void:
 	if turnoJugador:
 		vidaEnemigo.value -= 1
+	#else:
 		turnoJugador = false
+		_esperarTurnoEnemigo()
+
+func _esperarTurnoEnemigo() -> void:
+	_turnoEnemigo()
+
+
+func _turnoEnemigo() -> void:
+	if not turnoJugador:
+		vidaJugador.value -= 1
+	#else:
+		turnoJugador = true

@@ -8,30 +8,20 @@
 
 config_version=5
 
-[La vida mejora, el godot no]
-
-config/ninetailsrabbit.lootie/update_notification_enabled=true
-
 [application]
 
 config/name="La vida mejora, el godot no"
 run/main_scene="res://cartafiumba.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
-
-[autoload]
-
-LootieGlobal="*res://addons/ninetailsrabbit.lootie/src/lootie_global.gd"
-Cursor="*res://addons/awesome_custom_cursor/Autoloads/Cursor.tscn"
-Toolkit="*res://addons/godottoolkit/toolkit.gd"
 
 [display]
 
 window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ScriptEditorQoL/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/ai_algorithms/plugin.cfg", "res://addons/awesome_custom_cursor/plugin.cfg", "res://addons/easy-godot/plugin.cfg", "res://addons/focus_camera_with_mouse/plugin.cfg", "res://addons/globalize-plugins/plugin.cfg", "res://addons/godot-game-settings-main/plugin.cfg", "res://addons/godot_card_layout/plugin.cfg", "res://addons/godottoolkit/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/ninetailsrabbit.lootie/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
