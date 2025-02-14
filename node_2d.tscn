@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5jxgggnljvb" path="res://Imagenes/POLITOED MASON 1.png" id="4_vkxeq"]
 [ext_resource type="Texture2D" uid="uid://t3tk5v4iw67d" path="res://Imagenes/MODELO SIN VIDA.png" id="7_e8rka"]
 [ext_resource type="Texture2D" uid="uid://n4mhkp0fc8ei" path="res://Imagenes/MODELO CON VIDA.png" id="8_43bvj"]
-[ext_resource type="PackedScene" path="res://card1.tscn" id="10_c1bvn"]
+[ext_resource type="PackedScene" uid="uid://r4qyes1tb6ki" path="res://card1.tscn" id="10_c1bvn"]
 [ext_resource type="Texture2D" uid="uid://c6qqmij40irls" path="res://Imagenes/mazo.jpeg" id="11_abtqe"]
 [ext_resource type="Texture2D" uid="uid://m17lfmw03ht7" path="res://Imagenes/R5.png" id="12_lfsd4"]
 [ext_resource type="Texture2D" uid="uid://02pe58sll0n5" path="res://Imagenes/Prototipo 2 reversa.png" id="13_uow60"]
