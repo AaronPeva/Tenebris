@@ -16,4 +16,4 @@ position = Vector2(158, 216)
 position = Vector2(905, 204)
 
 [node name="CardSlot" parent="." instance=ExtResource("3_0qdts")]
-position = Vector2(545, 461)
+position = Vector2(552, 461)
