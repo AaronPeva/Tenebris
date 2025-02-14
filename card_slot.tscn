@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://f8hsvyqerhlg"]
+
+[ext_resource type="Texture2D" uid="uid://q0i5wlrtnc52" path="res://Imagenes/Bordegilipollas.png" id="1_3sg5c"]
+[ext_resource type="Script" path="res://cardSlot.gd" id="1_rcahj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0dxl"]
+size = Vector2(23.0128, 31.0356)
+
+[node name="CardSlot" type="Node2D"]
+script = ExtResource("1_rcahj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(9.473, 9.473)
+texture = ExtResource("1_3sg5c")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4.29153e-06, -5.96046e-08)
+scale = Vector2(9.473, 9.473)
+shape = SubResource("RectangleShape2D_l0dxl")
