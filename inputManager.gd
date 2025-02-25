@@ -17,6 +17,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			emit_signal("left_mouse_button_clicked")
+			#deck_reference.draw_card();
 			raycast_at_cursor()
 		else:
 			emit_signal("left_mouse_button_released")
