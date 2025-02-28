@@ -20,7 +20,7 @@ script = ExtResource("6_56th6")
 script = ExtResource("1_3bc8y")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_0qdts")]
-position = Vector2(751, 156)
+position = Vector2(606, 238)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_lxjeb")
