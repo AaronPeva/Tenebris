@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://5vhmfc3nxngg"]
 
-[ext_resource type="Script" path="res://MENU.tres.gd" id="1_bfpus"]
+[ext_resource type="Script" path="res://Scripts/MENU.tres.gd" id="1_bfpus"]
 [ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/menucroquis.png" id="2_ra4qy"]
 [ext_resource type="FontFile" uid="uid://djrdt4qlj7m3m" path="res://Imagenes/blood_crow/bloodcrowi.ttf" id="3_ecetf"]
 [ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]

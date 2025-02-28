@@ -1,0 +1,5 @@
+const CARDS = {
+	"Knight" : [],
+	"Mascara" : [],
+
+}

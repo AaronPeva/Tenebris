@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgfmnpohwi1ht"
-path="res://.godot/imported/alfabetajuega-guia-ediciones-minecraft-00-20052020.webp-595949ffc78907d3b73a0db92eeeadea.ctex"
+uid="uid://ca3ncror87ly3"
+path="res://.godot/imported/PALWORLD.PNG-9f1dc81e20bff6f99d16a286e3df69a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/alfabetajuega-guia-ediciones-minecraft-00-20052020.webp"
-dest_files=["res://.godot/imported/alfabetajuega-guia-ediciones-minecraft-00-20052020.webp-595949ffc78907d3b73a0db92eeeadea.ctex"]
+source_file="res://Imagenes/PALWORLD.PNG"
+dest_files=["res://.godot/imported/PALWORLD.PNG-9f1dc81e20bff6f99d16a286e3df69a7.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="La vida mejora, el godot no"
-run/main_scene="res://cartafiumba.tscn"
+run/main_scene="res://Scenes/cartafiumba.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -26,6 +26,14 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://Imagenes/": "yellow",
+"res://Scenes/": "blue",
+"res://Scripts/": "gray"
+}
 
 [input]
 
