@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvo0mjrfheua8"]
 
-[ext_resource type="Script" path="res://puntuaciones.gd" id="1_48l2v"]
+[ext_resource type="Script" uid="uid://bhub4yf1snepp" path="res://Scripts/puntuaciones.gd" id="1_4tt35"]
 [ext_resource type="Texture2D" uid="uid://1e0ibavnkrcx" path="res://Imagenes/puntuacionesfondo.png" id="1_q4kex"]
 [ext_resource type="FontFile" uid="uid://xb3l5jkkjb2q" path="res://Imagenes/blood_crow/bloodcrowei.ttf" id="2_r3shx"]
 
 [sub_resource type="FontVariation" id="FontVariation_n1fwa"]
 base_font = ExtResource("2_r3shx")
 
-[node name="Opciones" type="Node2D"]
-script = ExtResource("1_48l2v")
+[node name="Puntuaciones" type="Node2D"]
+script = ExtResource("1_4tt35")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

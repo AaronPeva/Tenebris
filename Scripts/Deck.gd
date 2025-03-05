@@ -3,7 +3,7 @@ extends Node2D
 const CARD_SCENE_PATH = "res://Scenes/card1.tscn"
 const card_draw_speed = 0.3
 
-var player_deck = ["Knight"]
+var player_deck = ["Knight", "Knight"]
 # Called when the node enters the scene tree for the first time.
 
 
