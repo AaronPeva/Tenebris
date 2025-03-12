@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://bx1aedafwd2kt"]
+[gd_scene load_steps=7 format=3 uid="uid://bx1aedafwd2kt"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/SelectorPersonajes.gd" id="1_sckeb"]
+[ext_resource type="Texture2D" uid="uid://ddu488sv4d2hi" path="res://Imagenes/meta.png" id="2_b36kw"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_pnyfv"]
+[ext_resource type="Texture2D" uid="uid://ne7sfemdd8yq" path="res://Imagenes/Personaje Duolingo.png" id="4_b36kw"]
+
+[sub_resource type="FontVariation" id="FontVariation_1qmb7"]
+base_font = ExtResource("3_pnyfv")
+
+[sub_resource type="FontVariation" id="FontVariation_qdaqw"]
+base_font = SubResource("FontVariation_1qmb7")
+
+[node name="Personajes" type="Node2D"]
+script = ExtResource("1_sckeb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 1160.0
+offset_bottom = 651.0
+texture = ExtResource("2_b36kw")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 637.0
+offset_bottom = 615.0
+scale = Vector2(1.58981, 1.75168)
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_qdaqw")
+theme_override_font_sizes/font_size = 26
+text = "VOLVER"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 456.0
+offset_top = 136.0
+offset_right = 776.0
+offset_bottom = 657.0
+scale = Vector2(0.948697, 0.705973)
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 325.0
+offset_bottom = 544.0
+texture = ExtResource("4_b36kw")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 328.872
+offset_top = -79.3232
+offset_right = 448.872
+offset_bottom = -16.3232
+
+[node name="Siguiente" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 337.305
+offset_top = 396.616
+offset_right = 449.305
+offset_bottom = 484.616
+
+[node name="Atras" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = -143.355
+offset_top = 385.284
+offset_right = -23.3546
+offset_bottom = 481.284
+
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ne7sfemdd8yq"
-path="res://.godot/imported/DUOLINGO JEFE 1 MORAO.png-36d988abf22ed2a936a08cf3bd6a80b0.ctex"
+uid="uid://bm5jxgggnljvb"
+path="res://.godot/imported/Politoed.png-9a4e405aaad4170d2456cd826afefb6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/DUOLINGO JEFE 1 MORAO.png"
-dest_files=["res://.godot/imported/DUOLINGO JEFE 1 MORAO.png-36d988abf22ed2a936a08cf3bd6a80b0.ctex"]
+source_file="res://Imagenes/Politoed.png"
+dest_files=["res://.godot/imported/Politoed.png-9a4e405aaad4170d2456cd826afefb6e.ctex"]
 
 [params]
 

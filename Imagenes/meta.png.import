@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmcpx7un077mo"
-path="res://.godot/imported/POLITOED MASON 1 MORAO.png-dacc99744b87a5c883f9f8992037e6f5.ctex"
+uid="uid://ddu488sv4d2hi"
+path="res://.godot/imported/meta.png-0cfca57016a29c7718b4355e32bbf7a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/POLITOED MASON 1 MORAO.png"
-dest_files=["res://.godot/imported/POLITOED MASON 1 MORAO.png-dacc99744b87a5c883f9f8992037e6f5.ctex"]
+source_file="res://Imagenes/meta.png"
+dest_files=["res://.godot/imported/meta.png-0cfca57016a29c7718b4355e32bbf7a0.ctex"]
 
 [params]
 
