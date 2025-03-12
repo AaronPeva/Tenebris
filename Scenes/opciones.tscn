@@ -1,16 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://np855hr7rhml"]
 
+[ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones.gd" id="1_3hjeq"]
 [ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/OPCIONES.png" id="1_6gp1c"]
 [ext_resource type="FontFile" uid="uid://xb3l5jkkjb2q" path="res://Imagenes/blood_crow/bloodcrowei.ttf" id="3_dl254"]
-
-[sub_resource type="Resource" id="Resource_o14iw"]
-metadata/__load_path__ = "res://opciones.gd"
 
 [sub_resource type="FontVariation" id="FontVariation_vcat1"]
 base_font = ExtResource("3_dl254")
 
 [node name="Opciones" type="Node2D"]
-script = SubResource("Resource_o14iw")
+script = ExtResource("1_3hjeq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.607843, 0.517647, 0.596078, 1)

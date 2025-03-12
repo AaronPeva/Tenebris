@@ -26,10 +26,10 @@ func _process(delta: float) -> void:
 
 func start_drag(card):
 	card_being_dragged = card
-	card.scale = Vector2(0.55, 0.55)
+	card.scale = Vector2(0.35, 0.35)
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(0.6, 0.6)
+	card_being_dragged.scale = Vector2(0.3, 0.3)
 	var card_slot_found = raycast_check_for_card_slot()
 	if card_slot_found and not card_slot_found.card_in_slot:
 		player_hand_reference.remove_card_from_hand(card_being_dragged)
@@ -64,10 +64,10 @@ func on_hovered_off_card(card):
 
 func highlight_card(card, hovered):
 	if hovered:
-		card.scale = Vector2(0.55, 0.55)
+		card.scale = Vector2(0.35, 0.35)
 		card.z_index = 2
 	else:
-		card.scale = Vector2(0.5, 0.5)
+		card.scale = Vector2(0.3, 0.3)
 		card.z_index = 1
 
 func raycast_check_for_card_slot():
