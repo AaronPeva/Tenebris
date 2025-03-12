@@ -1,5 +1,5 @@
 const CARDS = {
-	"Knight" : [2, 2],
+	"Knight" : [21, 60],
 	"Mascara" : [1, 1],
 
 }

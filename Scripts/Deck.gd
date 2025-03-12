@@ -23,7 +23,7 @@ func draw_card():
 	var new_card = card_scene.instantiate()
 	var card_image_path = str(player_deck.size())
 	new_card.get_node("Attack").text = str(card_database_reference.CARDS[card_draw][0])
-	new_card.get_node("Mana").text = str(card_database_reference.CARDS[card_draw][0])
+	new_card.get_node("Energy").text = str(card_database_reference.CARDS[card_draw][1])
 
 	$"../CardManager".add_child(new_card)
 	new_card.name = "Card"
