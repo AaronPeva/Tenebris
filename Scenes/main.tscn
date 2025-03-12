@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://c4d8aa1saijwy"]
 
-[ext_resource type="Script" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
+[ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="PackedScene" uid="uid://f8hsvyqerhlg" path="res://Scenes/card_slot.tscn" id="3_0qdts"]
-[ext_resource type="Script" path="res://Scripts/PlayerHand.gd" id="3_lxjeb"]
-[ext_resource type="Script" path="res://Scripts/Deck.gd" id="4_q8rok"]
+[ext_resource type="Script" uid="uid://cuig5d2jqtspk" path="res://Scripts/PlayerHand.gd" id="3_lxjeb"]
+[ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/Deck.gd" id="4_q8rok"]
 [ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_bvle5"]
-[ext_resource type="Script" path="res://Scripts/inputManager.gd" id="6_56th6"]
+[ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="6_56th6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(24.2857, 32)
@@ -20,7 +20,7 @@ script = ExtResource("6_56th6")
 script = ExtResource("1_3bc8y")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_0qdts")]
-position = Vector2(606, 238)
+position = Vector2(597, 257)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_lxjeb")
