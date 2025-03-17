@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx1aedafwd2kt"]
+[gd_scene load_steps=9 format=3 uid="uid://bx1aedafwd2kt"]
 
 [ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/SelectorPersonajes.gd" id="1_sckeb"]
-[ext_resource type="Texture2D" uid="uid://ddu488sv4d2hi" path="res://Imagenes/meta.png" id="2_b36kw"]
+[ext_resource type="Texture2D" uid="uid://yquepcxd832i" path="res://Imagenes/fondoselector.png" id="2_1qmb7"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_pnyfv"]
-[ext_resource type="Texture2D" uid="uid://ne7sfemdd8yq" path="res://Imagenes/Personaje Duolingo.png" id="4_b36kw"]
+[ext_resource type="Texture2D" uid="uid://bdc7guxdlq5t6" path="res://Imagenes/Carta activa rana.png" id="4_b36kw"]
+[ext_resource type="Texture2D" uid="uid://dcoxs3gseptjn" path="res://Imagenes/Flechaderecha.png" id="5_pnyfv"]
+[ext_resource type="Texture2D" uid="uid://dibyqqtg3wqck" path="res://Imagenes/Flechaizquierda.png" id="6_1qmb7"]
 
 [sub_resource type="FontVariation" id="FontVariation_1qmb7"]
 base_font = ExtResource("3_pnyfv")
@@ -15,11 +17,12 @@ base_font = SubResource("FontVariation_1qmb7")
 script = ExtResource("1_sckeb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -15.0
-offset_top = -10.0
-offset_right = 1160.0
-offset_bottom = 651.0
-texture = ExtResource("2_b36kw")
+texture_filter = 1
+offset_left = -39.0
+offset_top = -16.0
+offset_right = 1177.0
+offset_bottom = 648.0
+texture = ExtResource("2_1qmb7")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -46,9 +49,10 @@ offset_bottom = 657.0
 scale = Vector2(0.948697, 0.705973)
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
-offset_right = 325.0
-offset_bottom = 544.0
+offset_right = 320.0
+offset_bottom = 521.0
 texture = ExtResource("4_b36kw")
 
 [node name="Label" type="Label" parent="Panel"]
@@ -59,17 +63,27 @@ offset_right = 448.872
 offset_bottom = -16.3232
 
 [node name="Siguiente" type="Button" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 337.305
-offset_top = 396.616
-offset_right = 449.305
-offset_bottom = 484.616
+offset_left = 320.44
+offset_top = 181.31
+offset_right = 480.44
+offset_bottom = 326.31
+icon = ExtResource("5_pnyfv")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Atras" type="Button" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
-offset_left = -143.355
-offset_top = 385.284
-offset_right = -23.3546
-offset_bottom = 481.284
+offset_left = -160.22
+offset_top = 181.31
+offset_right = -0.219757
+offset_bottom = 326.31
+icon = ExtResource("6_1qmb7")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

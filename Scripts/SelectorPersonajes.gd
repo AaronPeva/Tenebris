@@ -8,13 +8,13 @@ extends Node2D
 
 # Lista de personajes
 var personajes = []
-var indice_actual = 0
+var indice_actual = 1
 
 func _ready():
 	# Cargar personajes en la lista
-	personajes.append(Personaje.new(preload("res://Imagenes/Personaje Duolingo.png"), 50, 30))
-	personajes.append(Personaje.new(preload("res://Imagenes/Politoed.png"), 40, 40))
-	personajes.append(Personaje.new(preload("res://Imagenes/walta.png"), 60, 20))
+	personajes.append(Personaje.new(preload("res://Imagenes/Carta activa rana.png"), 2, 2))
+	personajes.append(Personaje.new(preload("res://Imagenes/Carta activa linux.png"), 1, 1))
+	personajes.append(Personaje.new(preload("res://Imagenes/Carta activa gimpmamado.png"), 3, 4))
 
 	# Actualiza la interfaz con el primer personaje
 	actualizar_selector()
@@ -38,3 +38,7 @@ func _on_prev_button_pressed():
 func _on_next_button_pressed():
 	indice_actual = (indice_actual + 1) % personajes.size()
 	actualizar_selector()
+
+
+func _on_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
