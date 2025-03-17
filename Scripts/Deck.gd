@@ -3,11 +3,33 @@ extends Node2D
 const CARD_SCENE_PATH = "res://Scenes/card1.tscn"
 const card_draw_speed = 0.3
 
-var player_deck = ["Knight", "gitano", "Mascara", "rata", "feo"]  # Cartas disponibles
+var player_deck = []  # Cartas disponibles
 var card_database_reference
 
+#func _ready() -> void:
+	#card_database_reference = load("res://Scripts/CardDatabase.gd").new()
+	#for i in card_database_reference.CARDS:
+		#var listCard = i
+		#for j in listCard[2]:
+			#player_deck.append(listCard)
+	
 func _ready() -> void:
 	card_database_reference = load("res://Scripts/CardDatabase.gd").new()
+	
+	if not "CARDS" in card_database_reference:
+		print("Error: CARDS no existe en CardDatabase.gd")
+		return
+	
+	for card_name in card_database_reference.CARDS:
+		var card_data = card_database_reference.CARDS[card_name]
+		var card_energy = card_data[1]  # Segundo valor
+		var card_quantity = int(card_data[2])  # Número de copias disponibles
+		for _i in range(card_quantity):
+			player_deck.append(card_name)  # Asegurarse de que solo se guarda el nombre, no una lista
+
+
+
+
 
 func draw_card():
 	if player_deck.is_empty():
@@ -15,8 +37,10 @@ func draw_card():
 
 	# Seleccionar una carta aleatoria SIN eliminarla
 	var random_index = randi() % player_deck.size()
-	var card_draw = player_deck[random_index]  # Ahora la carta no se elimina
-
+	var card_draw = player_deck[random_index]
+	var card_name = card_draw[0]
+	#player_deck.erase(card_draw)# Ahora la carta no se elimina
+	player_deck.erase(card_draw)
 	var card_scene = load(CARD_SCENE_PATH)
 	var new_card = card_scene.instantiate()
 
