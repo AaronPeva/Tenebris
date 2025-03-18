@@ -1,3 +1,89 @@
-[gd_scene load_steps=0 format=3 uid="uid://bx1aedafwd2kt"]
+[gd_scene load_steps=9 format=3 uid="uid://bx1aedafwd2kt"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/SelectorPersonajes.gd" id="1_sckeb"]
+[ext_resource type="Texture2D" uid="uid://yquepcxd832i" path="res://Imagenes/fondoselector.png" id="2_1qmb7"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_pnyfv"]
+[ext_resource type="Texture2D" uid="uid://bdc7guxdlq5t6" path="res://Imagenes/Carta activa rana.png" id="4_b36kw"]
+[ext_resource type="Texture2D" uid="uid://dcoxs3gseptjn" path="res://Imagenes/Flechaderecha.png" id="5_pnyfv"]
+[ext_resource type="Texture2D" uid="uid://dibyqqtg3wqck" path="res://Imagenes/Flechaizquierda.png" id="6_1qmb7"]
+
+[sub_resource type="FontVariation" id="FontVariation_1qmb7"]
+base_font = ExtResource("3_pnyfv")
+
+[sub_resource type="FontVariation" id="FontVariation_qdaqw"]
+base_font = SubResource("FontVariation_1qmb7")
+
+[node name="Personajes" type="Node2D"]
+script = ExtResource("1_sckeb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -39.0
+offset_top = -16.0
+offset_right = 1177.0
+offset_bottom = 648.0
+texture = ExtResource("2_1qmb7")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+offset_left = 512.0
+offset_top = 576.0
+offset_right = 637.0
+offset_bottom = 615.0
+scale = Vector2(1.58981, 1.75168)
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_qdaqw")
+theme_override_font_sizes/font_size = 26
+text = "VOLVER"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 456.0
+offset_top = 136.0
+offset_right = 776.0
+offset_bottom = 657.0
+scale = Vector2(0.948697, 0.705973)
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 521.0
+texture = ExtResource("4_b36kw")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 328.872
+offset_top = -79.3232
+offset_right = 448.872
+offset_bottom = -16.3232
+
+[node name="Siguiente" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 320.44
+offset_top = 181.31
+offset_right = 480.44
+offset_bottom = 326.31
+icon = ExtResource("5_pnyfv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Atras" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -160.22
+offset_top = 181.31
+offset_right = -0.219757
+offset_bottom = 326.31
+icon = ExtResource("6_1qmb7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

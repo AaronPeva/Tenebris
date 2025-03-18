@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mue2aa7nwren"
-path="res://.godot/imported/DUOLINGO JEFE 1.png-ce87b94de86bc1e6d48a0562efe673de.ctex"
+uid="uid://yquepcxd832i"
+path="res://.godot/imported/fondoselector.png-245878fef19d17ae09f9778b8b4990ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/DUOLINGO JEFE 1.png"
-dest_files=["res://.godot/imported/DUOLINGO JEFE 1.png-ce87b94de86bc1e6d48a0562efe673de.ctex"]
+source_file="res://Imagenes/fondoselector.png"
+dest_files=["res://.godot/imported/fondoselector.png-245878fef19d17ae09f9778b8b4990ba.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm5jxgggnljvb"
-path="res://.godot/imported/POLITOED MASON 1.png-f0cce4ce380b5b9075aaea0244be8786.ctex"
+uid="uid://bdc7guxdlq5t6"
+path="res://.godot/imported/Carta activa rana.png-a345ef25a36e36b5642338202a7efc24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/POLITOED MASON 1.png"
-dest_files=["res://.godot/imported/POLITOED MASON 1.png-f0cce4ce380b5b9075aaea0244be8786.ctex"]
+source_file="res://Imagenes/Carta activa rana.png"
+dest_files=["res://.godot/imported/Carta activa rana.png-a345ef25a36e36b5642338202a7efc24.ctex"]
 
 [params]
 
