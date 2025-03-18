@@ -27,8 +27,6 @@ func _ready() -> void:
 		for _i in range(card_quantity):
 			player_deck.append(card_name)  # Asegurarse de que solo se guarda el nombre, no una lista
 
-
-
 func draw_card():
 	if player_deck.is_empty():
 		return  # Evita que el juego falle si no hay cartas en el mazo (aunque ahora no debería ocurrir)
