@@ -29,8 +29,6 @@ func _ready() -> void:
 
 
 
-
-
 func draw_card():
 	if player_deck.is_empty():
 		return  # Evita que el juego falle si no hay cartas en el mazo (aunque ahora no debería ocurrir)
