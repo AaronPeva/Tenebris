@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://86xpch7auyjn"]
 
-[ext_resource type="Script" uid="uid://bx5n0j832mfki" path="res://Scripts/node_2d.gd" id="1_a1t5a"]
+[ext_resource type="Script" uid="uid://drxmn4n6soin4" path="res://Scripts/node_2d.gd" id="1_a1t5a"]
 [ext_resource type="Texture2D" uid="uid://dkwqcoqwpiaga" path="res://Imagenes/Fondo prototipo.png" id="2_kelwu"]
 [ext_resource type="Texture2D" uid="uid://cy6660mhkbv4g" path="res://Imagenes/Mesa prototipo.png" id="3_tipb5"]
-[ext_resource type="Texture2D" uid="uid://bm5jxgggnljvb" path="res://Imagenes/POLITOED MASON 1.png" id="4_vkxeq"]
+[ext_resource type="Texture2D" uid="uid://bm5jxgggnljvb" path="res://Imagenes/Politoed.png" id="4_vkxeq"]
 [ext_resource type="Texture2D" uid="uid://t3tk5v4iw67d" path="res://Imagenes/MODELO SIN VIDA.png" id="7_e8rka"]
 [ext_resource type="Texture2D" uid="uid://n4mhkp0fc8ei" path="res://Imagenes/MODELO CON VIDA.png" id="8_43bvj"]
 [ext_resource type="PackedScene" uid="uid://r4qyes1tb6ki" path="res://Scenes/card1.tscn" id="10_c1bvn"]
 [ext_resource type="Texture2D" uid="uid://c6qqmij40irls" path="res://Imagenes/mazo.jpeg" id="11_abtqe"]
-[ext_resource type="Texture2D" uid="uid://m17lfmw03ht7" path="res://Imagenes/R5.png" id="12_lfsd4"]
-[ext_resource type="Texture2D" uid="uid://02pe58sll0n5" path="res://Imagenes/Prototipo 2 reversa.png" id="13_uow60"]
+[ext_resource type="Texture2D" uid="uid://m17lfmw03ht7" path="res://Imagenes/Cartas/R3.png" id="12_lfsd4"]
+[ext_resource type="Texture2D" uid="uid://02pe58sll0n5" path="res://Imagenes/Cartas/Reversa.png" id="13_uow60"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_a1t5a")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsojv00g0k0hd"
-path="res://.godot/imported/Carta activa linux.png-82db4200c2b885b308f2dab5e895c61a.ctex"
+uid="uid://opey70tjqlti"
+path="res://.godot/imported/R1.png-0607132a7b53b4aa885d8103fc437d5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Carta activa linux.png"
-dest_files=["res://.godot/imported/Carta activa linux.png-82db4200c2b885b308f2dab5e895c61a.ctex"]
+source_file="res://Imagenes/Cartas/R1.png"
+dest_files=["res://.godot/imported/R1.png-0607132a7b53b4aa885d8103fc437d5e.ctex"]
 
 [params]
 

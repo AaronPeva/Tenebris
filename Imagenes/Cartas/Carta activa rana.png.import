@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://02pe58sll0n5"
-path="res://.godot/imported/Prototipo 2 reversa.png-bd92c019f718c81f32ea14ce9459db2d.ctex"
+uid="uid://bdc7guxdlq5t6"
+path="res://.godot/imported/Carta activa rana.png-997b27d368241a7bd0126dd8613ab8c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Prototipo 2 reversa.png"
-dest_files=["res://.godot/imported/Prototipo 2 reversa.png-bd92c019f718c81f32ea14ce9459db2d.ctex"]
+source_file="res://Imagenes/Cartas/Carta activa rana.png"
+dest_files=["res://.godot/imported/Carta activa rana.png-997b27d368241a7bd0126dd8613ab8c9.ctex"]
 
 [params]
 

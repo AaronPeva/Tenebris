@@ -2,12 +2,13 @@ extends Object
 
 class_name Personaje
 
-# Constructor del personaje con imagen, salud, ataque y defensa
-var imagen
-var attack
-var energy
+var imagen: Texture2D
+var attack: int
+var energy: int
+var health: int
 
-func _init(_imagen, _ataque, _energy):
-	imagen = _imagen
-	attack = _ataque
-	energy = _energy
+func _init(img: Texture2D, atk: int, en: int, hp: int):
+	self.imagen = img
+	self.attack = atk
+	self.energy = en
+	self.health = hp

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m17lfmw03ht7"
-path="res://.godot/imported/R5.png-94cf242ba6117083b57377378216afad.ctex"
+uid="uid://02pe58sll0n5"
+path="res://.godot/imported/Reversa.png-bb1e90add751490fffb08aeafda341dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/R5.png"
-dest_files=["res://.godot/imported/R5.png-94cf242ba6117083b57377378216afad.ctex"]
+source_file="res://Imagenes/Cartas/Reversa.png"
+dest_files=["res://.godot/imported/Reversa.png-bb1e90add751490fffb08aeafda341dc.ctex"]
 
 [params]
 

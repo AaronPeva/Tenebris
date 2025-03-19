@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfv3kroa05h78"
-path="res://.godot/imported/Carta activa gimpmamado.png-dd8092c6fcaf60e54f8235d606a7a934.ctex"
+uid="uid://bsojv00g0k0hd"
+path="res://.godot/imported/Carta activa linux.png-6dbc471cfe1cd9aeb66dcd176fba2bce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Carta activa gimpmamado.png"
-dest_files=["res://.godot/imported/Carta activa gimpmamado.png-dd8092c6fcaf60e54f8235d606a7a934.ctex"]
+source_file="res://Imagenes/Cartas/Carta activa linux.png"
+dest_files=["res://.godot/imported/Carta activa linux.png-6dbc471cfe1cd9aeb66dcd176fba2bce.ctex"]
 
 [params]
 
