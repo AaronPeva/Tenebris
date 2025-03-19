@@ -11,18 +11,17 @@ config_version=5
 [application]
 
 config/name="La vida mejora, el godot no"
-run/main_scene="res://Scenes/cartafiumba.tscn"
+run/main_scene="uid://5vhmfc3nxngg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-LootieGlobal="*res://addons/ninetailsrabbit.lootie/src/lootie_global.gd"
-Global="*res://Scripts/Global.gd"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[editor]
+
+movie_writer/disable_vsync=true
 
 [editor_plugins]
 
