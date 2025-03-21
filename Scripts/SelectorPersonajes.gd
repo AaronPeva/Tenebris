@@ -5,7 +5,8 @@ extends Node2D
 @onready var stats_label = $Panel/Label
 @onready var prev_button = $Panel/Atras
 @onready var next_button = $Panel/Siguiente
-@onready var select_button = $Panel/Seleccionar  # Botón para seleccionar carta
+@onready var select_button = $Panel/Seleccionar 
+#@onready var Global = get_node("res://Scripts/Global.gd") # Botón para seleccionar carta
 
 # Lista de personajes
 var personajes = []
@@ -45,11 +46,12 @@ func _on_next_button_pressed():
 func _on_select_button_pressed():
 	Global.carta_seleccionada = personajes[indice_actual]
 	print("Carta seleccionada:", Global.carta_seleccionada)
+	#get_tree().change_scene_to_file("res://Scenes/main.gd")
 
 
 func _on_salir_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
 
-func _on_select_pressed() -> void:
-	Global.carta_seleccionada = personajes[indice_actual]  # Guarda la carta en el script global
-	get_tree().change_scene_to_file("res://Scenes/main.gd")  # Cambia a la escena del juego
+#func _on_select_pressed() -> void:
+	#Global.carta_seleccionada = personajes[indice_actual]  # Guarda la carta en el script global
+	#get_tree().change_scene_to_file("res://Scenes/main.gd")  # Cambia a la escena del juego

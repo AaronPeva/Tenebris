@@ -98,4 +98,4 @@ offset_bottom = -37.6507
 text = "Seleccionar"
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
-[connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_pressed"]
+[connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_button_pressed"]
