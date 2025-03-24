@@ -4,6 +4,9 @@ extends Node2D
 @onready var texture_rect = $Panel/TextureRect
 @onready var stats_label = $Panel/Label
 
+
+
+
 func _ready():
 	if Global.carta_seleccionada:
 		var carta = Global.carta_seleccionada
