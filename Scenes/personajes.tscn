@@ -48,13 +48,6 @@ offset_right = 776.0
 offset_bottom = 657.0
 scale = Vector2(0.948697, 0.705973)
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
-texture_filter = 1
-layout_mode = 0
-offset_right = 320.0
-offset_bottom = 521.0
-texture = ExtResource("4_b36kw")
-
 [node name="Label" type="Label" parent="Panel"]
 texture_filter = 1
 layout_mode = 0
@@ -96,6 +89,13 @@ offset_top = -124.651
 offset_right = 210.894
 offset_bottom = -37.6507
 text = "Seleccionar"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 323.0
+offset_bottom = 516.0
+texture = ExtResource("4_b36kw")
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_button_pressed"]
