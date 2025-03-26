@@ -19,6 +19,7 @@ position = Vector2(7.62939e-06, 3.05176e-05)
 script = ExtResource("6_56th6")
 
 [node name="CardManager" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_3bc8y")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_0qdts")]

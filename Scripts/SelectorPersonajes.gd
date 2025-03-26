@@ -21,11 +21,14 @@ func _ready():
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa linux.png"),
-			1, 1, 5  # Sin escena (será null)
+			1, 1, 5, 
+			"res://Scenes/cardA2.tscn" # Sin escena (será null)
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa gimpmamado.png"),
-			3, 4, 5  # Sin escena
+			3, 4, 5,
+			"res://Scenes/cardA3.tscn"
+			
 		)
 	]
 	
@@ -58,6 +61,7 @@ func _on_select_button_pressed():
 	var escena_seleccionada = personajes[indice_actual].escena
 	Global.escena_seleccionada = escena_seleccionada if escena_seleccionada else null
 	print("Escena guardada:", Global.escena_seleccionada)
+	print(Global.escena_seleccionada)
 
 func _on_salir_pressed():
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")

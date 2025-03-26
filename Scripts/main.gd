@@ -1,5 +1,6 @@
 extends Node2D
 
+var prede = load("res://Scenes/cardA1.tscn")
 
 func _ready():
 	if Global.escena_seleccionada and Global.escena_seleccionada != "":
@@ -12,7 +13,11 @@ func _ready():
 		else:
 			print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 	else:
-		print("⚠ Advertencia: No hay escena seleccionada en Global.")
+		prede is PackedScene
+		var ins = prede.instantiate()
+		ins.position = Vector2(200,150)
+		add_child(ins)
+		
 
 
 
