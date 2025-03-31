@@ -25,6 +25,8 @@ func _process(delta: float) -> void:
 
 
 func start_drag(card):
+	if card.isPlayerCharacterCard():
+		return
 	card_being_dragged = card
 	card.scale = Vector2(0.35, 0.35)
 
@@ -41,8 +43,9 @@ func finish_drag():
 	card_being_dragged = null
 
 func connect_card_signals(card):
-	card.connect("hovered", on_hovered_over_card)
-	card.connect("hovered_off", on_hovered_off_card)
+	if card.isPlayerCharacterCard():
+		card.connect("hovered", on_hovered_over_card)
+		card.connect("hovered_off", on_hovered_off_card)
 
 func on_left_click_released():
 	if card_being_dragged:
