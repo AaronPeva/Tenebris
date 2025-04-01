@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c84uhqenwhoxn"]
 
-[ext_resource type="Script" uid="uid://dte1nssfacvup" path="res://Scripts/card_a_1.gd" id="1_yd4ab"]
+[ext_resource type="Script" uid="uid://dte1nssfacvup" path="res://Scripts/card_character.gd" id="1_yd4ab"]
 [ext_resource type="Texture2D" uid="uid://bdc7guxdlq5t6" path="res://Imagenes/Cartas/Carta activa rana.png" id="2_yd4ab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sj8v"]
 size = Vector2(260, 374)
 
 [node name="card1" type="Node2D"]
+z_index = -1
 position = Vector2(125, 500)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_yd4ab")

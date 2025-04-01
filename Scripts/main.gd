@@ -1,27 +1,16 @@
 extends Node2D
 
-var prede = load("res://Scenes/cardA1.tscn")
 
 func _ready():
-	if Global.escena_seleccionada and Global.escena_seleccionada != "":
 		var escena_cargada = load(Global.escena_seleccionada)  # Cargar la escena desde la ruta
 		if escena_cargada is PackedScene:  # Verificar que sea una escena válida
 			var instancia = escena_cargada.instantiate()  # Instanciar la escena
-			instancia.position = Vector2(200, 150)  # Posición en la pantalla
+			instancia.position = Vector2(600, 256)  # Posición en la pantalla
 			add_child(instancia)  # Agregar la escena como hijo
 			print("✅ Escena añadida correctamente")
 		else:
 			print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
-	else:
-		prede is PackedScene
-		var ins = prede.instantiate()
-		ins.position = Vector2(200,150)
-		add_child(ins)
-		
-
-
-
-
+			
 	## Verificar si hay una carta seleccionada
 	#if Global.carta_seleccionada != null:
 		## Instanciar la carta (Godot 4 usa instantiate(), Godot 3.x usa instance())
