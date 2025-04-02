@@ -13,8 +13,10 @@ script = ExtResource("1_3hjeq")
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.607843, 0.517647, 0.596078, 1)
 texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -12.0
+offset_top = -10.0
+offset_right = 314.0
+offset_bottom = 177.0
 scale = Vector2(3.60082, 3.5988)
 texture = ExtResource("1_6gp1c")
 

@@ -7,6 +7,8 @@ extends Node2D
 @onready var next_button = $Panel/Siguiente
 @onready var select_button = $Panel/Seleccionar
 
+
+
 # Datos de personajes
 var personajes = []
 var indice_actual = 0

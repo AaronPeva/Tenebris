@@ -29,17 +29,20 @@ func _ready() -> void:
 
 func draw_card():
 	if player_deck.is_empty():
+		
 		return  # Evita que el juego falle si no hay cartas en el mazo (aunque ahora no debería ocurrir)
 
 	# Seleccionar una carta aleatoria SIN eliminarla
 	var random_index = randi() % player_deck.size()
 	var card_draw = player_deck[random_index]
 	var card_name = card_draw[0]
+	var monsterini = player_deck[random_index]
 	#player_deck.erase(card_draw)# Ahora la carta no se elimina
 	player_deck.erase(card_draw)
 	var card_scene = load(CARD_SCENE_PATH)
 	var new_card = card_scene.instantiate()
-
+	var card_image_path = str("res://Imagenes/Cartas/" + monsterini + "Card.png")
+	new_card.get_node("CardImage").texture = load(card_image_path)
 	# Asegurar que la carta tiene los nodos esperados antes de asignar valores
 	if new_card.has_node("Attack") and new_card.has_node("Energy"):
 		new_card.get_node("Attack").text = str(card_database_reference.CARDS[card_draw][0])

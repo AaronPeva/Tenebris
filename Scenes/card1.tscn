@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://r4qyes1tb6ki"]
 
-[ext_resource type="Texture2D" uid="uid://3lub2llomfpe" path="res://Imagenes/Cartas/C4.png" id="1_4uvki"]
-[ext_resource type="Script" uid="uid://bvvj3e8dg4qs" path="res://Scripts/card.gd" id="1_rr71g"]
+[ext_resource type="Texture2D" uid="uid://3lub2llomfpe" path="res://Imagenes/Cartas/C4Card.png" id="1_4uvki"]
+[ext_resource type="Script" uid="uid://dk6trr3vacudi" path="res://Scripts/card.gd" id="1_rr71g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sj8v"]
 size = Vector2(260, 374)
 
 [node name="card1" type="Node2D"]
 position = Vector2(125, 500)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_rr71g")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CardImage" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 3.05176e-05)
 scale = Vector2(12.3478, 12.9032)
