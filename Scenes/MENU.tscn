@@ -62,6 +62,7 @@ offset_bottom = 330.0
 [node name="jugar" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_ey08u")
 theme_override_font_sizes/font_size = 25
 text = "JUGAR"
@@ -76,6 +77,7 @@ offset_bottom = 638.0
 [node name="personajes" type="Button" parent="VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_urgu5")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rnc5l")
@@ -85,6 +87,7 @@ text = "PERSONAJES"
 [node name="opciones" type="Button" parent="VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_urgu5")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rnc5l")
@@ -94,6 +97,7 @@ text = "OPCIONES"
 [node name="puntuaciones" type="Button" parent="VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = ExtResource("3_ecetf")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/pressed = SubResource("StyleBoxFlat_w7jkc")
@@ -103,6 +107,7 @@ text = "PUNTUACIONES"
 [node name="salir" type="Button" parent="VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_6visc")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rft4w")

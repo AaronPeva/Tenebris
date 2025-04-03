@@ -45,7 +45,7 @@ func _conectar_botones():
 func actualizar_selector():
 	var personaje = personajes[indice_actual]
 	texture_rect.texture = personaje.imagen
-	stats_label.text = "Ataque: %d\nEnergía: %d\nVida: %d" % [
+	stats_label.text = "Ataque: %d\nCoste: %d\nVida: %d" % [
 		personaje.attack, 
 		personaje.energy, 
 		personaje.health

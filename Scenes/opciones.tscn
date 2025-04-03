@@ -31,6 +31,7 @@ scale = Vector2(1.66541, 1.01423)
 [node name="Salir" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_6ip24")
 theme_override_font_sizes/font_size = 26
 text = "VOLVER"

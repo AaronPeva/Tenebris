@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cr5heqp4qgb6h" path="res://Scripts/PlayerHand.gd" id="3_lxjeb"]
 [ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/Deck.gd" id="4_q8rok"]
 [ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_bvle5"]
-[ext_resource type="Script" uid="uid://djbucrdlnwdq0" path="res://Scripts/inputManager.gd" id="6_56th6"]
+[ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="6_56th6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(24.2857, 32)
