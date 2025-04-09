@@ -13,9 +13,7 @@ func _ready():
 		add_child(instancia) 
 		if instancia.has_signal("clic_personal"):
 			instancia.connect("clic_personal", _on_input_event)
-			emit_signal("clic")
 		print("✅ Escena añadida correctamente")
-		print(instancia)
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 
