@@ -35,7 +35,6 @@ func draw_card():
 	var random_index = randi() % player_deck.size()
 	var card_draw = player_deck[random_index]
 	var card_name = card_draw[0]
-	#player_deck.erase(card_draw)# Ahora la carta no se elimina
 	player_deck.erase(card_draw)
 	var card_scene = load(CARD_SCENE_PATH)
 	var new_card = card_scene.instantiate()
