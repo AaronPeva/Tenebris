@@ -44,17 +44,17 @@ scale = Vector2(7, 7)
 shape = SubResource("RectangleShape2D_ilbd4")
 
 [node name="Boton1" type="Button" parent="."]
-offset_left = 784.0
-offset_top = 112.0
-offset_right = 936.0
-offset_bottom = 248.0
+offset_left = 792.0
+offset_top = 344.0
+offset_right = 920.0
+offset_bottom = 392.0
 text = "atacar"
 
 [node name="Boton2" type="Button" parent="."]
-offset_left = 776.0
-offset_top = 280.0
-offset_right = 944.0
-offset_bottom = 416.0
+offset_left = 792.0
+offset_top = 400.0
+offset_right = 920.0
+offset_bottom = 431.0
 text = "Salir"
 
 [connection signal="pressed" from="Boton2" to="." method="_on_boton_salir_pressed"]

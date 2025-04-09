@@ -2,26 +2,26 @@ extends Node2D
 
 @onready var atacar = $Boton1
 @onready var salir = $Boton2
-
+signal clic_personal
 func _ready():
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
 	salir.visible = false
 	if escena_cargada is PackedScene:  # Verificar que sea una escena válida
 		var instancia = escena_cargada.instantiate()  # Instanciar la escena
-		instancia.position = Vector2(600, 256) 
-		#if instancia.has_signal("input_event"):
-			#instancia.connect("input_event", _on_input_event) # Posición en la pantalla
-		add_child(instancia)  # Agregar la escena como hijo
+		instancia.position = Vector2(600, 400) 
+		add_child(instancia) 
+		if instancia.has_signal("clic_personal"):
+			instancia.connect("clic_personal", _on_input_event)
+			emit_signal("clic")
 		print("✅ Escena añadida correctamente")
-		
+		print(instancia)
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 
 
-func _on_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed:
-		_visible()
+func _on_input_event():
+	_visible()# Emitimos la señal al hacer clic
 
 
 func _visible() -> void:
