@@ -7,6 +7,8 @@ extends Node2D
 @onready var next_button = $Panel/Siguiente
 @onready var select_button = $Panel/Seleccionar
 
+
+
 # Datos de personajes
 var personajes = []
 var indice_actual = 0
@@ -43,7 +45,7 @@ func _conectar_botones():
 func actualizar_selector():
 	var personaje = personajes[indice_actual]
 	texture_rect.texture = personaje.imagen
-	stats_label.text = "Ataque: %d\nEnergía: %d\nVida: %d" % [
+	stats_label.text = "Ataque: %d\nCoste: %d\nVida: %d" % [
 		personaje.attack, 
 		personaje.energy, 
 		personaje.health

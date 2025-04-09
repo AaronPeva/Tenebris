@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx1aedafwd2kt"]
+[gd_scene load_steps=13 format=3 uid="uid://bx1aedafwd2kt"]
 
 [ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/SelectorPersonajes.gd" id="1_sckeb"]
 [ext_resource type="Texture2D" uid="uid://yquepcxd832i" path="res://Imagenes/fondoselector.png" id="2_1qmb7"]
@@ -6,12 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://bdc7guxdlq5t6" path="res://Imagenes/Cartas/Carta activa rana.png" id="4_b36kw"]
 [ext_resource type="Texture2D" uid="uid://dcoxs3gseptjn" path="res://Imagenes/Flechaderecha.png" id="5_pnyfv"]
 [ext_resource type="Texture2D" uid="uid://dibyqqtg3wqck" path="res://Imagenes/Flechaizquierda.png" id="6_1qmb7"]
+[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="6_qdaqw"]
 
 [sub_resource type="FontVariation" id="FontVariation_1qmb7"]
 base_font = ExtResource("3_pnyfv")
 
 [sub_resource type="FontVariation" id="FontVariation_qdaqw"]
 base_font = SubResource("FontVariation_1qmb7")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd055"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hgak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdaqw"]
 
 [node name="Personajes" type="Node2D"]
 script = ExtResource("1_sckeb")
@@ -36,6 +43,7 @@ scale = Vector2(1.58981, 1.75168)
 [node name="Salir" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_qdaqw")
 theme_override_font_sizes/font_size = 26
 text = "VOLVER"
@@ -65,6 +73,8 @@ offset_left = 320.44
 offset_top = 181.31
 offset_right = 480.44
 offset_bottom = 326.31
+focus_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yd055")
 icon = ExtResource("5_pnyfv")
 flat = true
 icon_alignment = 1
@@ -77,18 +87,29 @@ offset_left = -160.22
 offset_top = 181.31
 offset_right = -0.219757
 offset_bottom = 326.31
+focus_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5hgak")
 icon = ExtResource("6_1qmb7")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
 [node name="Seleccionar" type="Button" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 75.8936
-offset_top = -124.651
-offset_right = 210.894
-offset_bottom = -37.6507
+offset_left = 67.4326
+offset_top = -156.167
+offset_right = 253.433
+offset_bottom = -31.167
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_pnyfv")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("6_qdaqw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qdaqw")
 text = "Seleccionar"
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 texture_filter = 1

@@ -13,8 +13,10 @@ script = ExtResource("1_3hjeq")
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.607843, 0.517647, 0.596078, 1)
 texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -12.0
+offset_top = -10.0
+offset_right = 314.0
+offset_bottom = 177.0
 scale = Vector2(3.60082, 3.5988)
 texture = ExtResource("1_6gp1c")
 
@@ -29,6 +31,7 @@ scale = Vector2(1.66541, 1.01423)
 [node name="Salir" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_6ip24")
 theme_override_font_sizes/font_size = 26
 text = "VOLVER"
