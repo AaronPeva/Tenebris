@@ -5,7 +5,7 @@ extends Node2D
 @onready var salir = $Salir
 
 signal clic_personal
-var turno_jugador = true
+
 var en_turno = true
 
 func _ready():
@@ -22,11 +22,10 @@ func _ready():
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 
+
 func _on_input_event():
-	if Global.abrirbotones:
-		_visible()
-	else:
-		print("❌ No es tu turno. No se muestran los botones.")
+	_visible()
+
 
 func _visible() -> void:
 	atacar.visible = true
@@ -35,26 +34,13 @@ func _visible() -> void:
 
 func _on_boton_salir_pressed() -> void:
 	atacar.visible = false
-	salir.visible = false
-	
+	salir.visible = false# Replace with function body.
 
-func cambiar_turno():
-	turno_jugador = !turno_jugador
-	if turno_jugador:
-		en_turno = true
-		Global.abrirbotones = true
-		print("ScriptMain: Turno del jugador")
-	else:
-		en_turno = false
-		Global.abrirbotones = false
-		print("ScriptMain: Turno del bot")
-	bot.cambiar_turno()
 
 func _on_atacar_pressed() -> void:
-	print("Boton atacar pulsado correctamente satisfactorio buenamente exitosamanete.")
-	if en_turno:
+	if Global.puede_jugar:
+		Global.puede_jugar = false
+		print("ScriptMain: Turno del jugador")
 		atacar.visible = false
 		salir.visible = false
-	cambiar_turno()
-	atacar.visible = false
-	salir.visible = false
+		bot.cambiar_turno()

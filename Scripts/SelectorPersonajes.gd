@@ -67,5 +67,3 @@ func _on_select_button_pressed():
 
 func _on_salir_pressed():
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
-	#Global.carta_seleccionada = personajes[indice_actual]  # Guarda la carta en el script global
-	#get_tree().change_scene_to_file("res://Scenes/main.gd")  # Cambia a la escena del juego
