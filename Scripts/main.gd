@@ -22,9 +22,8 @@ func _ready():
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 
-
 func _on_input_event():
-	if turno_jugador:
+	if Global.abrirbotones:
 		_visible()
 	else:
 		print("❌ No es tu turno. No se muestran los botones.")
@@ -36,32 +35,26 @@ func _visible() -> void:
 
 func _on_boton_salir_pressed() -> void:
 	atacar.visible = false
-	salir.visible = false# Replace with function body.
+	salir.visible = false
 	
 
 func cambiar_turno():
 	turno_jugador = !turno_jugador
 	if turno_jugador:
 		en_turno = true
-		Global.puede_jugar = true
+		Global.abrirbotones = true
 		print("ScriptMain: Turno del jugador")
 	else:
 		en_turno = false
-		Global.puede_jugar = false
+		Global.abrirbotones = false
 		print("ScriptMain: Turno del bot")
 	bot.cambiar_turno()
-#func cambiar_turno():
-	#turno_jugador = !turno_jugador
-	#if turno_jugador:
-		#Global.puede_jugar = true
-		#print("🟢 Turno del jugador xd")
-	#else:
-		#Global.puede_jugar = false
-		#print("🔴 Turno del BOT")
-	#bot.cambiar_turno()
 
 func _on_atacar_pressed() -> void:
+	print("Boton atacar pulsado correctamente satisfactorio buenamente exitosamanete.")
 	if en_turno:
 		atacar.visible = false
 		salir.visible = false
-		cambiar_turno()
+	cambiar_turno()
+	atacar.visible = false
+	salir.visible = false
