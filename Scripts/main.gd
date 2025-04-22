@@ -1,7 +1,9 @@
 extends Node2D
 
+@onready var bot = $Bot
 @onready var atacar = $Atacar
 @onready var salir = $Salir
+
 signal clic_personal
 var turno_jugador = true
 var en_turno = true
@@ -22,8 +24,10 @@ func _ready():
 
 
 func _on_input_event():
-	_visible()# Emitimos la señal al hacer clic
-
+	if turno_jugador:
+		_visible()
+	else:
+		print("❌ No es tu turno. No se muestran los botones.")
 
 func _visible() -> void:
 	atacar.visible = true
@@ -34,28 +38,30 @@ func _on_boton_salir_pressed() -> void:
 	atacar.visible = false
 	salir.visible = false# Replace with function body.
 	
-func cambiar_turno():
-	turno_jugador = !turno_jugador  # Cambiar entre jugador y BOT
-	en_turno = true
-	if turno_jugador:
-		print("Es el turno del jugador.")
-	else:
-		print("Es el turno del BOT.")
-		
-func procesar_turno():
-	if en_turno:
-		if turno_jugador:
-			print("Es el turno del jugador. El jugador puede jugar.")
-			# Aquí agregarás la lógica del jugador (como jugar una carta o algo más)
-		else:
-			print("Es el turno del BOT. El BOT juega automáticamente.")
-			# Aquí agregarás la lógica del BOT (como decidir jugada)
-		
-		# Al final de cada turno, se pasa al siguiente
-		en_turno = false
-		cambiar_turno()  # Cambiar de turno
 
+func cambiar_turno():
+	turno_jugador = !turno_jugador
+	if turno_jugador:
+		en_turno = true
+		Global.puede_jugar = true
+		print("ScriptMain: Turno del jugador")
+	else:
+		en_turno = false
+		Global.puede_jugar = false
+		print("ScriptMain: Turno del bot")
+	bot.cambiar_turno()
+#func cambiar_turno():
+	#turno_jugador = !turno_jugador
+	#if turno_jugador:
+		#Global.puede_jugar = true
+		#print("🟢 Turno del jugador xd")
+	#else:
+		#Global.puede_jugar = false
+		#print("🔴 Turno del BOT")
+	#bot.cambiar_turno()
 
 func _on_atacar_pressed() -> void:
 	if en_turno:
-		procesar_turno()
+		atacar.visible = false
+		salir.visible = false
+		cambiar_turno()
