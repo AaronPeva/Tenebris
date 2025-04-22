@@ -41,6 +41,6 @@ func _on_atacar_pressed() -> void:
 	if Global.puede_jugar:
 		Global.puede_jugar = false
 		print("ScriptMain: Turno del jugador")
-		bot.cambiar_turno()
 		atacar.visible = false
 		salir.visible = false
+		bot.cambiar_turno()
