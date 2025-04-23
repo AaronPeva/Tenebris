@@ -22,20 +22,16 @@ func _ready():
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
 
-
 func _on_input_event():
 	_visible()
-
 
 func _visible() -> void:
 	atacar.visible = true
 	salir.visible = true
 
-
 func _on_boton_salir_pressed() -> void:
 	atacar.visible = false
 	salir.visible = false# Replace with function body.
-
 
 func _on_atacar_pressed() -> void:
 	if Global.puede_jugar:

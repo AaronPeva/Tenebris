@@ -22,8 +22,6 @@ func _input(event):
 		else:
 			emit_signal("left_mouse_button_released")
 
-
-
 func raycast_at_cursor():
 	var space_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()
