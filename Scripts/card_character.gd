@@ -12,5 +12,4 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if Global.puede_jugar:
 			emit_signal("clic_personal")
 
-		#else:
-			#print("🚫 No puedes jugar ahora, turno del BOT xd")
+#Podria añadir aqui lo de la barra de energia.
