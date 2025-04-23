@@ -5,6 +5,7 @@ signal hovered_off
 
 var starting_position
 var card_slot_card_is_in
+var attack
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -24,3 +25,9 @@ func _on_area_2d_mouse_exited() -> void:
 
 func isPlayerCharacterCard() -> bool:
 	return self.scene_file_path == Global.escena_seleccionada
+
+func _consume_card() -> void:
+	pass;
+
+func _delete_card() -> void:
+	queue_free()
