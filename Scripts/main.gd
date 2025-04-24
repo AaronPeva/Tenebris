@@ -3,10 +3,10 @@ extends Node2D
 @onready var bot = $Bot
 @onready var atacar = $Atacar
 @onready var salir = $Salir
+@onready var saltar = $Saltar
+@onready var indicadorturno = $IndicadorTurno
 
 signal clic_personal
-
-var en_turno = true
 
 func _ready():
 	var escena_cargada = load(Global.escena_seleccionada)
@@ -21,7 +21,13 @@ func _ready():
 		print("✅ Escena añadida correctamente")
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
-
+		
+func _process(delta):
+	saltar.visible = Global.puede_jugar
+	if Global.puede_jugar:
+		indicadorturno.text = "Tu turno"
+	else:
+		indicadorturno.text = "Turno del rival"
 func _on_input_event():
 	_visible()
 
@@ -39,4 +45,14 @@ func _on_atacar_pressed() -> void:
 		print("ScriptMain: Turno del jugador")
 		atacar.visible = false
 		salir.visible = false
+		saltar.visible = false
+		bot.cambiar_turno()
+
+func _on_saltar_pressed() -> void:
+	if Global.puede_jugar:
+		Global.puede_jugar = false
+		print("ScriptMain: Turno del jugador")
+		atacar.visible = false
+		salir.visible = false
+		saltar.visible = false
 		bot.cambiar_turno()
