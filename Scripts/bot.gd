@@ -18,5 +18,5 @@ func cambiar_turno():
 
 func _on_TimerBot_timeout():
 	timer.stop()
-	print("ScriptBotTimer: Turno del jugador")
+	print("ScriptBotTimer: Turno del bot")
 	Global.puede_jugar = true
