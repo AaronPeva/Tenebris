@@ -15,5 +15,10 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	area.get_parent()._consume_card()
-	area.get_parent().queue_free() # Replace with function body.
+	var card = area.get_parent()
+	card._consume_card()
+	var hand_manager = get_node("/root/Main/PlayerHand")  # Ajusta esta ruta a tu escena
+	if hand_manager:
+		hand_manager.remove_card_from_hand(card)
+		card.queue_free()
+	

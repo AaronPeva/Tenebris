@@ -18,8 +18,8 @@ func add_card_to_hand(card, speed):
 		update_hand_positions(speed)
 	else:
 		animate_card_to_position(card, card.starting_position, DEFAULT_CARD_MOVE_SPEED)
-func remove_card_to_hand(card):
-	player_hand.erase(card)
+#func remove_card_to_hand(card):
+	#player_hand.erase(card)
 
 func update_hand_positions(speed):
 	for i in range(player_hand.size()):

@@ -24,10 +24,11 @@ func _process(delta: float) -> void:
 
 
 func start_drag(card):
-	if card.isPlayerCharacterCard():
-		return
-	card_being_dragged = card
-	card.scale = Vector2(0.35, 0.35)
+	if Global.puede_jugar:
+		if card.isPlayerCharacterCard():
+			return
+		card_being_dragged = card
+		card.scale = Vector2(0.35, 0.35)
 
 func finish_drag():
 	card_being_dragged.scale = Vector2(0.3, 0.3)
