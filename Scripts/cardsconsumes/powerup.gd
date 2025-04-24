@@ -4,6 +4,9 @@ extends "res://Scripts/card.gd"
 func _ready() -> void:
 	super._ready()
 	energy_consume = 2
+
+
+
 	#super._ready()
 	#contador = 2
 #func _consume_card() -> void:
