@@ -30,7 +30,7 @@ func draw_card():
 		var random_index = randi() % player_deck.size()
 		var card_draw = player_deck[random_index]
 		var card_name = card_draw[0]
-		var monsterini = player_deck[random_index]
+		var id_card = player_deck[random_index]
 		
 		# Dynamically attach the card's logic
 		var script_path = card_database_reference.CARDS[card_draw][3]
@@ -41,7 +41,7 @@ func draw_card():
 		var card_scene = load(CARD_SCENE_PATH)
 		var new_card = card_scene.instantiate()
 		new_card.set_script(card_script) #seteamos el script
-		var card_image_path = str("res://Imagenes/Cartas/" + monsterini + "Card.png")
+		var card_image_path = str("res://Imagenes/Cartas/" + id_card + "Card.png")
 		new_card.get_node("CardImage").texture = load(card_image_path)
 		# Asegurar que la carta tiene los nodos esperados antes de asignar valores
 		if new_card.has_node("Attack") and new_card.has_node("Energy"):
