@@ -2,7 +2,9 @@ extends "res://Scripts/card.gd"
 @onready var bot = $Bot
 @onready var atacar = $Boton1
 @onready var salir = $Boton2
+
 var Area = Area2D
+
 signal clic_personal
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
