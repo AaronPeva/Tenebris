@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=18 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -13,9 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://c17l4uosg6aap" path="res://Imagenes/Bordeprueba.png" id="10_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://crkrs6o0hx025" path="res://Imagenes/Rellenoprueba.png" id="11_jkdf5"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
+[ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(24.2857, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
@@ -31,8 +35,8 @@ script = ExtResource("1_3bc8y")
 script = ExtResource("3_lxjeb")
 
 [node name="Deck" type="Node2D" parent="."]
-position = Vector2(125, 500)
-scale = Vector2(0.9, 0.9)
+position = Vector2(64, 568)
+scale = Vector2(0.6, 0.6)
 script = ExtResource("4_q8rok")
 
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
@@ -51,17 +55,17 @@ scale = Vector2(7, 7)
 shape = SubResource("RectangleShape2D_ilbd4")
 
 [node name="Atacar" type="Button" parent="."]
-offset_left = 792.0
-offset_top = 344.0
-offset_right = 920.0
-offset_bottom = 392.0
+offset_left = 672.0
+offset_top = 352.0
+offset_right = 800.0
+offset_bottom = 400.0
 text = "atacar"
 
 [node name="Salir" type="Button" parent="."]
-offset_left = 792.0
-offset_top = 400.0
-offset_right = 920.0
-offset_bottom = 431.0
+offset_left = 672.0
+offset_top = 408.0
+offset_right = 800.0
+offset_bottom = 439.0
 text = "Salir"
 
 [node name="Bot" type="Node2D" parent="."]
@@ -87,13 +91,6 @@ texture_under = ExtResource("9_6iyac")
 texture_over = ExtResource("10_fdnlq")
 texture_progress = ExtResource("11_jkdf5")
 
-[node name="Saltar" type="Button" parent="."]
-offset_left = 16.0
-offset_top = 272.0
-offset_right = 160.0
-offset_bottom = 312.0
-text = "Saltar Turno"
-
 [node name="IndicadorTurno" type="Label" parent="."]
 texture_filter = 1
 offset_left = 448.0
@@ -106,7 +103,7 @@ text = "Turno"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Fondo" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -100
 texture_filter = 1
@@ -117,6 +114,28 @@ texture = ExtResource("2_fdnlq")
 [node name="TextoEnerg" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323.5)
+scale = Vector2(57.65, 0.9)
+texture = ExtResource("14_jkdf5")
+
+[node name="Saltar" type="Button" parent="."]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 280.0
+offset_right = 192.0
+offset_bottom = 365.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("12_6iyac")
+theme_override_font_sizes/font_size = 18
+theme_override_icons/icon = ExtResource("15_wsu2k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k12tt")
+text = "Saltar 
+Turno"
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]

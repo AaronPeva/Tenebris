@@ -9,7 +9,7 @@ size = Vector2(260, 374)
 [node name="card1" type="Node2D"]
 z_index = -1
 position = Vector2(125, 500)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_yd4ab")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
