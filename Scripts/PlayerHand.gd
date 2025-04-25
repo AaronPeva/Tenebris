@@ -4,6 +4,7 @@ extends Node2D
 const CARD_WIDTH = 90
 const HAND_Y_POSITION = 580
 const DEFAULT_CARD_MOVE_SPEED = 0.2
+const MAX_HAND_SIZE = 5
 
 var player_hand = []
 var center_screen_x
@@ -13,6 +14,10 @@ func _ready() -> void:
 	
 
 func add_card_to_hand(card, speed):
+	if player_hand.size() >= MAX_HAND_SIZE:
+		print("Mano llena, no se puede añadir más cartas. Esta white.")
+		return
+	
 	if card not in player_hand:
 		player_hand.insert(0, card)
 		update_hand_positions(speed)
@@ -39,3 +44,6 @@ func remove_card_from_hand(card):
 	if card in player_hand:
 		player_hand.erase(card)
 		update_hand_positions(DEFAULT_CARD_MOVE_SPEED)
+
+func is_hand_full() -> bool:
+	return player_hand.size() >= MAX_HAND_SIZE
