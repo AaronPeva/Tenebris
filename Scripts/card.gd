@@ -7,6 +7,7 @@ var energy_consume = 1
 var starting_position
 var card_slot_card_is_in
 var attack
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_parent().connect_card_signals(self) # Replace with function body.
@@ -34,3 +35,6 @@ func _consume_card() -> void:
 
 func _delete_card() -> void:
 	queue_free()
+
+
+		#var carta_activa = get_node("/root/Main/card1/Health")

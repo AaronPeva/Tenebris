@@ -28,21 +28,21 @@ offset_left = -104.0
 offset_top = 88.0
 offset_right = -36.0
 offset_bottom = 160.0
-text = "0"
+text = "2"
 
 [node name="Energy" type="RichTextLabel" parent="."]
 offset_left = 34.0
 offset_top = 86.0
 offset_right = 102.0
 offset_bottom = 158.0
-text = "0"
+text = "2"
 
 [node name="Health" type="RichTextLabel" parent="."]
 offset_left = -96.0
 offset_top = -168.0
 offset_right = -32.0
 offset_bottom = -120.0
-text = "0"
+text = "5"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

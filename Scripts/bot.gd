@@ -9,6 +9,7 @@ func _ready():
 	timer = $TimerBot
 	timer.timeout.connect(_on_TimerBot_timeout)
 	timer.stop()
+	
 
 # Función para cambiar el turno
 func cambiar_turno():

@@ -48,6 +48,7 @@ func _on_atacar_pressed() -> void:
 		saltar.visible = false
 		bot.cambiar_turno()
 
+
 func _on_saltar_pressed() -> void:
 	if Global.puede_jugar:
 		Global.puede_jugar = false
@@ -56,3 +57,6 @@ func _on_saltar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		bot.cambiar_turno()
+		
+	#ESTO VA, ENTERAO?
+	
