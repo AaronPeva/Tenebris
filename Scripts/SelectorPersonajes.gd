@@ -19,12 +19,12 @@ func _ready():
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa rana.png"),
 			2, 2, 5,
-			"res://Scenes/cardA1.tscn" # Solo la rana tiene escena
+			"res://Scenes/cardA1.tscn"
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa linux.png"),
 			1, 1, 5, 
-			"res://Scenes/cardA2.tscn" # Sin escena (será null)
+			"res://Scenes/cardA2.tscn" 
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa gimpmamado.png"),
@@ -36,6 +36,7 @@ func _ready():
 	
 	actualizar_selector()
 	_conectar_botones()
+
 
 func _conectar_botones():
 	prev_button.pressed.connect(_on_prev_button_pressed)
@@ -64,6 +65,7 @@ func _on_select_button_pressed():
 	Global.escena_seleccionada = escena_seleccionada if escena_seleccionada else null
 	print("Escena guardada:", Global.escena_seleccionada)
 	print(Global.escena_seleccionada)
+	print("Escena guardada:", Global.escena_seleccionada)
 
 func _on_salir_pressed():
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")

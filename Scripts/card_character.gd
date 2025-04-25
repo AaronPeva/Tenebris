@@ -2,7 +2,9 @@ extends "res://Scripts/card.gd"
 @onready var bot = $Bot
 @onready var atacar = $Boton1
 @onready var salir = $Boton2
+var daño = 1
 var Area = Area2D
+
 signal clic_personal
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,3 +24,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		hand_manager.remove_card_from_hand(card)
 		card.queue_free()
 	
+
+func _recibir_daño():
+	var carta_activa = $Health
+	carta_activa.text = str(int(carta_activa.text) - daño)
+
