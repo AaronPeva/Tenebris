@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=19 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
+[ext_resource type="AudioStream" uid="uid://dp60tiwihuitw" path="res://Musica/Pokémon TCG Pocket OST - Battle Start BGM.mp3" id="16_k12tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(24.2857, 32)
@@ -136,6 +137,10 @@ Turno"
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_k12tt")
+autoplay = true
 
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
