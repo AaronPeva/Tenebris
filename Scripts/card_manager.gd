@@ -28,12 +28,15 @@ func start_drag(card):
 		if card.isPlayerCharacterCard():
 			return
 		card_being_dragged = card
-		card.scale = Vector2(0.35, 0.35)
+		card.scale = Vector2(0.475, 0.475)
+		card.highlight_card(true)
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(0.3, 0.3)
+	card_being_dragged.scale = Vector2(0.4, 0.4)
 	player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
+	card_being_dragged.highlight_card(false)
 	card_being_dragged = null
+	
 
 func connect_card_signals(card):
 	if card.isPlayerCharacterCard():
@@ -47,24 +50,12 @@ func on_left_click_released():
 func on_hovered_over_card(card):
 	if !is_hovering_on_card:
 		is_hovering_on_card = true
-		highlight_card(card, true)
 
 func on_hovered_off_card(card):
 	if !card.card_slot_card_is_in && card_being_dragged:
-		highlight_card(card, false)
 		var new_card_hovered = raycast_check_for_card()
-		if new_card_hovered:
-			highlight_card(new_card_hovered, true)
-		else:
-			is_hovering_on_card = false
 
-func highlight_card(card, hovered):
-	if hovered:
-		card.scale = Vector2(0.35, 0.35)
-		card.z_index = 2
-	else:
-		card.scale = Vector2(0.3, 0.3)
-		card.z_index = 1
+
 
 func raycast_check_for_card():
 	var space_state = get_world_2d().direct_space_state

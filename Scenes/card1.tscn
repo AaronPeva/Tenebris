@@ -7,8 +7,8 @@
 size = Vector2(260, 374)
 
 [node name="card1" type="Node2D"]
-position = Vector2(120, 568)
-scale = Vector2(0.3, 0.3)
+position = Vector2(99, 911)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_rr71g")
 
 [node name="CardImage" type="Sprite2D" parent="."]
@@ -36,6 +36,7 @@ offset_top = 86.0
 offset_right = 102.0
 offset_bottom = 158.0
 text = "0"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

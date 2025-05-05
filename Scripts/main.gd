@@ -14,7 +14,7 @@ func _ready():
 	salir.visible = false
 	if escena_cargada is PackedScene:  # Verificar que sea una escena válida
 		var instancia = escena_cargada.instantiate()  # Instanciar la escena
-		instancia.position = Vector2(576, 420) 
+		instancia.position = Vector2(976, 715) 
 		add_child(instancia) 
 		if instancia.has_signal("clic_personal"):
 			instancia.connect("clic_personal", _on_input_event)

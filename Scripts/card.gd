@@ -19,9 +19,9 @@ func _process(delta: float) -> void:
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self) # Replace with function body.
 
-
 func _on_area_2d_mouse_exited() -> void:
 	emit_signal("hovered_off", self) # Replace with function body.
+	self.z_index = 1
 
 
 func isPlayerCharacterCard() -> bool:
@@ -35,6 +35,7 @@ func _consume_card() -> void:
 
 func _delete_card() -> void:
 	queue_free()
-
-
-		#var carta_activa = get_node("/root/Main/card1/Health")
+	
+func highlight_card(dragged):
+	if dragged:
+		self.z_index = 2
