@@ -15,7 +15,7 @@
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
-[ext_resource type="AudioStream" uid="uid://dp60tiwihuitw" path="res://Musica/Pokémon TCG Pocket OST - Battle Start BGM.mp3" id="16_k12tt"]
+[ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(24.2857, 32)
