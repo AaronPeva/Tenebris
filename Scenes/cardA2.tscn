@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1ff5rpcjvuwx"]
+
+[ext_resource type="Script" uid="uid://b1xm3cioy2uf8" path="res://Scripts/card_characterPinguin.gd" id="1_qppwr"]
+[ext_resource type="Texture2D" uid="uid://bsojv00g0k0hd" path="res://Imagenes/Cartas/Carta activa linux.png" id="2_qppwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sj8v"]
+size = Vector2(260, 374)
+
+[node name="card1" type="Node2D"]
+z_index = -1
+position = Vector2(125, 500)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_qppwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 3.05176e-05)
+scale = Vector2(12.3478, 12.9032)
+texture = ExtResource("2_qppwr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0sj8v")
+
+[node name="Attack" type="RichTextLabel" parent="."]
+offset_left = -104.0
+offset_top = 88.0
+offset_right = -36.0
+offset_bottom = 160.0
+text = "0"
+
+[node name="Energy" type="RichTextLabel" parent="."]
+offset_left = 34.0
+offset_top = 86.0
+offset_right = 102.0
+offset_bottom = 158.0
+text = "0"
+
+[node name="Health" type="RichTextLabel" parent="."]
+offset_left = -96.0
+offset_top = -168.0
+offset_right = -32.0
+offset_bottom = -120.0
+text = "5"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

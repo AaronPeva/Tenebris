@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://5vhmfc3nxngg"]
+
+[ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/MENU.tres.gd" id="1_bfpus"]
+[ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/menucroquis.png" id="2_ra4qy"]
+[ext_resource type="FontFile" uid="uid://djrdt4qlj7m3m" path="res://Imagenes/blood_crow/bloodcrowi.ttf" id="3_ecetf"]
+[ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="5_cb33x"]
+[ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Musica/menu.mp3" id="6_06sv8"]
+
+[sub_resource type="FontVariation" id="FontVariation_ey08u"]
+base_font = ExtResource("5_cb33x")
+
+[sub_resource type="FontVariation" id="FontVariation_urgu5"]
+base_font = ExtResource("4_ckvkf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnc5l"]
+bg_color = Color(0.303143, 0.000217864, 0.365382, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pofdv"]
+bg_color = Color(0.331429, 0.000679317, 0.473836, 0.309804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7jkc"]
+bg_color = Color(0.21744, 0.00171098, 0.26442, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq4xt"]
+bg_color = Color(0.266667, 0, 0.384314, 0.309804)
+
+[sub_resource type="FontVariation" id="FontVariation_h8drx"]
+base_font = ExtResource("5_cb33x")
+
+[sub_resource type="FontVariation" id="FontVariation_6visc"]
+base_font = SubResource("FontVariation_h8drx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rft4w"]
+bg_color = Color(0.554204, 0, 0.125442, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82hmb"]
+bg_color = Color(0.992157, 0.227451, 0.4, 0.0862745)
+
+[node name="Menu" type="Node2D"]
+position = Vector2(9, 2)
+scale = Vector2(1.65, 1.65)
+script = ExtResource("1_bfpus")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.950346, 0.605506, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1160.0
+offset_bottom = 655.0
+texture = ExtResource("2_ra4qy")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 509.0
+offset_top = 292.0
+offset_right = 653.0
+offset_bottom = 330.0
+
+[node name="jugar" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ey08u")
+theme_override_font_sizes/font_size = 25
+text = "JUGAR"
+flat = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 961.0
+offset_top = 523.0
+offset_right = 1137.0
+offset_bottom = 638.0
+
+[node name="personajes" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_urgu5")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rnc5l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pofdv")
+text = "PERSONAJES"
+
+[node name="opciones" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_urgu5")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rnc5l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pofdv")
+text = "OPCIONES"
+
+[node name="puntuaciones" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_ecetf")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w7jkc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq4xt")
+text = "PUNTUACIONES"
+
+[node name="salir" type="Button" parent="VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_6visc")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rft4w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_82hmb")
+text = "SALIR"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_06sv8")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer2/personajes" to="." method="_on_personajes_pressed"]
+[connection signal="pressed" from="VBoxContainer2/opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer2/puntuaciones" to="." method="_on_puntuaciones_pressed"]
+[connection signal="pressed" from="VBoxContainer2/salir" to="." method="_on_salir_pressed"]
