@@ -75,41 +75,6 @@ script = ExtResource("7_6bp64")
 [node name="TimerBot" type="Timer" parent="Bot"]
 wait_time = 5.0
 
-[node name="BotEnergyBar" type="TextureProgressBar" parent="Bot"]
-texture_filter = 1
-offset_left = -12.0
-offset_top = 10.0
-offset_right = 100.0
-offset_bottom = 258.0
-max_value = 5.0
-value = 1.0
-fill_mode = 2
-nine_patch_stretch = true
-texture_under = ExtResource("9_6iyac")
-texture_over = ExtResource("10_fdnlq")
-texture_progress = ExtResource("11_jkdf5")
-
-[node name="Deck" type="Node2D" parent="Bot"]
-position = Vector2(1088, 80)
-rotation = 3.14159
-scale = Vector2(0.6, 0.6)
-script = ExtResource("4_q8rok")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bot/Deck"]
-z_index = -2
-texture_filter = 1
-scale = Vector2(7, 7)
-texture = ExtResource("5_bvle5")
-
-[node name="Area2D" type="Area2D" parent="Bot/Deck"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot/Deck/Area2D"]
-position = Vector2(-1.52588e-05, 0)
-scale = Vector2(7, 7)
-shape = SubResource("RectangleShape2D_ilbd4")
-
 [node name="EnergyNode" type="Node2D" parent="."]
 script = ExtResource("8_d1ilt")
 
@@ -147,11 +112,6 @@ position = Vector2(960, 540)
 scale = Vector2(13.3333, 13.3333)
 texture = ExtResource("2_fdnlq")
 metadata/_edit_lock_ = true
-
-[node name="TextoEnerg" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(952, 548)
