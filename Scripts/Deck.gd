@@ -1,8 +1,7 @@
 extends Node2D
 
 const CARD_SCENE_PATH = "res://Scenes/card1.tscn"
-const card_draw_speed = 0.3
-
+const card_draw_speed = 0.4
 var player_deck = []  # Cartas disponibles
 var card_database_reference
 

@@ -36,8 +36,8 @@ script = ExtResource("1_3bc8y")
 script = ExtResource("3_lxjeb")
 
 [node name="Deck" type="Node2D" parent="."]
-position = Vector2(144, 888)
-scale = Vector2(3, 3)
+position = Vector2(128, 936)
+scale = Vector2(2, 2)
 script = ExtResource("4_q8rok")
 
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
@@ -94,16 +94,15 @@ texture_progress = ExtResource("11_jkdf5")
 
 [node name="IndicadorTurno" type="Label" parent="."]
 texture_filter = 1
-offset_left = 848.0
-offset_top = 32.0
-offset_right = 1104.0
+offset_left = 624.0
+offset_top = 16.0
+offset_right = 1328.0
 offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("12_6iyac")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 60
 text = "Turno"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Fondo" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -126,13 +125,13 @@ texture = ExtResource("14_jkdf5")
 
 [node name="Saltar" type="Button" parent="."]
 texture_filter = 1
-offset_left = 24.0
+offset_left = 40.0
 offset_top = 472.0
-offset_right = 224.0
+offset_right = 240.0
 offset_bottom = 624.0
 focus_mode = 0
 theme_override_fonts/font = ExtResource("12_6iyac")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 30
 theme_override_icons/icon = ExtResource("15_wsu2k")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_k12tt")
 text = "Saltar 

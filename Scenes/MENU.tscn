@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Musica/menu.mp3" id="6_06sv8"]
 
 [sub_resource type="FontVariation" id="FontVariation_ey08u"]
-base_font = ExtResource("3_ecetf")
+base_font = ExtResource("5_cb33x")
 
 [sub_resource type="FontVariation" id="FontVariation_urgu5"]
 base_font = ExtResource("4_ckvkf")
@@ -38,6 +38,8 @@ bg_color = Color(0.554204, 0, 0.125442, 1)
 bg_color = Color(0.992157, 0.227451, 0.4, 0.0862745)
 
 [node name="Menu" type="Node2D"]
+position = Vector2(9, 2)
+scale = Vector2(1.65, 1.65)
 script = ExtResource("1_bfpus")
 
 [node name="ColorRect" type="ColorRect" parent="."]
