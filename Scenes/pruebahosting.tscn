@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca02dfn8l7g6l"]
+
+[ext_resource type="Script" uid="uid://c1s5sgwvl6mkk" path="res://Scenes/multiplayer.gd" id="1_garqi"]
+[ext_resource type="PackedScene" uid="uid://c4d8aa1saijwy" path="res://Scenes/main.tscn" id="2_cbye0"]
+[ext_resource type="PackedScene" uid="uid://cji4e16ne2x1t" path="res://Scenes/enemigo.tscn" id="3_nwoyx"]
+
+[node name="Multiplayer" type="Node2D"]
+script = ExtResource("1_garqi")
+player_field_scene = ExtResource("2_cbye0")
+opponent_field_scene = ExtResource("3_nwoyx")
+
+[node name="HostButton" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 108.0
+offset_right = 194.0
+offset_bottom = 139.0
+text = "Host"
+metadata/_edit_use_anchors_ = true
+
+[node name="JoinButton" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 178.0
+offset_right = 190.0
+offset_bottom = 209.0
+text = "Join"
+
+[connection signal="pressed" from="HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]

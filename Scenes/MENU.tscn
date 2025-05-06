@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://5vhmfc3nxngg"]
+[gd_scene load_steps=19 format=3 uid="uid://5vhmfc3nxngg"]
 
 [ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/MENU.tres.gd" id="1_bfpus"]
 [ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/menucroquis.png" id="2_ra4qy"]
 [ext_resource type="FontFile" uid="uid://djrdt4qlj7m3m" path="res://Imagenes/blood_crow/bloodcrowi.ttf" id="3_ecetf"]
 [ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="5_cb33x"]
+[ext_resource type="Script" uid="uid://c1s5sgwvl6mkk" path="res://Scenes/multiplayer.gd" id="6_06sv8"]
+[ext_resource type="PackedScene" uid="uid://c4d8aa1saijwy" path="res://Scenes/main.tscn" id="7_7e7a2"]
+[ext_resource type="PackedScene" uid="uid://cji4e16ne2x1t" path="res://Scenes/enemigo.tscn" id="8_cn24f"]
 
 [sub_resource type="FontVariation" id="FontVariation_ey08u"]
 base_font = ExtResource("3_ecetf")
@@ -114,8 +117,30 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_rft4w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_82hmb")
 text = "SALIR"
 
+[node name="Multiplayer" type="Node2D" parent="."]
+script = ExtResource("6_06sv8")
+player_field_scene = ExtResource("7_7e7a2")
+opponent_field_scene = ExtResource("8_cn24f")
+
+[node name="HostButton" type="Button" parent="Multiplayer"]
+offset_left = 150.0
+offset_top = 108.0
+offset_right = 194.0
+offset_bottom = 139.0
+text = "Host"
+metadata/_edit_use_anchors_ = true
+
+[node name="JoinButton" type="Button" parent="Multiplayer"]
+offset_left = 152.0
+offset_top = 178.0
+offset_right = 190.0
+offset_bottom = 209.0
+text = "Join"
+
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer2/personajes" to="." method="_on_personajes_pressed"]
 [connection signal="pressed" from="VBoxContainer2/opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer2/puntuaciones" to="." method="_on_puntuaciones_pressed"]
 [connection signal="pressed" from="VBoxContainer2/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Multiplayer/HostButton" to="Multiplayer" method="_on_host_button_pressed"]
+[connection signal="pressed" from="Multiplayer/JoinButton" to="Multiplayer" method="_on_join_button_pressed"]

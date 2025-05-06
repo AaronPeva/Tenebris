@@ -1,0 +1,129 @@
+[gd_scene load_steps=16 format=3 uid="uid://cji4e16ne2x1t"]
+
+[ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="1_p3jwc"]
+[ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="2_6pwql"]
+[ext_resource type="Script" uid="uid://cuig5d2jqtspk" path="res://Scripts/PlayerHand.gd" id="3_0ryvk"]
+[ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/Deck.gd" id="4_nyoux"]
+[ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_nwwci"]
+[ext_resource type="Script" uid="uid://g8jnrs0pdtwh" path="res://Scripts/energy_node.gd" id="6_r4rf8"]
+[ext_resource type="Texture2D" uid="uid://4xed87u62n6r" path="res://Imagenes/Fondoprueba.png" id="7_txn3v"]
+[ext_resource type="Texture2D" uid="uid://c17l4uosg6aap" path="res://Imagenes/Bordeprueba.png" id="8_f0wvv"]
+[ext_resource type="Texture2D" uid="uid://crkrs6o0hx025" path="res://Imagenes/Rellenoprueba.png" id="9_qt143"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="10_lqjfn"]
+[ext_resource type="Texture2D" uid="uid://d20kttcxijqvo" path="res://Imagenes/Fondodeprueba.png" id="11_nrqrd"]
+[ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="12_f2hvq"]
+[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="13_dq30i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5ovo"]
+size = Vector2(24.2857, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajvp0"]
+
+[node name="GameEnemigo" type="Node2D"]
+position = Vector2(1152, 648)
+rotation = -3.14159
+
+[node name="InputManager" type="Node2D" parent="."]
+position = Vector2(7.62939e-06, 3.05176e-05)
+script = ExtResource("1_p3jwc")
+
+[node name="CardManager" type="Node2D" parent="."]
+script = ExtResource("2_6pwql")
+
+[node name="OpponentHand" type="Node2D" parent="."]
+script = ExtResource("3_0ryvk")
+
+[node name="OpponentDeck" type="Node2D" parent="."]
+position = Vector2(64, 568)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("4_nyoux")
+
+[node name="Sprite2D" type="Sprite2D" parent="OpponentDeck"]
+z_index = -2
+texture_filter = 1
+scale = Vector2(7, 7)
+texture = ExtResource("5_nwwci")
+
+[node name="Area2D" type="Area2D" parent="OpponentDeck"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpponentDeck/Area2D"]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_k5ovo")
+
+[node name="Atacar" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 352.0
+offset_right = 800.0
+offset_bottom = 400.0
+text = "atacar"
+
+[node name="Salir" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 408.0
+offset_right = 800.0
+offset_bottom = 439.0
+text = "Salir"
+
+[node name="EnergyNode" type="Node2D" parent="."]
+script = ExtResource("6_r4rf8")
+
+[node name="EnergyBar" type="TextureProgressBar" parent="EnergyNode"]
+texture_filter = 1
+offset_left = 1052.0
+offset_top = 390.0
+offset_right = 1164.0
+offset_bottom = 638.0
+max_value = 5.0
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("7_txn3v")
+texture_over = ExtResource("8_f0wvv")
+texture_progress = ExtResource("9_qt143")
+
+[node name="IndicadorTurno" type="Label" parent="."]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 704.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("10_lqjfn")
+theme_override_font_sizes/font_size = 35
+text = "Turno"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fondo" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -100
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
+texture = ExtResource("11_nrqrd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323.5)
+scale = Vector2(57.65, 0.9)
+texture = ExtResource("12_f2hvq")
+
+[node name="Saltar" type="Button" parent="."]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 280.0
+offset_right = 192.0
+offset_bottom = 365.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("10_lqjfn")
+theme_override_font_sizes/font_size = 18
+theme_override_icons/icon = ExtResource("13_dq30i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ajvp0")
+text = "Saltar 
+Turno"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BattleTimer" type="Timer" parent="."]
