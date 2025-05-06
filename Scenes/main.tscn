@@ -79,10 +79,10 @@ script = ExtResource("8_d1ilt")
 
 [node name="EnergyBar" type="TextureProgressBar" parent="EnergyNode"]
 texture_filter = 1
-offset_left = 1052.0
-offset_top = 390.0
-offset_right = 1164.0
-offset_bottom = 638.0
+offset_left = 1056.0
+offset_top = 400.0
+offset_right = 1168.0
+offset_bottom = 648.0
 max_value = 5.0
 value = 1.0
 fill_mode = 3
@@ -110,6 +110,10 @@ texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(8, 8)
 texture = ExtResource("2_fdnlq")
+
+[node name="TextoEnerg" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(575.5, 323.5)
