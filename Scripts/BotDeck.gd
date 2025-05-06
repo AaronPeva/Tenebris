@@ -1,6 +1,6 @@
 extends Node2D
 
-const CARD_SCENE_PATH = "res://Scenes/Enemycard1.tscn"
+const CARD_SCENE_PATH = "res://Scripts/Enemycard.gd"
 const card_draw_speed = 0.4
 var player_deck = []  # Cartas disponibles
 var card_database_reference
@@ -21,11 +21,6 @@ func _ready() -> void:
 			player_deck.append(card_name)  # Asegurarse de que solo se guarda el nombre, no una lista
 
 func draw_card():
-	if Global.puede_jugar:
-		if not $"../PlayerHand".is_hand_full():
-			if player_deck.is_empty():
-				return  # Evita que el juego falle si no hay cartas en el mazo (aunque ahora no debería ocurrir)
-
 			# Seleccionar una carta aleatoria SIN eliminarla
 			var random_index = randi() % player_deck.size()
 			var card_draw = player_deck[random_index]
@@ -52,4 +47,4 @@ func draw_card():
 			$"../CardManager".add_child(new_card)
 			new_card.name = "Card"
 
-			$"../PlayerHand".add_card_to_hand(new_card, card_draw_speed)
+			$"../../BotHand".add_card_to_hand(new_card, card_draw_speed)
