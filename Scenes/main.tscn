@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=21 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/Deck.gd" id="4_q8rok"]
 [ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_bvle5"]
 [ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="6_56th6"]
-[ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="7_6bp64"]
 [ext_resource type="Script" uid="uid://g8jnrs0pdtwh" path="res://Scripts/energy_node.gd" id="8_d1ilt"]
 [ext_resource type="Texture2D" uid="uid://4xed87u62n6r" path="res://Imagenes/Fondoprueba.png" id="9_6iyac"]
 [ext_resource type="Texture2D" uid="uid://c17l4uosg6aap" path="res://Imagenes/Bordeprueba.png" id="10_fdnlq"]
@@ -15,13 +14,17 @@
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
+[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scenes/bot.gd" id="16_b3802"]
+[ext_resource type="Texture2D" uid="uid://dw5jaln3rr3de" path="res://Imagenes/Walter-White-Breaking-Bad-Series-PNG.png" id="16_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
-[ext_resource type="Script" path="res://Scripts/BotHand.gd" id="18_fevyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(7.7037, 10.6667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
+size = Vector2(272, 307)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
@@ -69,15 +72,6 @@ offset_top = 736.0
 offset_right = 1320.0
 offset_bottom = 816.0
 text = "Salir"
-
-[node name="Bot" type="Node2D" parent="."]
-script = ExtResource("7_6bp64")
-
-[node name="BotHand" type="Node2D" parent="Bot"]
-script = ExtResource("18_fevyy")
-
-[node name="TimerBot" type="Timer" parent="Bot"]
-wait_time = 5.0
 
 [node name="EnergyNode" type="Node2D" parent="."]
 script = ExtResource("8_d1ilt")
@@ -143,6 +137,30 @@ expand_icon = true
 stream = ExtResource("16_k12tt")
 autoplay = true
 
+[node name="Bot" type="Node2D" parent="."]
+script = ExtResource("16_b3802")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bot"]
+position = Vector2(964, 306)
+scale = Vector2(0.292725, 0.277686)
+texture = ExtResource("16_h1bgf")
+
+[node name="vidabot" type="ProgressBar" parent="Bot/Sprite2D"]
+offset_left = -1004.36
+offset_top = 493.363
+offset_right = 1021.64
+offset_bottom = 705.363
+theme_override_font_sizes/font_size = 90
+value = 100.0
+
+[node name="Area2D" type="Area2D" parent="Bot"]
+position = Vector2(967, 302)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot/Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_k12tt")
+
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
+[connection signal="area_entered" from="Bot/Area2D" to="Bot" method="_on_area_2d_area_entered"]
