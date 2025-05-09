@@ -132,6 +132,10 @@ expand_icon = true
 stream = ExtResource("16_k12tt")
 autoplay = true
 
+[node name="TextEnerg" type="Label" parent="."]
+offset_right = 80.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
