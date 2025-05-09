@@ -58,8 +58,3 @@ func _on_saltar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		bot.cambiar_turno()
-		
-		
-		$Bot/BotDeck.draw_card()
-	
-	
