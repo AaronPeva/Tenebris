@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=22 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -14,9 +14,10 @@
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
-[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scenes/bot.gd" id="16_b3802"]
+[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scenes/boss.gd" id="16_b3802"]
 [ext_resource type="Texture2D" uid="uid://dw5jaln3rr3de" path="res://Imagenes/Walter-White-Breaking-Bad-Series-PNG.png" id="16_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
+[ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(7.7037, 10.6667)
@@ -24,7 +25,7 @@ size = Vector2(7.7037, 10.6667)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
-size = Vector2(272, 307)
+size = Vector2(304, 302)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
@@ -137,15 +138,15 @@ expand_icon = true
 stream = ExtResource("16_k12tt")
 autoplay = true
 
-[node name="Bot" type="Node2D" parent="."]
+[node name="Boss" type="Node2D" parent="."]
 script = ExtResource("16_b3802")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bot"]
+[node name="Sprite2D" type="Sprite2D" parent="Boss"]
 position = Vector2(964, 306)
 scale = Vector2(0.292725, 0.277686)
 texture = ExtResource("16_h1bgf")
 
-[node name="vidabot" type="ProgressBar" parent="Bot/Sprite2D"]
+[node name="vidabot" type="ProgressBar" parent="Boss/Sprite2D"]
 offset_left = -1004.36
 offset_top = 493.363
 offset_right = 1021.64
@@ -153,14 +154,24 @@ offset_bottom = 705.363
 theme_override_font_sizes/font_size = 90
 value = 100.0
 
-[node name="Area2D" type="Area2D" parent="Bot"]
+[node name="Area" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Area"]
 position = Vector2(967, 302)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot/Area2D"]
-position = Vector2(-1, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_k12tt")
+
+[node name="bot" type="Node2D" parent="."]
+visible = false
+script = ExtResource("18_b3802")
+
+[node name="TimerBot" type="Timer" parent="bot"]
+wait_time = 5.0
 
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
-[connection signal="area_entered" from="Bot/Area2D" to="Bot" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="ready" from="bot/TimerBot" to="bot" method="_on_timer_ready"]

@@ -58,8 +58,10 @@ func _on_saltar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		bot.cambiar_turno()
-		
-		
-		$Bot/BotDeck.draw_card()
-	
-	
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	var nodo = area.get_parent()
+	if nodo.is_in_group("cartas"):
+		nodo.accion_consumible()
