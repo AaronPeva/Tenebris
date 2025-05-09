@@ -12,7 +12,7 @@ var attack
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	add_to_group("cartas")
 	get_parent().connect_card_signals(self) # Replace with function body.
 	barra_energia = get_node("/root/Main/EnergyNode/EnergyBar")
 	attack = richtext.text.to_int()
@@ -43,9 +43,12 @@ func _remove_card() -> void:
 		hand_manager.remove_card_from_hand(self)
 		self.queue_free()
 
-func _delete_card() -> void:
-	queue_free()
-	
+#func _delete_card() -> void:
+	#queue_free()
+
 func highlight_card(dragged):
 	if dragged:
 		self.z_index = 2
+
+func accion_consumible():
+	pass
