@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bf1mohr1qj65"]
+[gd_scene load_steps=3 format=3 uid="uid://cbpuxg6mrdq0k"]
 
-[ext_resource type="Script" uid="uid://degmxaqu68uxp" path="res://Scripts/Botcard.gd" id="1_t1qb5"]
+[ext_resource type="Script" path="res://Scripts/Botcard.gd" id="1_t1qb5"]
 [ext_resource type="Texture2D" uid="uid://02pe58sll0n5" path="res://Imagenes/Cartas/Reversa.png" id="2_mykln"]
 
 [node name="card1" type="Node2D"]

@@ -7,15 +7,17 @@ var barra_energia
 var energy_consume = 1
 var starting_position
 var card_slot_card_is_in
-@onready var richtext = $Attack
-var attack 
+@onready var richtext = $Valor
+var valor 
+@onready var vidaBoss = get_node("/root/Main/Boss/Sprite2D/vidabot")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	valor = richtext.text.to_int()
 	add_to_group("cartas")
 	get_parent().connect_card_signals(self) # Replace with function body.
 	barra_energia = get_node("/root/Main/EnergyNode/EnergyBar")
-	attack = richtext.text.to_int()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -43,12 +45,18 @@ func _remove_card() -> void:
 		hand_manager.remove_card_from_hand(self)
 		self.queue_free()
 
-#func _delete_card() -> void:
-	#queue_free()
+func hacer_daño():
+	vidaBoss.value -= valor
+
+func curar():
+	#vidaJugador.value += valor
+	pass
+
 
 func highlight_card(dragged):
 	if dragged:
 		self.z_index = 2
 
 func accion_consumible():
+	_remove_card()
 	pass

@@ -160,7 +160,7 @@ value = 100.0
 position = Vector2(967, 302)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
-position = Vector2(0, -11)
+position = Vector2(-3, -13)
 shape = SubResource("RectangleShape2D_k12tt")
 
 [node name="timer" type="Node2D" parent="."]
