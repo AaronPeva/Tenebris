@@ -45,12 +45,8 @@ func _remove_card() -> void:
 		hand_manager.remove_card_from_hand(self)
 		self.queue_free()
 
-func hacer_daño():
-	vidaBoss.value -= valor
 
-func curar():
-	#vidaJugador.value += valor
-	pass
+
 
 
 func highlight_card(dragged):

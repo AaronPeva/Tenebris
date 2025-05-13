@@ -13,8 +13,7 @@ extends "res://Scripts/card.gd"
 	
 func accion_consumible():
 	super.accion_consumible()
-	hacer_daño()
-
+	vidaBoss.value -= valor
 
 
 
