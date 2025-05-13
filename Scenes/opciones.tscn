@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://np855hr7rhml"]
+[gd_scene load_steps=6 format=3 uid="uid://np855hr7rhml"]
 
 [ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones.gd" id="1_3hjeq"]
 [ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/OPCIONES.png" id="1_6gp1c"]
+[ext_resource type="Script" uid="uid://b8jyayraesft2" path="res://Scenes/OptionsMenu.gd" id="2_6ip24"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_3hjeq"]
 
 [sub_resource type="FontVariation" id="FontVariation_6ip24"]
@@ -10,25 +11,74 @@ base_font = ExtResource("3_3hjeq")
 [node name="Opciones" type="Node2D"]
 script = ExtResource("1_3hjeq")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="OptionsMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_6ip24")
+
+[node name="TextureRect" type="TextureRect" parent="OptionsMenu"]
 modulate = Color(0.607843, 0.517647, 0.596078, 1)
 texture_filter = 1
+layout_mode = 0
 offset_left = -12.0
 offset_top = -10.0
-offset_right = 314.0
-offset_bottom = 177.0
+offset_right = 526.0
+offset_bottom = 292.0
 scale = Vector2(3.60082, 3.5988)
 texture = ExtResource("1_6gp1c")
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
 texture_filter = 1
-offset_left = 476.0
-offset_top = 587.0
-offset_right = 606.0
-offset_bottom = 629.0
+layout_mode = 0
+offset_left = 848.0
+offset_top = 135.0
+offset_right = 978.0
+offset_bottom = 175.0
 scale = Vector2(1.66541, 1.01423)
 
-[node name="Salir" type="Button" parent="VBoxContainer"]
+[node name="Titulo" type="Label" parent="OptionsMenu/VBoxContainer"]
+layout_mode = 2
+text = "OPCIONES"
+
+[node name="Volume" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Volume"]
+layout_mode = 2
+text = "volumen maestro
+"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/Volume"]
+layout_mode = 2
+
+[node name="Resolution" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Resolution"]
+layout_mode = 2
+text = "Resolucion"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/VBoxContainer/Resolution"]
+layout_mode = 2
+
+[node name="Mouse" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Mouse"]
+layout_mode = 2
+text = "Sensibilidad"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/Mouse"]
+layout_mode = 2
+
+[node name="Aplicar" type="Button" parent="OptionsMenu/VBoxContainer"]
+layout_mode = 2
+text = "Aplicar"
+
+[node name="Salir" type="Button" parent="OptionsMenu/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 focus_mode = 0
@@ -37,4 +87,4 @@ theme_override_font_sizes/font_size = 26
 text = "VOLVER"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="OptionsMenu/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
