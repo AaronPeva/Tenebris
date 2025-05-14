@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/SelectorPersonajes.gd" id="1_sckeb"]
 [ext_resource type="Texture2D" uid="uid://yquepcxd832i" path="res://Imagenes/fondoselector.png" id="2_1qmb7"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_pnyfv"]
-[ext_resource type="Texture2D" uid="uid://bdc7guxdlq5t6" path="res://Imagenes/Cartas/Carta activa rana.png" id="4_b36kw"]
 [ext_resource type="Texture2D" uid="uid://dcoxs3gseptjn" path="res://Imagenes/Flechaderecha.png" id="5_pnyfv"]
 [ext_resource type="Texture2D" uid="uid://dibyqqtg3wqck" path="res://Imagenes/Flechaizquierda.png" id="6_1qmb7"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="6_qdaqw"]
@@ -19,6 +18,9 @@ base_font = SubResource("FontVariation_1qmb7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hgak"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdaqw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1qmb7"]
+load_path = "res://.godot/imported/Carta activa rana.png-997b27d368241a7bd0126dd8613ab8c9.ctex"
 
 [node name="Personajes" type="Node2D"]
 script = ExtResource("1_sckeb")
@@ -116,7 +118,7 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 323.0
 offset_bottom = 516.0
-texture = ExtResource("4_b36kw")
+texture = SubResource("CompressedTexture2D_1qmb7")
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_button_pressed"]

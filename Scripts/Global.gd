@@ -4,3 +4,5 @@ extends Node
 var main = preload("res://Scenes/main.tscn")
 var escena_seleccionada = "res://Scenes/cardA1.tscn"  # Guardará null o la ruta de la escena
 var puede_jugar = true
+
+var hp_carta_jugador = 80

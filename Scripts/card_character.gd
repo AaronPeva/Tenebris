@@ -2,12 +2,19 @@ extends "res://Scripts/card.gd"
 @onready var bot = $Bot
 @onready var atacar = $Boton1
 @onready var salir = $Boton2
+
 var damage = 1
 var Area = Area2D
+var carta_activa
 
 signal clic_personal
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	carta_activa = $Health
+	
+
+func _process(delta: float) -> void:
+	carta_activa.text = str(Global.hp_carta_jugador)
 	pass
 	
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

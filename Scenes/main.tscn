@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
-[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scenes/boss.gd" id="16_b3802"]
+[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scripts/boss.gd" id="16_b3802"]
 [ext_resource type="Texture2D" uid="uid://dw5jaln3rr3de" path="res://Imagenes/Walter-White-Breaking-Bad-Series-PNG.png" id="16_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cicgw83dm8j6l" path="res://Imagenes/Frame2.png" id="17_b3802"]
@@ -129,7 +129,7 @@ position = Vector2(960, 540)
 scale = Vector2(17.9439, 17.7049)
 texture = ExtResource("10_k12tt")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="LineaTotalmenteInecesaria" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 548)
 scale = Vector2(96, 5.6)
@@ -165,10 +165,11 @@ scale = Vector2(0.292725, 0.277686)
 texture = ExtResource("16_h1bgf")
 
 [node name="vidabot" type="ProgressBar" parent="Boss/Sprite2D"]
-offset_left = -1004.36
-offset_top = 493.363
-offset_right = 1021.64
-offset_bottom = 705.363
+self_modulate = Color(0.743507, 1, 0.674181, 1)
+offset_left = -970.194
+offset_top = 511.369
+offset_right = 1055.81
+offset_bottom = 723.369
 theme_override_font_sizes/font_size = 90
 value = 100.0
 
@@ -190,15 +191,24 @@ wait_time = 5.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1872, 1024)
+position = Vector2(1840, 1016)
 scale = Vector2(6.9, 7.7)
 sprite_frames = SubResource("SpriteFrames_hibaj")
 autoplay = "default"
 frame_progress = 0.718181
 speed_scale = 7.0
 
+[node name="Label" type="Label" parent="."]
+offset_left = 1765.0
+offset_top = 1055.0
+offset_right = 1914.0
+offset_bottom = 1086.0
+text = "print print patapim"
+
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
+[connection signal="pressed" from="Atacar" to="Boss" method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
+[connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]
