@@ -9,7 +9,7 @@ var starting_position
 var card_slot_card_is_in
 @onready var richtext = $Valor
 var valor 
-@onready var vidaBoss = get_node("/root/Main/Boss/Sprite2D/vidabot")
+@onready var vidaBoss = get_node("/root/Main/Boss/Sprite2D/CanvasLayer/vidabot")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
