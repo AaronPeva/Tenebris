@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=26 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5jxgggnljvb" path="res://Imagenes/Politoed.png" id="16_fevyy"]
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cicgw83dm8j6l" path="res://Imagenes/Frame2.png" id="17_b3802"]
+[ext_resource type="Texture2D" uid="uid://c0ycxc4s717n0" path="res://Imagenes/POLITOED MASON 2.png" id="17_hibaj"]
 [ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
 [ext_resource type="Texture2D" uid="uid://bwd63iyk6w0gf" path="res://Imagenes/Frame1.png" id="18_fevyy"]
 
@@ -25,8 +26,22 @@ size = Vector2(7.7037, 10.6667)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_pdsj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_fevyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hibaj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
-size = Vector2(333.5, 352)
+size = Vector2(304, 302)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hibaj"]
 animations = [{
@@ -130,7 +145,7 @@ scale = Vector2(17.9439, 17.7049)
 texture = ExtResource("10_k12tt")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="LineaTotalmenteInecesaria" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 548)
 scale = Vector2(96, 5.6)
@@ -160,32 +175,33 @@ autoplay = true
 [node name="Boss" type="Node2D" parent="."]
 script = ExtResource("16_b3802")
 
-[node name="Sprite2D" type="Sprite2D" parent="Boss"]
+[node name="BossAnimatedSprite" type="AnimatedSprite2D" parent="Boss"]
 texture_filter = 1
-position = Vector2(984, 306)
-scale = Vector2(3.51707, 3.2984)
-texture = ExtResource("16_fevyy")
+position = Vector2(968, 296)
+scale = Vector2(3.05, 2.89)
+sprite_frames = SubResource("SpriteFrames_pdsj5")
+autoplay = "default"
+frame_progress = 0.385577
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Boss/Sprite2D"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Boss/BossAnimatedSprite"]
+
+[node name="vidabot" type="ProgressBar" parent="Boss/BossAnimatedSprite/CanvasLayer"]
+self_modulate = Color(0.743507, 1, 0.674181, 1)
+offset_left = 776.0
+offset_top = 456.0
+offset_right = 1544.0
+offset_bottom = 584.0
 scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
-
-[node name="vidabot" type="ProgressBar" parent="Boss/Sprite2D/CanvasLayer"]
-offset_left = 1418.0
-offset_top = 966.0
-offset_right = 2500.0
-offset_bottom = 1085.0
-theme_override_font_sizes/font_size = 84
+theme_override_font_sizes/font_size = 90
 value = 100.0
 
 [node name="Area" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Area"]
 position = Vector2(967, 302)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
-position = Vector2(14, -2)
+position = Vector2(-15, -6)
 shape = SubResource("RectangleShape2D_k12tt")
 
 [node name="timer" type="Node2D" parent="."]
@@ -197,15 +213,24 @@ wait_time = 5.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1872, 1024)
+position = Vector2(1840, 1016)
 scale = Vector2(6.9, 7.7)
 sprite_frames = SubResource("SpriteFrames_hibaj")
 autoplay = "default"
 frame_progress = 0.718181
 speed_scale = 7.0
 
+[node name="Label" type="Label" parent="."]
+offset_left = 1765.0
+offset_top = 1055.0
+offset_right = 1914.0
+offset_bottom = 1086.0
+text = "print print patapim"
+
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
+[connection signal="pressed" from="Atacar" to="Boss" method="_on_atacar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
+[connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]
