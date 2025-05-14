@@ -30,7 +30,7 @@ func start_drag(card):
 		card_being_dragged = card
 		card.scale = Vector2(0.475, 0.475)
 		card.highlight_card(true)
-
+"res://Imagenes/Prototipo 2 marco con texto.png"
 
 func finish_drag():
 	card_being_dragged.scale = Vector2(0.4, 0.4)
