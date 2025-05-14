@@ -23,8 +23,9 @@ Global="*res://Scripts/Global.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/borderless=true
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 window/vsync/vsync_mode=0
 
 [editor]
