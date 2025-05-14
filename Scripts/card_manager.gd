@@ -4,10 +4,12 @@ const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 4
 const DEFAULT_CARD_MOVE_SPEED = 0.2
 
+@onready var area = $"../Area/Area2D/TextureRect"
 var screen_size
 var card_being_dragged
 var is_hovering_on_card
 var player_hand_reference
+var is_dragging := false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -27,16 +29,20 @@ func start_drag(card):
 	if Global.puede_jugar:
 		if card.isPlayerCharacterCard():
 			return
+		is_dragging = true
+		area.visible = true
 		card_being_dragged = card
 		card.scale = Vector2(0.475, 0.475)
 		card.highlight_card(true)
-"res://Imagenes/Prototipo 2 marco con texto.png"
+
 
 func finish_drag():
+	is_dragging = false
 	card_being_dragged.scale = Vector2(0.4, 0.4)
 	player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	card_being_dragged.highlight_card(false)
 	card_being_dragged = null
+	area.visible = false
 
 
 func connect_card_signals(card):
@@ -46,7 +52,17 @@ func connect_card_signals(card):
 
 func on_left_click_released():
 	if card_being_dragged:
+		var main = get_node("/root/Main")
+		if main.carta_dentro == card_being_dragged:
+			card_being_dragged.accion_consumible()
 		finish_drag()
+
+
+
+
+
+
+
 
 func on_hovered_over_card(card):
 	if !is_hovering_on_card:

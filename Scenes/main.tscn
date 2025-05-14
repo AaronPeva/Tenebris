@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=27 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c0ycxc4s717n0" path="res://Imagenes/POLITOED MASON 2.png" id="17_hibaj"]
 [ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
 [ext_resource type="Texture2D" uid="uid://bwd63iyk6w0gf" path="res://Imagenes/Frame1.png" id="18_fevyy"]
+[ext_resource type="Texture2D" uid="uid://co01wcrqyn2e8" path="res://Imagenes/area.jpg" id="18_pdsj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(7.7037, 10.6667)
@@ -41,7 +42,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
-size = Vector2(304, 302)
+size = Vector2(757, 594)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hibaj"]
 animations = [{
@@ -201,8 +202,18 @@ value = 100.0
 position = Vector2(967, 302)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
-position = Vector2(-15, -6)
+position = Vector2(-6.5, 210)
 shape = SubResource("RectangleShape2D_k12tt")
+
+[node name="TextureRect" type="TextureRect" parent="Area/Area2D"]
+visible = false
+modulate = Color(1, 1, 1, 0.215686)
+offset_left = -387.0
+offset_top = -90.0
+offset_right = 370.0
+offset_bottom = 509.0
+texture = ExtResource("18_pdsj5")
+metadata/_edit_lock_ = true
 
 [node name="timer" type="Node2D" parent="."]
 visible = false
@@ -233,4 +244,5 @@ text = "print print patapim"
 [connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
 [connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]

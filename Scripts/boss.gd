@@ -2,8 +2,6 @@ extends Node2D
 
 var boss_damage = 5
 
-var b
-
 func _ready() -> void:
 	pass
 

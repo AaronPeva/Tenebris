@@ -6,3 +6,5 @@ var escena_seleccionada = "res://Scenes/cardA1.tscn"  # Guardará null o la ruta
 var puede_jugar = true
 
 var hp_carta_jugador = 80
+
+var in_drag = false

@@ -10,7 +10,7 @@ var card_slot_card_is_in
 @onready var richtext = $Valor
 var valor 
 @onready var vidaBoss = get_node("/root/Main/Boss/BossAnimatedSprite/CanvasLayer/vidabot")
-
+@onready var area = get_node("/root/Main/Area/Area2D/TextureRect")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	valor = richtext.text.to_int()
@@ -43,10 +43,9 @@ func _remove_card() -> void:
 	var hand_manager = get_node("/root/Main/PlayerHand")  # Ajusta esta ruta a tu escena
 	if hand_manager:
 		hand_manager.remove_card_from_hand(self)
+		area.visible = false
 		self.queue_free()
-
-
-
+		
 
 
 func highlight_card(dragged):
