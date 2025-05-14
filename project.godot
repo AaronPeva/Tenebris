@@ -40,6 +40,7 @@ enabled=PackedStringArray()
 
 folder_colors={
 "res://Imagenes/": "yellow",
+"res://Imagenes/Animations/": "purple",
 "res://Scenes/": "blue",
 "res://Scripts/": "gray"
 }
