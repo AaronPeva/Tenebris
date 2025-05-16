@@ -7,12 +7,14 @@ var barra_energia
 var energy_consume = 1
 var starting_position
 var card_slot_card_is_in
+var being_removed = false
 @onready var richtext = $Valor
 var valor 
 @onready var vidaBoss = get_node("/root/Main/Boss/BossAnimatedSprite/CanvasLayer/vidabot")
 @onready var area = get_node("/root/Main/Area/Area2D/TextureRect")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	valor = richtext.text.to_int()
 	add_to_group("cartas")
 	get_parent().connect_card_signals(self) # Replace with function body.
@@ -39,13 +41,17 @@ func _consume_card() -> void:
 	else:
 		print("⚠️ ¡No tengo barra, coach!")
 
+
+
 func _remove_card() -> void:
-	var hand_manager = get_node("/root/Main/PlayerHand")  # Ajusta esta ruta a tu escena
+	var hand_manager = get_node("/root/Main/PlayerHand") # Ajusta esta ruta a tu escena
 	if hand_manager:
 		hand_manager.remove_card_from_hand(self)
 		area.visible = false
+		self.being_removed = true
 		self.queue_free()
-		
+
+
 
 
 func highlight_card(dragged):

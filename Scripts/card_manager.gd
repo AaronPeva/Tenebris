@@ -37,7 +37,6 @@ func start_drag(card):
 
 
 func finish_drag():
-	is_dragging = false
 	card_being_dragged.scale = Vector2(0.4, 0.4)
 	player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	card_being_dragged.highlight_card(false)

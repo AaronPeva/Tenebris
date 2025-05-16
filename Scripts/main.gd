@@ -66,14 +66,9 @@ var carta_dentro: Node = null
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var nodo = area.get_parent()
+
 	if nodo.is_in_group("cartas"):
 		carta_dentro = nodo
-
-
-
-func _on_timer_bot_timeout() -> void:
-	pass # Replace with function body.
-
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
