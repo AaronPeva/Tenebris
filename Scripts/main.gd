@@ -5,6 +5,10 @@ extends Node2D
 @onready var salir = $Salir
 @onready var saltar = $Saltar
 @onready var indicadorturno = $IndicadorTurno
+@onready var energy_node = $EnergyNode
+@onready var atacar_button = $Atacar
+@onready var insuficiente = $EnergiaInsuficiente
+
 
 signal clic_personal
 
@@ -12,6 +16,7 @@ func _ready():
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
 	salir.visible = false
+	insuficiente.visible = false
 	if escena_cargada is PackedScene:  # Verificar que sea una escena válida
 		var instancia = escena_cargada.instantiate()  # Instanciar la escena
 		instancia.position = Vector2(976, 680) 
@@ -28,9 +33,19 @@ func _process(delta):
 		indicadorturno.text = "Tu turno"
 	else:
 		indicadorturno.text = "Turno del rival"
+	var energia_actual = int(energy_node.energ.text)
+	if energia_actual < Global.attack_cost:
+		atacar_button.disabled = true
+	else:
+		atacar_button.disabled = false
 
 func _on_input_event():
 	_visible()
+	var energia_actual = int(energy_node.energ.text)
+	if energia_actual < Global.attack_cost:
+		insuficiente.visible = true
+	else:
+		insuficiente.visible = false
 
 func _visible() -> void:
 	atacar.visible = true
@@ -39,6 +54,7 @@ func _visible() -> void:
 func _on_boton_salir_pressed() -> void:
 	atacar.visible = false
 	salir.visible = false# Replace with function body.
+	insuficiente.visible = false
 
 func _on_atacar_pressed() -> void:
 	if Global.puede_jugar:
@@ -58,6 +74,7 @@ func _on_saltar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		timer.cambiar_turno()
+		insuficiente.visible = false
 
 
 

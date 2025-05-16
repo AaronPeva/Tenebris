@@ -39,8 +39,8 @@ enabled=PackedStringArray()
 [file_customization]
 
 folder_colors={
+"res://Animations/": "purple",
 "res://Imagenes/": "yellow",
-"res://Imagenes/Animations/": "purple",
 "res://Scenes/": "blue",
 "res://Scripts/": "gray"
 }
