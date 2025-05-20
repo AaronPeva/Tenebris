@@ -8,11 +8,16 @@ extends Node2D
 @onready var energy_node = $EnergyNode
 @onready var atacar_button = $Atacar
 @onready var insuficiente = $EnergiaInsuficiente
-
+@onready var FogInfo = $FogInfo
+@onready var FogTitle = $FogTitle
+var contador_turnos_inactivos := 0
 
 signal clic_personal
 
 func _ready():
+	$FogAnimation.visible = false
+	$FogInfo.visible = false
+	$FogTitle.visible = false
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
 	salir.visible = false
@@ -64,6 +69,7 @@ func _on_atacar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		timer.cambiar_turno()
+		finalizar_turno()
 
 
 func _on_saltar_pressed() -> void:
@@ -75,7 +81,7 @@ func _on_saltar_pressed() -> void:
 		saltar.visible = false
 		timer.cambiar_turno()
 		insuficiente.visible = false
-
+		finalizar_turno()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -86,3 +92,28 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_timer_bot_timeout() -> void:
 	pass # Replace with function body.
+	
+	
+func niebla_azul_empezar():
+	$FogAnimation.visible = true
+	$FogInfo.visible = true
+	$FogTitle.visible = true
+	$FogAnimation.play()
+	Global.niebla_activa = true
+	
+func niebla_azul_finalizar():
+	$FogAnimation.visible = false
+	$FogInfo.visible = false
+	$FogTitle.visible = false
+	Global.niebla_activa = false
+	
+func finalizar_turno():
+	if Global.puede_jugar == false:
+		contador_turnos_inactivos += 1
+		var probabilidad := randi() % 100
+		if probabilidad < 40:
+			niebla_azul_empezar()
+			print ("oi oi baka!, la niebla ha comenzado, bakayaro!!!")
+		if contador_turnos_inactivos == 4:
+			niebla_azul_finalizar()
+			contador_turnos_inactivos = 0

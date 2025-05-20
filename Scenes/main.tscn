@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=133 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -7,22 +7,26 @@
 [ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_bvle5"]
 [ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="6_56th6"]
 [ext_resource type="Script" uid="uid://g8jnrs0pdtwh" path="res://Scripts/energy_node.gd" id="8_d1ilt"]
-[ext_resource type="Texture2D" uid="uid://dl85wafg8cbxs" path="res://Imagenes/bolafortnite.png" id="8_k12tt"]
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="9_fevyy"]
-[ext_resource type="Texture2D" uid="uid://bdsf1kxceypis" path="res://Imagenes/fondoprototipo4.png" id="10_k12tt"]
+[ext_resource type="Texture2D" uid="uid://cb151iva26sr7" path="res://Imagenes/Boladefinitiva.png" id="10_gdwd6"]
+[ext_resource type="Texture2D" uid="uid://r3xs72hnw071" path="res://Imagenes/fondoprototipo8.png" id="11_qnggo"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
 [ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scripts/boss.gd" id="16_b3802"]
-[ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Musica/batalla2.mp3" id="16_k12tt"]
+[ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Audios/batalla2.mp3" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://ceaollq64qx32" path="res://Animations/IdleAnimation/PolitoedIdle_1.png" id="16_kwxat"]
 [ext_resource type="Texture2D" uid="uid://biflsj1bktb44" path="res://Animations/IdleAnimation/PolitoedIdle_2.png" id="17_aa8k8"]
 [ext_resource type="Texture2D" uid="uid://cicgw83dm8j6l" path="res://Imagenes/Frame2.png" id="17_b3802"]
 [ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
 [ext_resource type="Texture2D" uid="uid://bwd63iyk6w0gf" path="res://Imagenes/Frame1.png" id="18_fevyy"]
 [ext_resource type="Texture2D" uid="uid://bp4dbl4f0eboe" path="res://Animations/AttackAnimation/PolitoedAttack_1.png" id="18_kqrg6"]
+[ext_resource type="Texture2D" uid="uid://cqd7tkl1t5ce1" path="res://Imagenes/rellenosinvidaboss3.png" id="18_wl4bb"]
+[ext_resource type="Texture2D" uid="uid://vjl0re5elrr6" path="res://Imagenes/bordevidaboss3.png" id="19_6h1fc"]
 [ext_resource type="Texture2D" uid="uid://50mo6oj7xq6o" path="res://Animations/AttackAnimation/PolitoedAttack_2.png" id="19_nwwfm"]
 [ext_resource type="Texture2D" uid="uid://c8uelexn5k0qu" path="res://Animations/AttackAnimation/PolitoedAttack_3.png" id="20_s8vy0"]
+[ext_resource type="Texture2D" uid="uid://bsgne4ucl0u8c" path="res://Imagenes/rellenovidaboss3.png" id="20_vxl7x"]
+[ext_resource type="Script" uid="uid://bvwdbhfc7jxlm" path="res://Scenes/vidabot.gd" id="21_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cyxqipwk5dm2q" path="res://Animations/AttackAnimation/PolitoedAttack_4.png" id="21_jut3y"]
 [ext_resource type="Texture2D" uid="uid://c5mxibw27kwly" path="res://Animations/AttackAnimation/PolitoedAttack_5.png" id="22_v2nl5"]
 [ext_resource type="Texture2D" uid="uid://dwx1n854m7ovq" path="res://Animations/AttackAnimation/PolitoedAttack_6.png" id="23_dmskm"]
@@ -78,6 +82,44 @@
 [ext_resource type="Texture2D" uid="uid://wwe54e5w57si" path="res://Animations/HurtAnimation/PolitoedHurt_33.png" id="73_ylsbi"]
 [ext_resource type="Texture2D" uid="uid://bd7sysjq4pnf2" path="res://Animations/HurtAnimation/PolitoedHurt_34.png" id="74_ceghn"]
 [ext_resource type="Texture2D" uid="uid://caks0vu0kvhpn" path="res://Animations/HurtAnimation/PolitoedHurt_35.png" id="75_3h4bx"]
+[ext_resource type="AudioStream" uid="uid://gwru850tqg5l" path="res://Audios/audioataque.mp3" id="76_fd3ed"]
+[ext_resource type="AudioStream" uid="uid://cqjd4ekxw8fek" path="res://Audios/audioataquecritico.mp3" id="77_qnggo"]
+[ext_resource type="Texture2D" uid="uid://b2fv4kqffvk7q" path="res://Animations/MissAnimation/missanimacion_1.png" id="81_t014q"]
+[ext_resource type="Texture2D" uid="uid://cgpjbt878stmq" path="res://Animations/MissAnimation/missanimacion_2.png" id="82_nb1ia"]
+[ext_resource type="Texture2D" uid="uid://chepmswo4m7u8" path="res://Animations/MissAnimation/missanimacion_3.png" id="83_3ahwd"]
+[ext_resource type="Texture2D" uid="uid://ckmv5hlx6mg2u" path="res://Animations/MissAnimation/missanimacion_4.png" id="84_b4xsn"]
+[ext_resource type="Texture2D" uid="uid://byshn80su14ky" path="res://Animations/MissAnimation/missanimacion_5.png" id="85_ot5ec"]
+[ext_resource type="Texture2D" uid="uid://ca8idu8ip6q0d" path="res://Animations/MissAnimation/missanimacion_6.png" id="86_aok0f"]
+[ext_resource type="Texture2D" uid="uid://d21rylcnrjje4" path="res://Animations/MissAnimation/missanimacion_7.png" id="87_64lof"]
+[ext_resource type="Texture2D" uid="uid://pp3xwangacal" path="res://Animations/MissAnimation/missanimacion_8.png" id="88_b4mik"]
+[ext_resource type="Texture2D" uid="uid://b5li2r3tfn0y2" path="res://Animations/MissAnimation/missanimacion_9.png" id="89_urine"]
+[ext_resource type="Texture2D" uid="uid://dg423k2qtsr30" path="res://Animations/MissAnimation/missanimacion_10.png" id="90_5vy51"]
+[ext_resource type="Texture2D" uid="uid://cjaibv1dkp2qk" path="res://Animations/MissAnimation/missanimacion_11.png" id="91_o2owy"]
+[ext_resource type="Texture2D" uid="uid://dossihue55baa" path="res://Animations/MissAnimation/missanimacion_12.png" id="92_ylsbi"]
+[ext_resource type="Texture2D" uid="uid://qqdbstfep1fn" path="res://Animations/MissAnimation/missanimacion_13.png" id="93_ceghn"]
+[ext_resource type="Texture2D" uid="uid://fo2hd4iyluyk" path="res://Animations/MissAnimation/missanimacion_14.png" id="94_3h4bx"]
+[ext_resource type="Texture2D" uid="uid://c1ldns7816ejn" path="res://Animations/MissAnimation/missanimacion_15.png" id="95_xg142"]
+[ext_resource type="Texture2D" uid="uid://bws8yod2uabdu" path="res://Animations/MissAnimation/missanimacion_16.png" id="96_rlvxq"]
+[ext_resource type="Texture2D" uid="uid://wpxrp08ie055" path="res://Animations/CriticalAnimation/criticalanimacion_1.png" id="97_0fjpc"]
+[ext_resource type="Texture2D" uid="uid://bivdmwjhx04g8" path="res://Animations/CriticalAnimation/criticalanimacion_3.png" id="98_gdwd6"]
+[ext_resource type="Texture2D" uid="uid://cix1gf3o7owbg" path="res://Animations/CriticalAnimation/criticalanimacion_4.png" id="99_cmq5c"]
+[ext_resource type="Texture2D" uid="uid://ofpjhwnoh6ye" path="res://Animations/CriticalAnimation/criticalanimacion_5.png" id="100_7t1gx"]
+[ext_resource type="Texture2D" uid="uid://desl4fy2a2mgy" path="res://Animations/CriticalAnimation/criticalanimacion_6.png" id="101_mfvrx"]
+[ext_resource type="Texture2D" uid="uid://dxlpfnmem6k0g" path="res://Animations/CriticalAnimation/criticalanimacion_7.png" id="102_ilwxp"]
+[ext_resource type="Texture2D" uid="uid://bpnb6o47312jw" path="res://Animations/CriticalAnimation/criticalanimacion_8.png" id="103_xjjvj"]
+[ext_resource type="Texture2D" uid="uid://vswoblcevs6g" path="res://Animations/CriticalAnimation/criticalanimacion_9.png" id="104_jab21"]
+[ext_resource type="Texture2D" uid="uid://dqvyksj1nqmcw" path="res://Animations/CriticalAnimation/criticalanimacion_10.png" id="105_8dylv"]
+[ext_resource type="Texture2D" uid="uid://dph34ucarjx5i" path="res://Animations/CriticalAnimation/criticalanimacion_11.png" id="106_qv1an"]
+[ext_resource type="Texture2D" uid="uid://b2mq0te4fhxia" path="res://Animations/CriticalAnimation/criticalanimacion_12.png" id="107_ja2pg"]
+[ext_resource type="Texture2D" uid="uid://2xduy4f37jhf" path="res://Animations/CriticalAnimation/criticalanimacion_13.png" id="108_0wopu"]
+[ext_resource type="Texture2D" uid="uid://b2c2r1eydr5vq" path="res://Animations/CriticalAnimation/criticalanimacion_14.png" id="109_na2ur"]
+[ext_resource type="Texture2D" uid="uid://c5hrsxtos4ic5" path="res://Animations/CriticalAnimation/criticalanimacion_15.png" id="110_rlvdk"]
+[ext_resource type="Texture2D" uid="uid://3dpge3j0pr80" path="res://Animations/CriticalAnimation/criticalanimacion_16.png" id="111_t6wb6"]
+[ext_resource type="Texture2D" uid="uid://hdc01ot627am" path="res://Animations/CriticalAnimation/criticalanimacion_17.png" id="112_fvjqb"]
+[ext_resource type="Texture2D" uid="uid://cl2tl0kjasqq8" path="res://Imagenes/bolablanca.png" id="117_cmq5c"]
+[ext_resource type="Texture2D" uid="uid://bw1mguje1h8pa" path="res://Animations/FogAnimation/Niebla_1.png" id="118_mfvrx"]
+[ext_resource type="Texture2D" uid="uid://bqo3mbra3mv4" path="res://Animations/FogAnimation/Niebla_2.png" id="119_ilwxp"]
+[ext_resource type="Texture2D" uid="uid://cfr17y6r1htmo" path="res://Imagenes/Niebla_3.png" id="120_ilwxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
 size = Vector2(7.7037, 10.6667)
@@ -292,6 +334,118 @@ animations = [{
 "speed": 70.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fjpc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_t014q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_nb1ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_3ahwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_b4xsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ot5ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_aok0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_64lof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_b4mik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_urine")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_5vy51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_o2owy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ylsbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ceghn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_3h4bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_xg142")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_rlvxq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b05pg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("97_0fjpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_gdwd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_cmq5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_7t1gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_mfvrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_ilwxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_xjjvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_jab21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_8dylv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_qv1an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ja2pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_0wopu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_na2ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_rlvdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_t6wb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_fvjqb")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
 size = Vector2(296, 319)
 
@@ -303,6 +457,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("17_b3802")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjjvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("118_mfvrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ilwxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ilwxp")
 }],
 "loop": true,
 "name": &"default",
@@ -381,24 +552,26 @@ script = ExtResource("8_d1ilt")
 texture_filter = 1
 position = Vector2(1744, 864)
 scale = Vector2(9.31667, 9.05)
-texture = ExtResource("8_k12tt")
+texture = ExtResource("10_gdwd6")
 
 [node name="TextEnerg" type="Label" parent="EnergyNode"]
 texture_filter = 1
-offset_left = 1726.0
-offset_top = 837.0
-offset_right = 1770.0
-offset_bottom = 908.0
+offset_left = 1725.0
+offset_top = 844.0
+offset_right = 1769.0
+offset_bottom = 915.0
 theme_override_colors/font_color = Color(1, 1, 0.741176, 1)
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 70
 text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IndicadorTurno" type="Label" parent="."]
 texture_filter = 1
-offset_left = 624.0
+offset_left = 616.0
 offset_top = 16.0
-offset_right = 1328.0
+offset_right = 1320.0
 offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 60
@@ -406,13 +579,19 @@ text = "Turno"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BrilloTurno" type="Sprite2D" parent="IndicadorTurno"]
+modulate = Color(1, 1, 1, 0.0705882)
+position = Vector2(360, 32)
+scale = Vector2(1.7825, 1.0075)
+texture = ExtResource("117_cmq5c")
+
 [node name="Fondo" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -100
 texture_filter = 1
 position = Vector2(960, 540)
 scale = Vector2(17.9439, 17.7049)
-texture = ExtResource("10_k12tt")
+texture = ExtResource("11_qnggo")
 metadata/_edit_lock_ = true
 
 [node name="LineaTotalmenteInecesaria" type="Sprite2D" parent="."]
@@ -446,6 +625,7 @@ autoplay = true
 script = ExtResource("16_b3802")
 
 [node name="BossAnimatedSprite" type="AnimatedSprite2D" parent="Boss"]
+modulate = Color(0.786613, 0.508219, 0.891528, 1)
 texture_filter = 1
 position = Vector2(960, 304)
 scale = Vector2(3, 3)
@@ -454,18 +634,37 @@ frame_progress = 0.219999
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Boss/BossAnimatedSprite"]
 
-[node name="vidabot" type="ProgressBar" parent="Boss/BossAnimatedSprite/CanvasLayer"]
-self_modulate = Color(0.743507, 1, 0.674181, 1)
-offset_left = 761.0
-offset_top = 456.0
-offset_right = 1529.0
-offset_bottom = 584.0
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 90
+[node name="vidabot" type="TextureProgressBar" parent="Boss/BossAnimatedSprite/CanvasLayer"]
+texture_filter = 1
+offset_left = 810.0
+offset_top = 440.0
+offset_right = 1090.0
+offset_bottom = 544.0
 value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 20
+stretch_margin_right = 20
+texture_under = ExtResource("18_wl4bb")
+texture_over = ExtResource("19_6h1fc")
+texture_progress = ExtResource("20_vxl7x")
+script = ExtResource("21_gdwd6")
+
+[node name="vidalabel" type="Label" parent="Boss/BossAnimatedSprite/CanvasLayer/vidabot"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 90.0
+offset_top = 33.0
+offset_right = 194.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 26
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AttackAnimation" type="AnimatedSprite2D" parent="Boss"]
 visible = false
+modulate = Color(0.788235, 0.509804, 0.890196, 1)
 texture_filter = 1
 position = Vector2(960, 304)
 scale = Vector2(3, 3)
@@ -475,6 +674,7 @@ frame_progress = 1.0
 
 [node name="HurtAnimation" type="AnimatedSprite2D" parent="Boss"]
 visible = false
+modulate = Color(0.851765, 0.355322, 0.690708, 1)
 texture_filter = 1
 position = Vector2(960, 304)
 scale = Vector2(3, 3)
@@ -482,34 +682,34 @@ sprite_frames = SubResource("SpriteFrames_xg142")
 frame = 34
 frame_progress = 1.0
 
-[node name="Miss" type="Label" parent="Boss"]
-visible = false
-texture_filter = 1
-offset_left = 1128.0
-offset_top = 264.0
-offset_right = 1347.0
-offset_bottom = 355.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_fevyy")
-theme_override_font_sizes/font_size = 90
-text = "Miss!"
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("76_fd3ed")
 
-[node name="Critical" type="Label" parent="Boss"]
+[node name="CriticSound" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("77_qnggo")
+
+[node name="MissAnimation" type="AnimatedSprite2D" parent="Boss"]
 visible = false
 texture_filter = 1
-offset_left = 1128.0
-offset_top = 264.0
-offset_right = 1466.0
-offset_bottom = 355.0
-theme_override_colors/font_color = Color(1, 0.231373, 0.337255, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_fevyy")
-theme_override_font_sizes/font_size = 90
-text = "Critical!"
+position = Vector2(1190, 279)
+scale = Vector2(3.39231, 3.00062)
+sprite_frames = SubResource("SpriteFrames_0fjpc")
+frame = 15
+frame_progress = 1.0
+
+[node name="CriticalAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(1264.12, 255.531)
+scale = Vector2(4.875, 4.42125)
+sprite_frames = SubResource("SpriteFrames_b05pg")
+frame = 15
+frame_progress = 1.0
 
 [node name="Area" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Area"]
+visible = false
 position = Vector2(967, 302)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
@@ -549,6 +749,38 @@ offset_bottom = 561.0
 theme_override_fonts/font = ExtResource("9_fevyy")
 text = "¡No tienes energía suficiente!"
 
+[node name="FogAnimation" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.109804)
+texture_filter = 1
+position = Vector2(959.75, 540.25)
+scale = Vector2(7.00912, 7.00974)
+sprite_frames = SubResource("SpriteFrames_xjjvj")
+frame_progress = 0.123805
+
+[node name="FogInfo" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 1384.0
+offset_top = 150.0
+offset_right = 1844.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 27
+text = "La carta activa tiene un 30% más 
+de probabilidad de fallar su ataque."
+
+[node name="FogTitle" type="Label" parent="."]
+visible = false
+modulate = Color(0.737255, 1, 1, 1)
+texture_filter = 1
+offset_left = 1384.0
+offset_top = 125.0
+offset_right = 1808.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 27
+text = "EVENTO ACTIVO: NIEBLA AZUL"
+
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
 [connection signal="pressed" from="Atacar" to="EnergyNode" method="_on_atacar_pressed"]
 [connection signal="pressed" from="Atacar" to="Boss" method="_on_atacar_pressed"]
@@ -557,5 +789,7 @@ text = "¡No tienes energía suficiente!"
 [connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="animation_finished" from="Boss/AttackAnimation" to="Boss" method="_on_attack_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/MissAnimation" to="Boss" method="_on_miss_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/CriticalAnimation" to="Boss" method="_on_critical_animation_animation_finished"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]

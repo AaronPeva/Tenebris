@@ -6,5 +6,6 @@ var escena_seleccionada = "res://Scenes/cardA1.tscn"  # Guardará null o la ruta
 var puede_jugar = true
 
 var hp_carta_jugador = 80
-var attack_cost = 2
-var attack_damage = 5
+var attack_cost = 1
+var attack_damage = 10
+var niebla_activa = false
