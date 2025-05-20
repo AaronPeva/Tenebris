@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dte1nssfacvup" path="res://Scripts/card_character.gd" id="1_yd4ab"]
 [ext_resource type="Texture2D" uid="uid://dlqvhgl1q5lhq" path="res://Imagenes/Cartas/Carta activa rana.png" id="2_yd4ab"]
-[ext_resource type="Script" path="res://Scenes/progress_bar.gd" id="3_7c7dp"]
+[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/progress_bar.gd" id="3_7c7dp"]
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_7fe6x"]
 [ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Cartas/BoxVidav3.png" id="3_tcgq6"]
 [ext_resource type="Texture2D" uid="uid://d3th7vs16jqye" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_1.png" id="4_83sfg"]
@@ -44,6 +44,7 @@ scale = Vector2(0.6, 0.6)
 script = ExtResource("1_yd4ab")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
 texture_filter = 1
 position = Vector2(0, 3.05176e-05)
 scale = Vector2(12.3478, 12.9032)
@@ -55,7 +56,6 @@ offset_left = 23.3333
 offset_top = 83.6667
 offset_right = 116.333
 offset_bottom = 162.667
-theme_override_constants/outline_size = 7
 theme_override_fonts/normal_font = ExtResource("3_7fe6x")
 theme_override_font_sizes/normal_font_size = 60
 text = "2"
@@ -68,7 +68,6 @@ offset_left = -117.0
 offset_top = 83.667
 offset_right = -19.0
 offset_bottom = 161.667
-theme_override_constants/outline_size = 7
 theme_override_fonts/normal_font = ExtResource("3_7fe6x")
 theme_override_font_sizes/normal_font_size = 60
 text = "2"
@@ -96,7 +95,6 @@ offset_left = -138.333
 offset_top = -210.0
 offset_right = -58.3334
 offset_bottom = -170.0
-theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("3_7fe6x")
 theme_override_font_sizes/normal_font_size = 21
 text = "80

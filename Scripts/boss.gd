@@ -12,6 +12,7 @@ var critico = false
 var main = get_parent()
 
 func _ready() -> void:
+	boss_health.z_index -= 100
 	$BossAnimatedSprite.play()
 	$BossAnimatedSprite.visible = true
 	$AttackAnimation.visible = false
