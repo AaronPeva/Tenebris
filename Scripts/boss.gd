@@ -75,13 +75,12 @@ func damage_prob() -> int:
 	var prob = randi() % 100
 	var fallo_chance = 10 
 	if Global.niebla_activa:
-		fallo_chance += 90
+		fallo_chance += 30
 	if prob < fallo_chance:
 		AnimacionFallar()
 		fallado = true
 		return 0  # fallo
-
-	elif prob < fallo_chance + 10:
+	elif prob < 20:
 		AnimacionCritico()
 		critico = true
 		return player_damage * 2  # crítico
