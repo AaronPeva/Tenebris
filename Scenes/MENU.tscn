@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://djrdt4qlj7m3m" path="res://Imagenes/blood_crow/bloodcrowi.ttf" id="3_ecetf"]
 [ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
 [ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="5_cb33x"]
-[ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Musica/menu.mp3" id="6_06sv8"]
+[ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Audios/menu.mp3" id="6_06sv8"]
 
 [sub_resource type="FontVariation" id="FontVariation_ey08u"]
 base_font = ExtResource("5_cb33x")
