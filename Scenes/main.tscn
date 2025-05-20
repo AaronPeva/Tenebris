@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=132 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -10,7 +10,6 @@
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="9_fevyy"]
 [ext_resource type="Texture2D" uid="uid://cb151iva26sr7" path="res://Imagenes/Boladefinitiva.png" id="10_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://r3xs72hnw071" path="res://Imagenes/fondoprototipo8.png" id="11_qnggo"]
-[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
 [ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scripts/boss.gd" id="16_b3802"]
@@ -520,6 +519,11 @@ offset_top = 576.0
 offset_right = 1240.0
 offset_bottom = 680.0
 focus_mode = 0
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fd3ed")
@@ -536,6 +540,7 @@ offset_top = 688.0
 offset_right = 1240.0
 offset_bottom = 792.0
 focus_mode = 0
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/pressed = SubResource("StyleBoxFlat_v1mrv")
@@ -561,6 +566,7 @@ offset_top = 844.0
 offset_right = 1769.0
 offset_bottom = 915.0
 theme_override_colors/font_color = Color(1, 1, 0.741176, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 70
 text = "2"
@@ -573,6 +579,8 @@ offset_left = 616.0
 offset_top = 16.0
 offset_right = 1320.0
 offset_bottom = 88.0
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 60
 text = "Turno"
@@ -607,7 +615,8 @@ offset_top = 472.0
 offset_right = 240.0
 offset_bottom = 624.0
 focus_mode = 0
-theme_override_fonts/font = ExtResource("12_6iyac")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 30
 theme_override_icons/icon = ExtResource("15_wsu2k")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_k12tt")
@@ -656,6 +665,7 @@ offset_left = 90.0
 offset_top = 33.0
 offset_right = 194.0
 offset_bottom = 73.0
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 26
 text = "100"
