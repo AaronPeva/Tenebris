@@ -14,7 +14,6 @@ func _ready() -> void:
 func add_card_to_hand(card, speed):
 	if card.being_removed:
 		return
-		
 	if card not in player_hand:
 		player_hand.insert(0, card)
 		update_hand_positions(speed)
