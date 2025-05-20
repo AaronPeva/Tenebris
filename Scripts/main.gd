@@ -127,4 +127,3 @@ func finalizar_turno():
 		if contador_turnos_inactivos == 3:
 			niebla_azul_finalizar()
 			contador_turnos_inactivos = 0
-

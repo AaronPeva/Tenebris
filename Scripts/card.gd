@@ -11,7 +11,7 @@ var being_removed = false
 @onready var richtext = $Valor
 var valor 
 @onready var vidaBoss = get_node("/root/Main/Boss/BossAnimatedSprite/CanvasLayer/vidabot")
-@onready var area = get_node("/root/Main/Area/Area2D/TextureRect")
+@onready var area = get_node("/root/Main/Area/Area2D/AreaImage")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
