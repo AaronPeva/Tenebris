@@ -493,7 +493,6 @@ position = Vector2(977, 292)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
-visible = false
 position = Vector2(-18, 211)
 shape = SubResource("RectangleShape2D_k12tt")
 metadata/_edit_lock_ = true

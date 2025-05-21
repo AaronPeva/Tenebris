@@ -27,13 +27,15 @@ func _process(delta: float) -> void:
 
 func start_drag(card):
 	if Global.puede_jugar:
-		if card.isPlayerCharacterCard():
+		if card.has_method("isPlayerCharacterCard") and card.isPlayerCharacterCard():
 			return
-		is_dragging = true
-		area.visible = true
-		card_being_dragged = card
-		card.scale = Vector2(0.475, 0.475)
-		card.highlight_card(true)
+		if card.has_method("highlight_card"):
+			is_dragging = true
+			area.visible = true
+			card_being_dragged = card
+			card.scale = Vector2(0.475, 0.475)
+			card.highlight_card(true)
+
 
 
 func finish_drag():
