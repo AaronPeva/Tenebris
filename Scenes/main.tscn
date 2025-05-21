@@ -493,6 +493,7 @@ position = Vector2(977, 292)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area/Area2D"]
+visible = false
 position = Vector2(-18, 211)
 shape = SubResource("RectangleShape2D_k12tt")
 metadata/_edit_lock_ = true
@@ -752,6 +753,7 @@ script = ExtResource("18_b3802")
 wait_time = 5.0
 
 [node name="Pene" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(1840, 1016)
 scale = Vector2(6.9, 7.7)
@@ -762,6 +764,7 @@ speed_scale = 7.0
 metadata/_edit_lock_ = true
 
 [node name="LabelPene" type="Label" parent="."]
+visible = false
 offset_left = 1765.0
 offset_top = 1055.0
 offset_right = 1914.0

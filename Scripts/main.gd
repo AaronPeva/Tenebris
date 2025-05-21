@@ -10,6 +10,7 @@ extends Node2D
 @onready var insuficiente = $EnergiaInsuficiente
 @onready var FogInfo = $FogInfo
 @onready var FogTitle = $FogTitle
+@onready var area = $Area/Area2D/AreaImage
 var contador_turnos_inactivos := 0
 
 signal clic_personal
@@ -18,6 +19,7 @@ func _ready():
 	$FogAnimation.visible = false
 	$FogInfo.visible = false
 	$FogTitle.visible = false
+	area.visible = false
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
 	salir.visible = false
