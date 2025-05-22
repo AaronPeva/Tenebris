@@ -1,6 +1,6 @@
 extends Node2D
 
-var boss_damage = 10
+var boss_damage = 20
 var player_damage = Global.attack_damage
 var fallado = false
 var critico = false
@@ -74,14 +74,14 @@ func _on_hurt_animation_animation_finished() -> void:
 	
 func damage_prob() -> int:
 	var prob = randi() % 100
-	var fallo_chance = 10 
+	var fallo_chance = 30 
 	if Global.niebla_activa:
 		fallo_chance += 30
 	if prob < fallo_chance:
 		AnimacionFallar()
 		fallado = true
 		return 0  # fallo
-	elif prob < 20:
+	elif prob < 70:
 		AnimacionCritico()
 		critico = true
 		return player_damage * 2  # crítico
