@@ -6,6 +6,11 @@ var last_text: String = ""
 var damage = 1
 var Area = Area2D
 var carta_activa
+@onready var barra_vida = $ProgressBar
+@onready var estilo_verde = preload("res://Imagenes/verde.tres")
+@onready var estilo_naranja = preload("res://Imagenes/naranja.tres")
+@onready var estilo_roja = preload("res://Imagenes/rojo.tres")
+
 
 signal clic_personal
 # Called when the node enters the scene tree for the first time.
@@ -14,11 +19,22 @@ func _ready() -> void:
 	$HealthBoxAnimation.visible = false
 
 func _process(delta: float) -> void:
-	carta_activa.text = str(Global.hp_carta_jugador)
-	if carta_activa.text != last_text:
-		last_text = carta_activa.text
-		caja_dolida()
-		print ("Vida tocada")
+	var vida_actual = Global.hp_carta_jugador
+	var vida_maxima = barra_vida.max_value
+	var porcentaje = float(vida_actual) / vida_maxima
+
+	barra_vida.value = vida_actual
+	carta_activa.text = str(vida_actual)
+
+	if porcentaje > 0.30:
+		barra_vida.set("theme_override_styles/fill", estilo_verde)
+	elif porcentaje > 0.10:
+		barra_vida.set("theme_override_styles/fill", estilo_naranja)
+	else:
+		barra_vida.set("theme_override_styles/fill", estilo_roja)
+
+
+
 	
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
