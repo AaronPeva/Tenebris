@@ -121,7 +121,7 @@ func finalizar_turno():
 	if Global.puede_jugar == false:
 		contador_turnos_inactivos += 1
 		var probabilidad := randi() % 100
-		if probabilidad < 5:
+		if probabilidad < 7:
 			niebla_azul_empezar()
 			print ("oi oi baka!, la niebla ha comenzado, bakayaro!!!")
 		if contador_turnos_inactivos == 3:
