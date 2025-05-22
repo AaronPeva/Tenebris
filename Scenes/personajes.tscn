@@ -23,14 +23,16 @@ base_font = SubResource("FontVariation_1qmb7")
 load_path = "res://.godot/imported/Carta activa rana.png-997b27d368241a7bd0126dd8613ab8c9.ctex"
 
 [node name="Personajes" type="Node2D"]
+position = Vector2(9, 25)
+scale = Vector2(1.62, 1.62)
 script = ExtResource("1_sckeb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -39.0
+offset_left = -7.0
 offset_top = -16.0
 offset_right = 1177.0
-offset_bottom = 648.0
+offset_bottom = 652.0
 texture = ExtResource("2_1qmb7")
 expand_mode = 1
 
@@ -57,6 +59,7 @@ offset_top = 136.0
 offset_right = 776.0
 offset_bottom = 657.0
 scale = Vector2(0.948697, 0.705973)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Panel"]
 texture_filter = 1
@@ -67,6 +70,7 @@ offset_right = 457.0
 offset_bottom = 136.0
 theme_override_fonts/font = ExtResource("3_pnyfv")
 theme_override_font_sizes/font_size = 30
+metadata/_edit_use_anchors_ = true
 
 [node name="Siguiente" type="Button" parent="Panel"]
 texture_filter = 1
@@ -81,6 +85,7 @@ icon = ExtResource("5_pnyfv")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Atras" type="Button" parent="Panel"]
 texture_filter = 1
@@ -95,6 +100,7 @@ icon = ExtResource("6_1qmb7")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Seleccionar" type="Button" parent="Panel"]
 texture_filter = 1
@@ -112,6 +118,7 @@ text = "Seleccionar"
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 texture_filter = 1
@@ -119,6 +126,7 @@ layout_mode = 0
 offset_right = 323.0
 offset_bottom = 516.0
 texture = SubResource("CompressedTexture2D_1qmb7")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_button_pressed"]

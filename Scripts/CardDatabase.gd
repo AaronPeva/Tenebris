@@ -1,8 +1,8 @@
 const CARDS = {
-	"C1": [1, 60, 2,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C2": [1, 1, 2,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C3": [1, 34, 2,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C4": [1, 5, 1,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C5": [1, 4, 1, "res://Scripts/cardsconsumes/powerup.gd"],
+	"C1": [1, 60, 0,"res://Scripts/cardsconsumes/Cactus.gd"],
+	"C2": [1, 1, 99,"res://Scripts/cardsconsumes/Cactus.gd"],
+	"C3": [1, 34, 0,"res://Scripts/cardsconsumes/powerup.gd"],
+	"C4": [1, 5, 0,"res://Scripts/cardsconsumes/powerup.gd"],
+	"C5": [1, 4, 0, "res://Scripts/cardsconsumes/powerup.gd"],
 
 }
