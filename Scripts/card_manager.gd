@@ -59,12 +59,6 @@ func on_left_click_released():
 		finish_drag()
 
 
-
-
-
-
-
-
 func on_hovered_over_card(card):
 	if !is_hovering_on_card:
 		is_hovering_on_card = true
