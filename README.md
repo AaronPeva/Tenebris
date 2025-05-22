@@ -1,6 +1,3 @@
-Perfecto, voy a generar un README en formato Markdown para tu proyecto, con un índice al inicio que permita redirigir tanto a la sección orientada a jugadores como a la sección orientada a desarrolladores. Me pondré a ello y te aviso cuando esté listo, looteado y crackeado para deploy.
-
-
 # La vida mejora, el Godot no
 
 **La vida mejora, el Godot no** es un juego de cartas por turnos en 2D desarrollado con Godot Engine. En este prototipo, los jugadores seleccionan personajes únicos y combaten usando un mazo de cartas con habilidades especiales (por ejemplo, *“rana”, “pingüino” o “Burrito Gringo”*). El juego incorpora un toque de humor en personajes y cartas, reflejado en su título irónico. Cada partida consiste en alternar turnos jugando cartas del mazo para derrotar al oponente, intentando alcanzar el objetivo (como agotar la vida del adversario o superar una puntuación límite). Se puede jugar contra la computadora (bot) o en modo multijugador local/red. *(Nota: este proyecto es un prototipo, por lo que la historia es mínima y el enfoque principal está en la mecánica de juego.)*
