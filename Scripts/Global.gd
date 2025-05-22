@@ -9,3 +9,5 @@ var hp_carta_jugador = 80
 var attack_cost = 1
 var attack_damage = 10
 var niebla_activa = false
+var viento_activo = false
+var evento_activo = null

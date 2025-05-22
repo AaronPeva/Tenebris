@@ -10,15 +10,20 @@ extends Node2D
 @onready var insuficiente = $EnergiaInsuficiente
 @onready var FogInfo = $FogInfo
 @onready var FogTitle = $FogTitle
+@onready var WindInfo = $WindInfo
+@onready var WindTitle = $WindTitle
 @onready var area = $Area/Area2D/AreaImage
 var contador_turnos_inactivos := 0
 
 signal clic_personal
 
 func _ready():
+	$WindAnimation.visible = false
 	$FogAnimation.visible = false
 	$FogInfo.visible = false
 	$FogTitle.visible = false
+	$WindTitle.visible = false
+	$WindInfo.visible = false
 	area.visible = false
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
@@ -120,12 +125,43 @@ func niebla_azul_finalizar():
 	Global.niebla_activa = false
 	
 func finalizar_turno():
-	if Global.puede_jugar == false:
+	if Global.puede_jugar:
 		contador_turnos_inactivos += 1
-		var probabilidad := randi() % 100
-		if probabilidad < 7:
-			niebla_azul_empezar()
-			print ("oi oi baka!, la niebla ha comenzado, bakayaro!!!")
-		if contador_turnos_inactivos == 3:
+		if Global.evento_activo == null:
+			var probabilidad := randi() % 100
+
+			if probabilidad < 5:
+				niebla_azul_empezar()
+				Global.evento_activo = "niebla"
+				print("oi oi baka!, la niebla ha comenzado, bakayaro!!!")
+
+			elif probabilidad < 90:  # Ojo: cambia el valor aquí para que sea distinto al anterior
+				viento_empezar()
+				Global.evento_activo = "viento"
+				print("Dattebayo!!, el viento ha comenzado!")
+
+		# Si hay evento activo, comprobar si debe terminar
+		if Global.evento_activo == "niebla" and contador_turnos_inactivos >= 3:
 			niebla_azul_finalizar()
+			Global.evento_activo = null
 			contador_turnos_inactivos = 0
+
+		elif Global.evento_activo == "viento" and contador_turnos_inactivos >= 2:
+			viento_finalizar()
+			Global.evento_activo = null
+			contador_turnos_inactivos = 0
+
+
+
+func viento_empezar():
+	$WindAnimation.play()
+	$WindAnimation.visible = true
+	$WindTitle.visible = true
+	$WindInfo.visible = true
+	Global.viento_activo = true
+
+func viento_finalizar():
+	$WindAnimation.visible = false
+	$WindTitle.visible = false
+	$WindInfo.visible = false
+	Global.viento_activo = false

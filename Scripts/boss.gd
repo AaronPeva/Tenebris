@@ -9,7 +9,6 @@ var critico = false
 @onready var boss_health = $BossAnimatedSprite/CanvasLayer/vidabot
 @onready var attack_sound = $AttackSound
 @onready var critical_sound = $CriticSound
-var main = get_parent()
 
 func _ready() -> void:
 	$BossAnimatedSprite.play()
@@ -73,14 +72,17 @@ func _on_hurt_animation_animation_finished() -> void:
 	
 func damage_prob() -> int:
 	var prob = randi() % 100
-	var fallo_chance = 30 
+	var fallo_chance = 15
+	var crit_chance = 10
 	if Global.niebla_activa:
 		fallo_chance += 30
+	if Global.viento_activo:
+		crit_chance += 90
 	if prob < fallo_chance:
 		AnimacionFallar()
 		fallado = true
 		return 0  # fallo
-	elif prob < 70:
+	elif prob < crit_chance:
 		AnimacionCritico()
 		critico = true
 		return player_damage * 2  # crítico
