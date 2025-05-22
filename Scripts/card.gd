@@ -60,6 +60,12 @@ func highlight_card(dragged):
 	if dragged:
 		self.z_index = 2
 
+func hacer_accion():
+	var energia_actual = energia_general.text.to_int()
+	var coste_energia = text_energia.text.to_int()
+	if energia_actual >= coste_energia:
+		accion_consumible()
+
 func accion_consumible():
 	gastar_energia()
 	_remove_card()

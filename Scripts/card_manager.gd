@@ -55,7 +55,7 @@ func on_left_click_released():
 	if card_being_dragged:
 		var main = get_node("/root/Main")
 		if main.carta_dentro == card_being_dragged:
-			card_being_dragged.accion_consumible()
+			card_being_dragged.hacer_accion()
 		finish_drag()
 
 
