@@ -9,3 +9,9 @@ var hp_carta_jugador = 80
 var attack_cost = 1
 var attack_damage = 10
 var niebla_activa = false
+
+func _process(delta: float) -> void:
+	if Global.hp_carta_jugador < 0:
+			Global.hp_carta_jugador = 0
+	if Global.hp_carta_jugador > 80:
+		Global.hp_carta_jugador = 80
