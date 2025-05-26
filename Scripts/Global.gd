@@ -12,6 +12,6 @@ var niebla_activa = false
 
 func _process(delta: float) -> void:
 	if Global.hp_carta_jugador < 0:
-			Global.hp_carta_jugador = 0
+		Global.hp_carta_jugador = 0
 	if Global.hp_carta_jugador > 80:
 		Global.hp_carta_jugador = 80
