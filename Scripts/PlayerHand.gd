@@ -4,7 +4,6 @@ const CARD_WIDTH = 95
 const HAND_Y_POSITION = 985
 const DEFAULT_CARD_MOVE_SPEED = 0.2
 const MAX_HAND_SIZE = 5
-
 var player_hand = []
 var center_screen_x
 
@@ -13,6 +12,8 @@ func _ready() -> void:
 	
 
 func add_card_to_hand(card, speed):
+	if card.being_removed:
+		return
 	if card not in player_hand:
 		player_hand.insert(0, card)
 		update_hand_positions(speed)
@@ -22,6 +23,7 @@ func add_card_to_hand(card, speed):
 func update_hand_positions(speed):
 	for i in range(player_hand.size()):
 		var new_position = Vector2(calculate_card_position(i), HAND_Y_POSITION)
+		print(new_position)
 		var card = player_hand[i]
 		card.starting_position = new_position
 		animate_card_to_position(card, new_position, speed)
@@ -39,6 +41,7 @@ func remove_card_from_hand(card):
 	if card in player_hand:
 		player_hand.erase(card)
 		update_hand_positions(DEFAULT_CARD_MOVE_SPEED)
+		
 
 func is_hand_full() -> bool:
 	return player_hand.size() >= MAX_HAND_SIZE

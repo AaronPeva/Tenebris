@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://r4qyes1tb6ki"]
+[gd_scene load_steps=5 format=3 uid="uid://r4qyes1tb6ki"]
 
 [ext_resource type="Texture2D" uid="uid://3lub2llomfpe" path="res://Imagenes/Cartas/C4Card.png" id="1_4uvki"]
 [ext_resource type="Script" uid="uid://dk6trr3vacudi" path="res://Scripts/card.gd" id="1_rr71g"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_4g0oj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sj8v"]
 size = Vector2(260, 374)
@@ -22,21 +23,27 @@ texture = ExtResource("1_4uvki")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0sj8v")
 
-[node name="Attack" type="RichTextLabel" parent="."]
-visible = false
-offset_left = -104.0
-offset_top = 88.0
-offset_right = -36.0
-offset_bottom = 160.0
+[node name="Valor" type="RichTextLabel" parent="."]
+offset_left = -105.0
+offset_top = 82.5
+offset_right = -25.0
+offset_bottom = 162.5
+theme_override_fonts/normal_font = ExtResource("3_4g0oj")
+theme_override_font_sizes/normal_font_size = 50
 text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Energy" type="RichTextLabel" parent="."]
-offset_left = 34.0
-offset_top = 86.0
-offset_right = 102.0
-offset_bottom = 158.0
+offset_left = 25.0
+offset_top = 82.5
+offset_right = 105.0
+offset_bottom = 162.5
+theme_override_fonts/normal_font = ExtResource("3_4g0oj")
+theme_override_font_sizes/normal_font_size = 50
 text = "0"
-metadata/_edit_use_anchors_ = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

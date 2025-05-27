@@ -1,8 +1,14 @@
 const CARDS = {
-	"C1": [21, 60, 2,"res://Scripts/card.gd"],
-	"C2": [1, 1, 2,"res://Scripts/card.gd"],
-	"C3": [45, 34, 2,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C4": [234, 5, 1,"res://Scripts/cardsconsumes/powerup.gd"],
-	"C5": [8, 4, 1, "res://Scripts/cardsconsumes/powerup.gd"],
+	"C1": [1, 0, 1,"res://Scripts/cardsconsumes/Manzana.gd"],
+	"C2": [1, 0, 1,"res://Scripts/cardsconsumes/Platano.gd"],
+	"C3": [1, 0, 1,"res://Scripts/cardsconsumes/Manzana.gd"],
+	"C4": [1, 0, 1,"res://Scripts/cardsconsumes/Mascara.gd"],
+	"C5": [1, 0, 1, "res://Scripts/cardsconsumes/Cactus.gd"],
+	"E1": [1, 0, 1,"res://Scripts/cardsconsumes/Monster.gd"],
+	"E2": [1, 0, 1,"res://Scripts/cardsconsumes/Ruleta.gd"],
+	"R1": [1, 0, 1,"res://Scripts/cardsconsumes/manzana_dorada.gd"],
+	"R2": [1, 0, 1,"res://Scripts/cardsconsumes/TNT.gd"],
+	"R3": [1, 0, 1, "res://Scripts/cardsconsumes/Durum.gd"],
+	"R4": [1, 0, 1, "res://Scripts/cardsconsumes/Pan.gd"],
 
 }
