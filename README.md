@@ -1,6 +1,6 @@
-# La Vida Mejora (El Godot No)
+# Tenebris
 
-¡Bienvenido/a a **La Vida Mejora (El Godot No)**!
+¡Bienvenido/a a **Tenebris**!
 
 Un juego de cartas por turnos donde la estrategia, la gestión de energía y las decisiones tácticas marcan la diferencia. Desarrollado principalmente en Godot Engine con GDScript, este proyecto busca ofrecer una experiencia desafiante y entretenida tanto para jugadores como para desarrolladores curiosos.
 
@@ -8,7 +8,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 
 ## 🎮 ¿De qué va el juego?
 
-**La Vida Mejora (El Godot No)** es un juego de cartas por turnos en el que cada jugador debe gestionar cuidadosamente su mano y un sistema de energía limitado para derrotar a sus oponentes. En cada turno, tendrás que decidir cuáles cartas jugar y cómo administrar tu energía para maximizar tu ventaja, ¡pero cuidado! Muchas cartas son consumibles y desaparecerán tras usarlas, obligándote a planificar tu estrategia a largo plazo.
+**Tenebris** es un juego de cartas por turnos en el que cada jugador debe gestionar cuidadosamente su mano y un sistema de energía limitado para derrotar a sus oponentes. En cada turno, tendrás que decidir cuáles cartas jugar y cómo administrar tu energía para maximizar tu ventaja, ¡pero cuidado! Muchas cartas son consumibles y desaparecerán tras usarlas, obligándote a planificar tu estrategia a largo plazo.
 
 ### Mecánicas principales
 
@@ -85,7 +85,7 @@ El proyecto está diseñado para ser fácil de modificar. Puedes:
 ## 🙌 Contribuciones
 
 ¡Las contribuciones, sugerencias y reportes de errores son bienvenidos!  
-Si tienes ideas para nuevas cartas, mecánicas, enemigos o mejoras, no dudes en abrir un [issue](https://github.com/AaronPeva/la-vida-mejora--el-godot-no/issues) o enviar un pull request.
+Si tienes ideas para nuevas cartas, mecánicas, enemigos o mejoras, no dudes en abrir un [issue](https://github.com/AaronPeva/Tenebris/issues) o enviar un pull request.
 
 **Pasos para contribuir:**
 1. Haz un fork del repositorio.
@@ -121,5 +121,4 @@ y [GodotColombia](https://github.com/GodotColombia).
 ---
 
 ¡Gracias por tu interés!  
-Si la vida mejora, que tu deck también lo haga.  
 ¡Disfruta jugando y programando! 🚀
