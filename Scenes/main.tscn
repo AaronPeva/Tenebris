@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=149 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -121,6 +121,20 @@
 [ext_resource type="Texture2D" uid="uid://bw1mguje1h8pa" path="res://Animations/FogAnimation/Niebla_1.png" id="118_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://bqo3mbra3mv4" path="res://Animations/FogAnimation/Niebla_2.png" id="119_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://cfr17y6r1htmo" path="res://Imagenes/Niebla_3.png" id="120_ilwxp"]
+[ext_resource type="Texture2D" uid="uid://ful3m7mvoa6u" path="res://Animations/WindAnimation/Viento_1.png" id="122_ci23i"]
+[ext_resource type="Texture2D" uid="uid://bdnd5hoehgdug" path="res://Animations/WindAnimation/Viento_2.png" id="123_myryv"]
+[ext_resource type="Texture2D" uid="uid://bbfg8w7fj8emq" path="res://Animations/WindAnimation/Viento_3.png" id="124_bpr0e"]
+[ext_resource type="Texture2D" uid="uid://b06fk08t852fq" path="res://Animations/WindAnimation/Viento_4.png" id="125_14mkc"]
+[ext_resource type="Texture2D" uid="uid://hgc2a0ajdmcl" path="res://Animations/WindAnimation/Viento_5.png" id="126_l78ku"]
+[ext_resource type="Texture2D" uid="uid://byfkw6c0lyh3a" path="res://Animations/WindAnimation/Viento_6.png" id="127_hfu3o"]
+[ext_resource type="Texture2D" uid="uid://ulfnvdgl4nll" path="res://Animations/WindAnimation/Viento_7.png" id="128_adgm5"]
+[ext_resource type="Texture2D" uid="uid://dvys41qfuwf1a" path="res://Animations/WindAnimation/Viento_8.png" id="129_qxkn4"]
+[ext_resource type="Texture2D" uid="uid://dpyv63ual5npw" path="res://Animations/WindAnimation/Viento_9.png" id="130_130ps"]
+[ext_resource type="Texture2D" uid="uid://b802sncisnxmt" path="res://Animations/WindAnimation/Viento_10.png" id="131_odn5n"]
+[ext_resource type="Texture2D" uid="uid://dd2fi5jvl1vlm" path="res://Animations/WindAnimation/Viento_11.png" id="132_b12iu"]
+[ext_resource type="Texture2D" uid="uid://c5gb2g4wq3v0" path="res://Animations/WindAnimation/Viento_12.png" id="133_gf7g1"]
+[ext_resource type="Texture2D" uid="uid://c3v2nevfd00c2" path="res://Animations/WindAnimation/Viento_13.png" id="134_102yd"]
+[ext_resource type="Texture2D" uid="uid://m7gxfly6oawd" path="res://Animations/WindAnimation/Viento_14.png" id="135_rtmaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
 size = Vector2(570, 540)
@@ -481,6 +495,56 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_eqnci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("122_ci23i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_myryv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_bpr0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_14mkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_l78ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_hfu3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_adgm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_qxkn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_130ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_odn5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_b12iu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_gf7g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_102yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_rtmaq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
 
@@ -821,6 +885,39 @@ offset_bottom = 153.0
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 27
 text = "EVENTO ACTIVO: NIEBLA AZUL"
+
+[node name="WindAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(959.5, 540)
+scale = Vector2(7.00365, 7.01299)
+sprite_frames = SubResource("SpriteFrames_eqnci")
+frame = 11
+frame_progress = 0.745435
+
+[node name="WindInfo" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 1384.0
+offset_top = 154.0
+offset_right = 1844.0
+offset_bottom = 219.0
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 27
+text = "La carta activa hara critico
+garantizado en el siguiente turno."
+
+[node name="WindTitle" type="Label" parent="."]
+visible = false
+modulate = Color(0.939306, 0.962376, 0.738771, 1)
+texture_filter = 1
+offset_left = 1384.0
+offset_top = 125.0
+offset_right = 1808.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 27
+text = "EVENTO ACTIVO: VIENTO"
 
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]

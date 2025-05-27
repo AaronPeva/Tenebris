@@ -12,13 +12,17 @@ extends Node2D
 @onready var FogTitle = $FogTitle
 @onready var area = $Area/Area2D/AreaImage
 var contador_turnos_inactivos := 0
+var evento_chequeado := false
 
 signal clic_personal
 
 func _ready():
+	$WindAnimation.visible = false
 	$FogAnimation.visible = false
 	$FogInfo.visible = false
 	$FogTitle.visible = false
+	$WindTitle.visible = false
+	$WindInfo.visible = false
 	area.visible = false
 	var escena_cargada = load(Global.escena_seleccionada)
 	atacar.visible = false
@@ -33,18 +37,23 @@ func _ready():
 		print("✅ Escena añadida correctamente")
 	else:
 		print("⚠ Error: La ruta no contiene una escena válida ->", Global.escena_seleccionada)
-		
+
 func _process(delta):
 	saltar.visible = Global.puede_jugar
+	
 	if Global.puede_jugar:
 		indicadorturno.text = "Tu turno"
+		
+		if not evento_chequeado:
+			empezar_turno()
+			evento_chequeado = true  # ya chequeado en este turno
 	else:
 		indicadorturno.text = "Turno del rival"
+		evento_chequeado = false  # reset para el próximo turno del jugador
+
 	var energia_actual = int(energy_node.energ.text)
-	if energia_actual < Global.attack_cost:
-		atacar_button.disabled = true
-	else:
-		atacar_button.disabled = false
+	atacar_button.disabled = energia_actual < Global.attack_cost
+
 
 func _on_input_event():
 	_visible()
@@ -71,7 +80,7 @@ func _on_atacar_pressed() -> void:
 		salir.visible = false
 		saltar.visible = false
 		timer.cambiar_turno()
-		finalizar_turno()
+		
 
 
 func _on_saltar_pressed() -> void:
@@ -83,7 +92,6 @@ func _on_saltar_pressed() -> void:
 		saltar.visible = false
 		timer.cambiar_turno()
 		insuficiente.visible = false
-		finalizar_turno()
 
 
 
@@ -119,14 +127,54 @@ func niebla_azul_finalizar():
 	$FogTitle.visible = false
 	Global.niebla_activa = false
 	
-func finalizar_turno():
-	if Global.puede_jugar == false:
+func empezar_turno():
+	if Global.puede_jugar:
 		Global.max_clicks += 1
-		contador_turnos_inactivos += 1
-		var probabilidad := randi() % 100
-		if probabilidad < 5:
-			niebla_azul_empezar()
-			print ("oi oi baka!, la niebla ha comenzado, bakayaro!!!")
-		if contador_turnos_inactivos == 3:
-			niebla_azul_finalizar()
-			contador_turnos_inactivos = 0
+		print("🔄 Empezando turno del jugador...")
+		if Global.evento_activo == null:
+			var probabilidad := randi() % 100
+			print("Probabilidad de evento:", probabilidad)
+
+			if probabilidad < 5:
+				niebla_azul_empezar()
+				Global.evento_activo = "niebla"
+				Global.niebla_activa = true
+				contador_turnos_inactivos = 0
+				print("🌫 Niebla activada")
+
+			elif probabilidad < 10:
+				viento_empezar()
+				Global.evento_activo = "viento"
+				Global.viento_activo = true
+				contador_turnos_inactivos = 0
+				print("💨 Viento activado")
+
+		else:
+			# Si ya hay evento activo, contar turnos
+			contador_turnos_inactivos += 1
+
+			if Global.evento_activo == "niebla" and contador_turnos_inactivos >= 3:
+				niebla_azul_finalizar()
+				Global.evento_activo = null
+				Global.niebla_activa = false
+				print("✅ Niebla finalizada")
+
+			elif Global.evento_activo == "viento" and contador_turnos_inactivos >= 1:
+				viento_finalizar()
+				Global.evento_activo = null
+				Global.viento_activo = false
+				print("✅ Viento finalizado")
+
+
+func viento_empezar():
+	$WindAnimation.play()
+	$WindAnimation.visible = true
+	$WindTitle.visible = true
+	$WindInfo.visible = true
+	Global.viento_activo = true
+
+func viento_finalizar():
+	$WindAnimation.visible = false
+	$WindTitle.visible = false
+	$WindInfo.visible = false
+	Global.viento_activo = false
