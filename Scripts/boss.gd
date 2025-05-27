@@ -1,6 +1,6 @@
 extends Node2D
 
-var boss_damage = 20
+var boss_damage = 80
 var player_damage = Global.attack_damage
 var fallado = false
 var critico = false
@@ -90,7 +90,6 @@ func damage_prob() -> int:
 
 	else:
 		return player_damage  # daño normal
-
 
 
 func _on_miss_animation_animation_finished() -> void:

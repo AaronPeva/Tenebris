@@ -13,10 +13,13 @@ extends Node2D
 @onready var area = $Area/Area2D/AreaImage
 var contador_turnos_inactivos := 0
 var evento_chequeado := false
+var derrota_activada := false
 
 signal clic_personal
 
 func _ready():
+	$Volver.visible = false
+	$LoseAnimation.visible = false
 	$WindAnimation.visible = false
 	$FogAnimation.visible = false
 	$FogInfo.visible = false
@@ -53,7 +56,11 @@ func _process(delta):
 
 	var energia_actual = int(energy_node.energ.text)
 	atacar_button.disabled = energia_actual < Global.attack_cost
-
+	
+	if Global.hp_carta_jugador == 0 and not derrota_activada:
+		derrota_activada = true
+		_derrota()
+		
 
 func _on_input_event():
 	_visible()
@@ -178,3 +185,13 @@ func viento_finalizar():
 	$WindTitle.visible = false
 	$WindInfo.visible = false
 	Global.viento_activo = false
+	
+func _derrota():
+	$LoseAnimation.visible = true
+	$LoseAnimation.play()
+	await get_tree().create_timer(2.0).timeout
+	$Volver.visible = true
+
+
+func _on_volver_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
