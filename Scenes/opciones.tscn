@@ -1,12 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://np855hr7rhml"]
+[gd_scene load_steps=4 format=3 uid="uid://np855hr7rhml"]
 
 [ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones.gd" id="1_3hjeq"]
 [ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/OPCIONES.png" id="1_6gp1c"]
 [ext_resource type="Script" uid="uid://b8jyayraesft2" path="res://Scripts/OptionsMenu.gd" id="2_6ip24"]
-[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="3_3hjeq"]
-
-[sub_resource type="FontVariation" id="FontVariation_6ip24"]
-base_font = ExtResource("3_3hjeq")
 
 [node name="Opciones" type="Node2D"]
 script = ExtResource("1_3hjeq")
@@ -30,79 +26,57 @@ scale = Vector2(3.60082, 3.5988)
 texture = ExtResource("1_6gp1c")
 metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
-texture_filter = 1
+[node name="Configuracion" type="Label" parent="OptionsMenu"]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 135.0
-offset_right = 978.0
-offset_bottom = 175.0
-scale = Vector2(1.66541, 1.01423)
-
-[node name="Titulo" type="Label" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
-text = "OPCIONES"
-
-[node name="Volume" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Volume"]
-layout_mode = 2
-text = "volumen maestro
+offset_left = 805.0
+offset_top = 119.0
+offset_right = 1157.0
+offset_bottom = 195.0
+text = "Configuracion
 "
 
-[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/Volume"]
-layout_mode = 2
+[node name="Volumen" type="Label" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 153.0
+offset_right = 936.0
+offset_bottom = 183.0
+text = "Volumen"
 
-[node name="Resolution" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
+[node name="HSlider" type="HSlider" parent="OptionsMenu/Volumen"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 5.0
+offset_right = 204.0
+offset_bottom = 21.0
 
-[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Resolution"]
-layout_mode = 2
-text = "Resolucion"
+[node name="Fullscreen" type="Label" parent="OptionsMenu"]
+offset_left = 804.0
+offset_top = 184.0
+offset_right = 912.0
+offset_bottom = 223.0
+text = "Fullscreen"
 
-[node name="OptionButton" type="OptionButton" parent="OptionsMenu/VBoxContainer/Resolution"]
-layout_mode = 2
+[node name="CheckBox" type="CheckBox" parent="OptionsMenu/Fullscreen"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 26.0
 
-[node name="Mouse" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
+[node name="Aplicar" type="Button" parent="OptionsMenu"]
+offset_left = 267.0
+offset_top = 686.0
+offset_right = 739.0
+offset_bottom = 887.0
+text = "APlicar"
 
-[node name="Label" type="Label" parent="OptionsMenu/VBoxContainer/Mouse"]
-layout_mode = 2
-text = "Sensibilidad"
+[node name="Salir" type="Button" parent="OptionsMenu"]
+offset_left = 855.0
+offset_top = 684.0
+offset_right = 1444.0
+offset_bottom = 887.0
+text = "Salir"
 
-[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/Mouse"]
-layout_mode = 2
-
-[node name="Aplicar" type="Button" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
-text = "Aplicar"
-
-[node name="Salir" type="Button" parent="OptionsMenu/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-focus_mode = 0
-theme_override_fonts/font = SubResource("FontVariation_6ip24")
-theme_override_font_sizes/font_size = 26
-text = "VOLVER"
-flat = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
-
-[node name="Fullscreen" type="Control" parent="OptionsMenu/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="OptionsMenu/VBoxContainer/Fullscreen"]
-layout_mode = 2
-offset_left = -42.6322
-offset_top = -76.9783
-offset_right = 4.36783
-offset_bottom = 3.02173
-
-[connection signal="value_changed" from="OptionsMenu/VBoxContainer/Volume/HSlider" to="OptionsMenu" method="volume_on_h_slider_value_changed"]
-[connection signal="item_selected" from="OptionsMenu/VBoxContainer/Resolution/OptionButton" to="OptionsMenu" method="resolucion_on_option_button_item_selected"]
-[connection signal="value_changed" from="OptionsMenu/VBoxContainer/Mouse/HSlider" to="OptionsMenu" method="mouse_on_h_slider_value_changed"]
-[connection signal="pressed" from="OptionsMenu/VBoxContainer/Aplicar" to="OptionsMenu" method="_on_aplicar_pressed"]
-[connection signal="pressed" from="OptionsMenu/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
-[connection signal="toggled" from="OptionsMenu/VBoxContainer/Fullscreen/CheckBox" to="OptionsMenu" method="fullscreen_on_check_box_toggled"]
+[connection signal="pressed" from="OptionsMenu/Aplicar" to="OptionsMenu" method="_on_aplicar_pressed"]
+[connection signal="pressed" from="OptionsMenu/Salir" to="OptionsMenu" method="_on_salir_pressed"]

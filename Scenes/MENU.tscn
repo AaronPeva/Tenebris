@@ -42,9 +42,9 @@ color = Color(0.950346, 0.605506, 1, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -6.0
+offset_left = -11.0
 offset_top = -7.0
-offset_right = 1160.0
+offset_right = 1167.0
 offset_bottom = 655.0
 texture = ExtResource("2_ra4qy")
 expand_mode = 1
