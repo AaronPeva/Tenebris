@@ -10,5 +10,6 @@ const CARDS = {
 	"R2": [1, 0, 1,"res://Scripts/cardsconsumes/TNT.gd"],
 	"R3": [1, 0, 1, "res://Scripts/cardsconsumes/Durum.gd"],
 	"R4": [1, 0, 1, "res://Scripts/cardsconsumes/Pan.gd"],
+	"R5": [1, 0, 30, "res://Scripts/cardsconsumes/Ojo.gd"]
 
 }

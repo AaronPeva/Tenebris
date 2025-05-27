@@ -135,14 +135,14 @@ func empezar_turno():
 			var probabilidad := randi() % 100
 			print("Probabilidad de evento:", probabilidad)
 
-			if probabilidad < 5:
+			if probabilidad < 99:
 				niebla_azul_empezar()
 				Global.evento_activo = "niebla"
 				Global.niebla_activa = true
 				contador_turnos_inactivos = 0
 				print("🌫 Niebla activada")
 
-			elif probabilidad < 10:
+			elif probabilidad < 99:
 				viento_empezar()
 				Global.evento_activo = "viento"
 				Global.viento_activo = true

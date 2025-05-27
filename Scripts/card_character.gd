@@ -6,6 +6,7 @@ var last_text: String = ""
 var damage = 1
 var Area = Area2D
 var carta_activa
+var vida_anterior_barra: float = -1
 @onready var barra_vida = $ProgressBar
 @onready var estilo_verde = preload("res://Imagenes/verde.tres")
 @onready var estilo_naranja = preload("res://Imagenes/naranja.tres")
@@ -23,9 +24,18 @@ func _process(delta: float) -> void:
 	var vida_maxima = barra_vida.max_value
 	var porcentaje = float(vida_actual) / vida_maxima
 
+	# 💥 Detectar si la barra bajó
+	if vida_anterior_barra > vida_actual:
+		caja_dolida()
+
+	# Actualiza la barra
 	barra_vida.value = vida_actual
+	vida_anterior_barra = vida_actual  # Guarda para el siguiente frame
+
+	# Actualiza el texto
 	carta_activa.text = str(vida_actual)
 
+	# Cambia color según porcentaje
 	if porcentaje > 0.30:
 		barra_vida.set("theme_override_styles/fill", estilo_verde)
 	elif porcentaje > 0.10:
@@ -47,8 +57,9 @@ func _on_area_2d_mouse_exited() -> void:
 func _recibir_daño():
 	var carta_activa = $Health
 	carta_activa.text = str(int(carta_activa.text) - damage)
-	
+
 func caja_dolida():
+	print("me duele")
 	$HealthBox.visible = false
 	$HealthBoxAnimation.visible = true
 	$HealthBoxAnimation.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=150 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -26,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://50mo6oj7xq6o" path="res://Animations/AttackAnimation/PolitoedAttack_2.png" id="19_nwwfm"]
 [ext_resource type="Texture2D" uid="uid://c8uelexn5k0qu" path="res://Animations/AttackAnimation/PolitoedAttack_3.png" id="20_s8vy0"]
 [ext_resource type="Texture2D" uid="uid://bsgne4ucl0u8c" path="res://Imagenes/rellenovidaboss3.png" id="20_vxl7x"]
-[ext_resource type="Script" uid="uid://bvwdbhfc7jxlm" path="res://Scripts/vidabot.gd" id="21_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cyxqipwk5dm2q" path="res://Animations/AttackAnimation/PolitoedAttack_4.png" id="21_jut3y"]
 [ext_resource type="Texture2D" uid="uid://c5mxibw27kwly" path="res://Animations/AttackAnimation/PolitoedAttack_5.png" id="22_v2nl5"]
 [ext_resource type="Texture2D" uid="uid://dwx1n854m7ovq" path="res://Animations/AttackAnimation/PolitoedAttack_6.png" id="23_dmskm"]
@@ -104,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://bivdmwjhx04g8" path="res://Animations/CriticalAnimation/criticalanimacion_3.png" id="98_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cix1gf3o7owbg" path="res://Animations/CriticalAnimation/criticalanimacion_4.png" id="99_cmq5c"]
 [ext_resource type="Texture2D" uid="uid://ofpjhwnoh6ye" path="res://Animations/CriticalAnimation/criticalanimacion_5.png" id="100_7t1gx"]
+[ext_resource type="Script" path="res://Scripts/vidabot.gd" id="100_ci23i"]
 [ext_resource type="Texture2D" uid="uid://desl4fy2a2mgy" path="res://Animations/CriticalAnimation/criticalanimacion_6.png" id="101_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://dxlpfnmem6k0g" path="res://Animations/CriticalAnimation/criticalanimacion_7.png" id="102_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://bpnb6o47312jw" path="res://Animations/CriticalAnimation/criticalanimacion_8.png" id="103_xjjvj"]
@@ -136,18 +136,6 @@
 [ext_resource type="Texture2D" uid="uid://c3v2nevfd00c2" path="res://Animations/WindAnimation/Viento_13.png" id="134_102yd"]
 [ext_resource type="Texture2D" uid="uid://m7gxfly6oawd" path="res://Animations/WindAnimation/Viento_14.png" id="135_rtmaq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
-size = Vector2(570, 540)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
-size = Vector2(7.7037, 10.6667)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fd3ed"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1mrv"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ovafv"]
 animations = [{
 "frames": [{
@@ -161,6 +149,8 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
+
+[sub_resource type="GDScript" id="GDScript_stool"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owhal"]
 animations = [{
@@ -464,6 +454,18 @@ animations = [{
 "speed": 25.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
+size = Vector2(570, 540)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilbd4"]
+size = Vector2(7.7037, 10.6667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fd3ed"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1mrv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hibaj"]
 animations = [{
 "frames": [{
@@ -547,6 +549,96 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
+
+[node name="Boss" type="Node2D" parent="."]
+script = ExtResource("16_b3802")
+
+[node name="BossAnimatedSprite" type="AnimatedSprite2D" parent="Boss"]
+modulate = Color(0.786613, 0.508219, 0.891528, 1)
+texture_filter = 1
+position = Vector2(960, 304)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ovafv")
+frame_progress = 0.219999
+script = SubResource("GDScript_stool")
+
+[node name="AttackAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+modulate = Color(0.788235, 0.509804, 0.890196, 1)
+texture_filter = 1
+position = Vector2(960, 304)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_owhal")
+frame = 22
+frame_progress = 1.0
+
+[node name="HurtAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+modulate = Color(0.851765, 0.355322, 0.690708, 1)
+texture_filter = 1
+position = Vector2(960, 304)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_xg142")
+frame = 34
+frame_progress = 1.0
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("76_fd3ed")
+
+[node name="CriticSound" type="AudioStreamPlayer2D" parent="Boss"]
+stream = ExtResource("77_qnggo")
+
+[node name="MissAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(1190, 279)
+scale = Vector2(3.39231, 3.00062)
+sprite_frames = SubResource("SpriteFrames_0fjpc")
+frame = 15
+frame_progress = 1.0
+
+[node name="CriticalAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(1264.12, 255.531)
+scale = Vector2(4.875, 4.42125)
+sprite_frames = SubResource("SpriteFrames_b05pg")
+frame = 15
+frame_progress = 1.0
+
+[node name="vidabot" type="TextureProgressBar" parent="."]
+show_behind_parent = true
+texture_filter = 1
+offset_left = 768.0
+offset_top = 432.0
+offset_right = 1152.0
+offset_bottom = 576.0
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 20
+stretch_margin_right = 20
+texture_under = ExtResource("18_wl4bb")
+texture_over = ExtResource("19_6h1fc")
+texture_progress = ExtResource("20_vxl7x")
+script = ExtResource("100_ci23i")
+
+[node name="vidalabel" type="Label" parent="vidabot"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.754
+anchor_top = -0.556
+anchor_right = -0.754
+anchor_bottom = -0.556
+offset_left = 453.536
+offset_top = 126.064
+offset_right = 517.536
+offset_bottom = 180.064
+theme_override_fonts/font = ExtResource("9_fevyy")
+theme_override_font_sizes/font_size = 37
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Area" type="Node2D" parent="."]
 top_level = true
@@ -726,96 +818,6 @@ metadata/_edit_use_anchors_ = true
 stream = ExtResource("16_k12tt")
 autoplay = true
 
-[node name="Boss" type="Node2D" parent="."]
-script = ExtResource("16_b3802")
-
-[node name="BossAnimatedSprite" type="AnimatedSprite2D" parent="Boss"]
-modulate = Color(0.786613, 0.508219, 0.891528, 1)
-texture_filter = 1
-position = Vector2(960, 304)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_ovafv")
-frame_progress = 0.219999
-metadata/_edit_lock_ = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Boss/BossAnimatedSprite"]
-
-[node name="vidabot" type="TextureProgressBar" parent="Boss/BossAnimatedSprite/CanvasLayer"]
-show_behind_parent = true
-texture_filter = 1
-offset_left = 810.0
-offset_top = 440.0
-offset_right = 1090.0
-offset_bottom = 544.0
-value = 100.0
-nine_patch_stretch = true
-stretch_margin_left = 20
-stretch_margin_right = 20
-texture_under = ExtResource("18_wl4bb")
-texture_over = ExtResource("19_6h1fc")
-texture_progress = ExtResource("20_vxl7x")
-script = ExtResource("21_gdwd6")
-metadata/_edit_lock_ = true
-
-[node name="vidalabel" type="Label" parent="Boss/BossAnimatedSprite/CanvasLayer/vidabot"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 90.0
-offset_top = 33.0
-offset_right = 194.0
-offset_bottom = 73.0
-theme_override_fonts/font = ExtResource("9_fevyy")
-theme_override_font_sizes/font_size = 26
-text = "100"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
-
-[node name="AttackAnimation" type="AnimatedSprite2D" parent="Boss"]
-visible = false
-modulate = Color(0.788235, 0.509804, 0.890196, 1)
-texture_filter = 1
-position = Vector2(960, 304)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_owhal")
-frame = 22
-frame_progress = 1.0
-
-[node name="HurtAnimation" type="AnimatedSprite2D" parent="Boss"]
-visible = false
-modulate = Color(0.851765, 0.355322, 0.690708, 1)
-texture_filter = 1
-position = Vector2(960, 304)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_xg142")
-frame = 34
-frame_progress = 1.0
-
-[node name="AttackSound" type="AudioStreamPlayer2D" parent="Boss"]
-stream = ExtResource("76_fd3ed")
-
-[node name="CriticSound" type="AudioStreamPlayer2D" parent="Boss"]
-stream = ExtResource("77_qnggo")
-
-[node name="MissAnimation" type="AnimatedSprite2D" parent="Boss"]
-visible = false
-texture_filter = 1
-position = Vector2(1190, 279)
-scale = Vector2(3.39231, 3.00062)
-sprite_frames = SubResource("SpriteFrames_0fjpc")
-frame = 15
-frame_progress = 1.0
-
-[node name="CriticalAnimation" type="AnimatedSprite2D" parent="Boss"]
-visible = false
-texture_filter = 1
-position = Vector2(1264.12, 255.531)
-scale = Vector2(4.875, 4.42125)
-sprite_frames = SubResource("SpriteFrames_b05pg")
-frame = 15
-frame_progress = 1.0
-
 [node name="timer" type="Node2D" parent="."]
 visible = false
 script = ExtResource("18_b3802")
@@ -919,16 +921,16 @@ theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 27
 text = "EVENTO ACTIVO: VIENTO"
 
-[connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]
-[connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
-[connection signal="pressed" from="Atacar" to="EnergyNode" method="_on_atacar_pressed"]
-[connection signal="pressed" from="Atacar" to="Boss" method="_on_atacar_pressed"]
-[connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
-[connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
-[connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="animation_finished" from="Boss/AttackAnimation" to="Boss" method="_on_attack_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/MissAnimation" to="Boss" method="_on_miss_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/CriticalAnimation" to="Boss" method="_on_critical_animation_animation_finished"]
+[connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
+[connection signal="pressed" from="Atacar" to="Boss" method="_on_atacar_pressed"]
+[connection signal="pressed" from="Atacar" to="EnergyNode" method="_on_atacar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_boton_salir_pressed"]
+[connection signal="pressed" from="Saltar" to="." method="_on_saltar_pressed"]
+[connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]
