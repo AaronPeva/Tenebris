@@ -12,8 +12,10 @@ var niebla_activa = false
 var carta1 = true
 var carta2 = false
 var carta3 = false
-var max_clicks = 3
+var max_clicks = 10
 var clicks_actuales = 0
+var viento_activo = false
+var evento_activo = null
 
 func _process(delta: float) -> void:
 	if Global.hp_carta_jugador < 0:
