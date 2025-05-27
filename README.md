@@ -34,7 +34,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/AaronPeva/la-vida-mejora--el-godot-no.git
+   git clone https://github.com/AaronPeva/Tenebris.git
    ```
 2. **Abre el proyecto en Godot Engine.**
 3. **Ejecuta la escena principal** (`Main.tscn` o la escena indicada en la documentación del proyecto).
