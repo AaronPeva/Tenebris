@@ -539,6 +539,15 @@ collision_mask = 2
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_ilbd4")
 
+[node name="Restantes" type="Label" parent="Deck"]
+texture_filter = 1
+offset_left = 15.5
+offset_top = 22.5
+offset_right = 50.5
+offset_bottom = 41.5
+theme_override_fonts/font = ExtResource("9_fevyy")
+text = "1"
+
 [node name="Atacar" type="Button" parent="."]
 texture_filter = 1
 offset_left = 1088.0

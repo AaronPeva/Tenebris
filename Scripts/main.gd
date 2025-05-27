@@ -121,6 +121,7 @@ func niebla_azul_finalizar():
 	
 func finalizar_turno():
 	if Global.puede_jugar == false:
+		Global.max_clicks += 1
 		contador_turnos_inactivos += 1
 		var probabilidad := randi() % 100
 		if probabilidad < 5:

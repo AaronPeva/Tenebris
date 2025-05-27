@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://4t8pney5s5xp"]
 
-[ext_resource type="Script" uid="uid://dte1nssfacvup" path="res://Scripts/card_character.gd" id="1_fspfb"]
+[ext_resource type="Script" uid="uid://dvy1dkufn6grh" path="res://Scenes/card_a_3.gd" id="1_4nnr2"]
 [ext_resource type="Texture2D" uid="uid://cfv3kroa05h78" path="res://Imagenes/Cartas/Carta activa gimpmamado.png" id="2_fspfb"]
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_6pwpo"]
 [ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Cartas/BoxVidav3.png" id="4_8avu7"]
@@ -41,7 +41,7 @@ size = Vector2(260, 374)
 z_index = -1
 position = Vector2(179, 847)
 scale = Vector2(0.6, 0.6)
-script = ExtResource("1_fspfb")
+script = ExtResource("1_4nnr2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
