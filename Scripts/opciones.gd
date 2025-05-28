@@ -13,9 +13,6 @@ func _process(delta):
 	var offset = (mouse_pos - screen_center) / screen_center * intensity
 	position = original_position + offset
 
-func _on_salir_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
-
 
 func resolucion_on_option_button_item_selected(index: int) -> void:
 	pass # Replace with function body.
