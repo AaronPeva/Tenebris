@@ -1,12 +1,12 @@
 extends Node2D
 
-var boss_damage = 20
+var boss_damage = 5
 var player_damage = Global.attack_damage
 var fallado = false
 var critico = false
 @onready var miss_label = $Miss
 @onready var critical_label = $Critical
-@onready var boss_health = $BossAnimatedSprite/CanvasLayer/vidabot
+@onready var boss_health = get_parent().get_node("vidabot")
 @onready var attack_sound = $AttackSound
 @onready var critical_sound = $CriticSound
 
@@ -17,6 +17,7 @@ func _ready() -> void:
 	$HurtAnimation.visible = false
 	$MissAnimation.visible = false
 	$CriticalAnimation.visible = false
+	
 	
 func _on_atacar_pressed() -> void:
 	var final_damage = await damage_prob()
@@ -89,7 +90,6 @@ func damage_prob() -> int:
 
 	else:
 		return player_damage  # daño normal
-
 
 
 func _on_miss_animation_animation_finished() -> void:

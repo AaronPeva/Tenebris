@@ -11,12 +11,17 @@ extends Node2D
 @onready var FogInfo = $FogInfo
 @onready var FogTitle = $FogTitle
 @onready var area = $Area/Area2D/AreaImage
+@onready var vidabot = $vidabot
 var contador_turnos_inactivos := 0
 var evento_chequeado := false
+var derrota_activada := false
+var victoria_activada := false
 
 signal clic_personal
 
 func _ready():
+	$Volver.visible = false
+	$LoseAnimation.visible = false
 	$WindAnimation.visible = false
 	$FogAnimation.visible = false
 	$FogInfo.visible = false
@@ -53,7 +58,18 @@ func _process(delta):
 
 	var energia_actual = int(energy_node.energ.text)
 	atacar_button.disabled = energia_actual < Global.attack_cost
-
+	
+	if Global.hp_carta_jugador == 0 and not derrota_activada:
+		derrota_activada = true
+		_derrota()
+		
+	if vidabot.value == 0 and not victoria_activada:
+		victoria_activada = true
+		_victoria()
+	if victoria_activada:
+		$Volver.modulate = Color(0, 1, 0) # Verde
+	elif derrota_activada:
+		$Volver.modulate = Color(1, 0, 0) # Rojo
 
 func _on_input_event():
 	_visible()
@@ -135,14 +151,14 @@ func empezar_turno():
 			var probabilidad := randi() % 100
 			print("Probabilidad de evento:", probabilidad)
 
-			if probabilidad < 5:
+			if probabilidad < 99:
 				niebla_azul_empezar()
 				Global.evento_activo = "niebla"
 				Global.niebla_activa = true
 				contador_turnos_inactivos = 0
 				print("🌫 Niebla activada")
 
-			elif probabilidad < 10:
+			elif probabilidad < 99:
 				viento_empezar()
 				Global.evento_activo = "viento"
 				Global.viento_activo = true
@@ -178,3 +194,22 @@ func viento_finalizar():
 	$WindTitle.visible = false
 	$WindInfo.visible = false
 	Global.viento_activo = false
+	
+func _derrota():
+	$LoseAnimation.visible = true
+	$LoseAnimation.play()
+	await get_tree().create_timer(1.5).timeout
+	$Volver.visible = true
+
+
+func _on_volver_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
+
+func _victoria():
+	$VictoryAnimation.visible = true
+	$VictoryAnimation.play()
+	await get_tree().create_timer(1.5).timeout
+	$Volver.visible = true
+
+func _on_victory_animation_animation_finished() -> void:
+	pass
