@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dte1nssfacvup" path="res://Scripts/card_character.gd" id="1_yd4ab"]
 [ext_resource type="Texture2D" uid="uid://dlqvhgl1q5lhq" path="res://Imagenes/Cartas/Carta activa rana.png" id="2_yd4ab"]
-[ext_resource type="Script" path="res://Scripts/progress_bar.gd" id="3_7c7dp"]
+[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/progress_bar.gd" id="3_7c7dp"]
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_7fe6x"]
 [ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Cartas/BoxVidav3.png" id="3_tcgq6"]
 [ext_resource type="Texture2D" uid="uid://d3th7vs16jqye" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_1.png" id="4_83sfg"]

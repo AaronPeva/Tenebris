@@ -103,7 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://bivdmwjhx04g8" path="res://Animations/CriticalAnimation/criticalanimacion_3.png" id="98_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cix1gf3o7owbg" path="res://Animations/CriticalAnimation/criticalanimacion_4.png" id="99_cmq5c"]
 [ext_resource type="Texture2D" uid="uid://ofpjhwnoh6ye" path="res://Animations/CriticalAnimation/criticalanimacion_5.png" id="100_7t1gx"]
-[ext_resource type="Script" uid="uid://cqvj2l0iol0kt" path="res://Scripts/vidabot.gd" id="100_ci23i"]
+[ext_resource type="Script" uid="uid://bvwdbhfc7jxlm" path="res://Scripts/vidabot.gd" id="100_ci23i"]
 [ext_resource type="Texture2D" uid="uid://desl4fy2a2mgy" path="res://Animations/CriticalAnimation/criticalanimacion_6.png" id="101_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://dxlpfnmem6k0g" path="res://Animations/CriticalAnimation/criticalanimacion_7.png" id="102_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://bpnb6o47312jw" path="res://Animations/CriticalAnimation/criticalanimacion_8.png" id="103_xjjvj"]
