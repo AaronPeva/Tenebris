@@ -51,6 +51,7 @@ offset_right = 204.0
 offset_bottom = 21.0
 
 [node name="Fullscreen" type="Label" parent="OptionsMenu"]
+layout_mode = 0
 offset_left = 804.0
 offset_top = 184.0
 offset_right = 912.0
@@ -65,6 +66,7 @@ offset_right = 111.0
 offset_bottom = 26.0
 
 [node name="Aplicar" type="Button" parent="OptionsMenu"]
+layout_mode = 0
 offset_left = 267.0
 offset_top = 686.0
 offset_right = 739.0
@@ -72,6 +74,7 @@ offset_bottom = 887.0
 text = "APlicar"
 
 [node name="Salir" type="Button" parent="OptionsMenu"]
+layout_mode = 0
 offset_left = 855.0
 offset_top = 684.0
 offset_right = 1444.0
