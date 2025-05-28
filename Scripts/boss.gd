@@ -1,6 +1,6 @@
 extends Node2D
 
-var boss_damage = 80
+var boss_damage = 5
 var player_damage = Global.attack_damage
 var fallado = false
 var critico = false

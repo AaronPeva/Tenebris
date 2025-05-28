@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=193 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -157,6 +157,25 @@
 [ext_resource type="Texture2D" uid="uid://dqurl3wmramnx" path="res://Animations/LoseAnimation/Derrota_20.png" id="155_dllok"]
 [ext_resource type="Texture2D" uid="uid://nkm1ihyhlkc1" path="res://Animations/LoseAnimation/Derrota_21.png" id="156_0t4jf"]
 [ext_resource type="Texture2D" uid="uid://cf7hc5qg6kqmp" path="res://Animations/LoseAnimation/Derrota_22.png" id="157_daoo8"]
+[ext_resource type="Texture2D" uid="uid://f2elxa0i8jbf" path="res://Animations/VictoryAnimation/Victoria_1.png" id="158_2rlip"]
+[ext_resource type="Texture2D" uid="uid://c5p2xflpjjeie" path="res://Animations/VictoryAnimation/Victoria_2.png" id="159_peks8"]
+[ext_resource type="Texture2D" uid="uid://cptkwfeywh42r" path="res://Animations/VictoryAnimation/Victoria_3.png" id="160_ve7nm"]
+[ext_resource type="Texture2D" uid="uid://dxces810ikbhv" path="res://Animations/VictoryAnimation/Victoria_4.png" id="161_sbvnb"]
+[ext_resource type="Texture2D" uid="uid://cwyluftv5hlfs" path="res://Animations/VictoryAnimation/Victoria_5.png" id="162_pkhog"]
+[ext_resource type="Texture2D" uid="uid://bkxiqe6hqwuxq" path="res://Animations/VictoryAnimation/Victoria_6.png" id="163_b4mg0"]
+[ext_resource type="Texture2D" uid="uid://dt68rlouuhnkt" path="res://Animations/VictoryAnimation/Victoria_7.png" id="164_g52ui"]
+[ext_resource type="Texture2D" uid="uid://c7auvvrc8au1l" path="res://Animations/VictoryAnimation/Victoria_8.png" id="165_144ni"]
+[ext_resource type="Texture2D" uid="uid://uc08alsbkxy7" path="res://Animations/VictoryAnimation/Victoria_9.png" id="166_vm2ri"]
+[ext_resource type="Texture2D" uid="uid://bvfhvyxk7spyo" path="res://Animations/VictoryAnimation/Victoria_10.png" id="167_reygs"]
+[ext_resource type="Texture2D" uid="uid://c1kna0lp1j3ng" path="res://Animations/VictoryAnimation/Victoria_11.png" id="168_tlp2u"]
+[ext_resource type="Texture2D" uid="uid://7niun1kf33rw" path="res://Animations/VictoryAnimation/Victoria_12.png" id="169_wx2j7"]
+[ext_resource type="Texture2D" uid="uid://cm2mmmcbtm2kx" path="res://Animations/VictoryAnimation/Victoria_13.png" id="170_0jame"]
+[ext_resource type="Texture2D" uid="uid://cgfxdlpiwp8t2" path="res://Animations/VictoryAnimation/Victoria_14.png" id="171_obsuk"]
+[ext_resource type="Texture2D" uid="uid://gqibbkkxu04u" path="res://Animations/VictoryAnimation/Victoria_15.png" id="172_74dxy"]
+[ext_resource type="Texture2D" uid="uid://cxrn1w50jpgaa" path="res://Animations/VictoryAnimation/Victoria_16.png" id="173_6ben7"]
+[ext_resource type="Texture2D" uid="uid://q6ckw634q40i" path="res://Animations/VictoryAnimation/Victoria_17.png" id="174_pxch7"]
+[ext_resource type="Texture2D" uid="uid://b8e78wo6ej03v" path="res://Animations/VictoryAnimation/Victoria_18.png" id="175_51a0c"]
+[ext_resource type="Texture2D" uid="uid://7gjopgrjywln" path="res://Animations/VictoryAnimation/Victoria_19.png" id="176_cqvvm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ovafv"]
 animations = [{
@@ -646,6 +665,74 @@ animations = [{
 "speed": 27.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7d74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("158_2rlip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_peks8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_ve7nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_sbvnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_pkhog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_b4mg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_g52ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_144ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_vm2ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_reygs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_tlp2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_wx2j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_0jame")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_obsuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_74dxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_74dxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_6ben7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_pxch7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_51a0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_cqvvm")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6bp64")
 
@@ -1031,7 +1118,6 @@ frame_progress = 1.0
 
 [node name="Volver" type="Button" parent="."]
 visible = false
-modulate = Color(1, 0.324387, 0.256332, 1)
 texture_filter = 1
 offset_left = 848.0
 offset_top = 752.0
@@ -1048,6 +1134,15 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
+[node name="VictoryAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(960, -32)
+scale = Vector2(20.15, 21.49)
+sprite_frames = SubResource("SpriteFrames_w7d74")
+frame = 19
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="Boss/AttackAnimation" to="Boss" method="_on_attack_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/MissAnimation" to="Boss" method="_on_miss_animation_animation_finished"]
@@ -1063,3 +1158,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]
 [connection signal="animation_finished" from="LoseAnimation" to="." method="_on_lose_animation_animation_finished"]
 [connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="animation_finished" from="VictoryAnimation" to="." method="_on_victory_animation_animation_finished"]

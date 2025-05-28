@@ -11,9 +11,11 @@ extends Node2D
 @onready var FogInfo = $FogInfo
 @onready var FogTitle = $FogTitle
 @onready var area = $Area/Area2D/AreaImage
+@onready var vidabot = $vidabot
 var contador_turnos_inactivos := 0
 var evento_chequeado := false
 var derrota_activada := false
+var victoria_activada := false
 
 signal clic_personal
 
@@ -61,6 +63,13 @@ func _process(delta):
 		derrota_activada = true
 		_derrota()
 		
+	if vidabot.value == 0 and not victoria_activada:
+		victoria_activada = true
+		_victoria()
+	if victoria_activada:
+		$Volver.modulate = Color(0, 1, 0) # Verde
+	elif derrota_activada:
+		$Volver.modulate = Color(1, 0, 0) # Rojo
 
 func _on_input_event():
 	_visible()
@@ -189,9 +198,18 @@ func viento_finalizar():
 func _derrota():
 	$LoseAnimation.visible = true
 	$LoseAnimation.play()
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.5).timeout
 	$Volver.visible = true
 
 
 func _on_volver_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
+
+func _victoria():
+	$VictoryAnimation.visible = true
+	$VictoryAnimation.play()
+	await get_tree().create_timer(1.5).timeout
+	$Volver.visible = true
+
+func _on_victory_animation_animation_finished() -> void:
+	pass
