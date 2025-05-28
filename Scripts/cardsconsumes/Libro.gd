@@ -1,6 +1,6 @@
 extends "res://Scripts/card.gd"
 
-var Daño = 1
+var Daño = 3
 
 func accion_consumible():
 	super.accion_consumible()

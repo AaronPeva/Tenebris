@@ -1,6 +1,6 @@
 extends "res://Scripts/card.gd"
 
-var Curar = 3
+var Curar = 10
 
 func accion_consumible():
 	super.accion_consumible()
