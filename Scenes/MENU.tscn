@@ -50,10 +50,10 @@ texture = ExtResource("2_ra4qy")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 924.242
-offset_top = 423.636
-offset_right = 1068.24
-offset_bottom = 461.636
+offset_left = 509.0
+offset_top = 292.0
+offset_right = 653.0
+offset_bottom = 330.0
 
 [node name="jugar" type="Button" parent="VBoxContainer"]
 texture_filter = 1
@@ -106,10 +106,10 @@ autoplay = true
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = 472.727
-offset_top = 281.818
-offset_right = 743.727
-offset_bottom = 395.818
+offset_left = 903.636
+offset_top = 457.576
+offset_right = 1174.64
+offset_bottom = 571.576
 rotation = 0.0065929
 theme_override_fonts/font = ExtResource("5_cb33x")
 theme_override_font_sizes/font_size = 48
