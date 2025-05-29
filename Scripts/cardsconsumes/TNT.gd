@@ -1,7 +1,7 @@
 extends "res://Scripts/card.gd"
 
-var Autodaño = 3
-var Daño = 3
+var Autodaño = 10
+var Daño = 10
 func accion_consumible():
 	super.accion_consumible()
 	vidaBoss.value -= Daño

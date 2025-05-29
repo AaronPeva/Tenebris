@@ -1,8 +1,7 @@
 extends "res://Scripts/card.gd"
 
-var Autodaño = 1
+var Autodaño = 5
 var Recuperacion_energia = 2
-
 
 func accion_consumible():
 	super.accion_consumible()

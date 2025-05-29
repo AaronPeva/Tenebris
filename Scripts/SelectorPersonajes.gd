@@ -18,17 +18,17 @@ func _ready():
 	personajes = [
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa rana.png"),
-			2, 2, 5,
+			5, 2, 100,
 			"res://Scenes/cardA1.tscn"
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa linux.png"),
-			1, 1, 5, 
+			5, 1, 80, 
 			"res://Scenes/cardA2.tscn" 
 		),
 		Personaje.new(
 			preload("res://Imagenes/Cartas/Carta activa gimpmamado.png"),
-			3, 4, 5,
+			10, 3, 120,
 			"res://Scenes/cardA3.tscn"
 			
 		)

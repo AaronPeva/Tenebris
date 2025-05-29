@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=201 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -103,7 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://bivdmwjhx04g8" path="res://Animations/CriticalAnimation/criticalanimacion_3.png" id="98_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cix1gf3o7owbg" path="res://Animations/CriticalAnimation/criticalanimacion_4.png" id="99_cmq5c"]
 [ext_resource type="Texture2D" uid="uid://ofpjhwnoh6ye" path="res://Animations/CriticalAnimation/criticalanimacion_5.png" id="100_7t1gx"]
-[ext_resource type="Script" uid="uid://bvwdbhfc7jxlm" path="res://Scripts/vidabot.gd" id="100_ci23i"]
+[ext_resource type="Script" uid="uid://cqvj2l0iol0kt" path="res://Scripts/vidabot.gd" id="100_ci23i"]
 [ext_resource type="Texture2D" uid="uid://desl4fy2a2mgy" path="res://Animations/CriticalAnimation/criticalanimacion_6.png" id="101_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://dxlpfnmem6k0g" path="res://Animations/CriticalAnimation/criticalanimacion_7.png" id="102_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://bpnb6o47312jw" path="res://Animations/CriticalAnimation/criticalanimacion_8.png" id="103_xjjvj"]
@@ -176,6 +176,13 @@
 [ext_resource type="Texture2D" uid="uid://q6ckw634q40i" path="res://Animations/VictoryAnimation/Victoria_17.png" id="174_pxch7"]
 [ext_resource type="Texture2D" uid="uid://b8e78wo6ej03v" path="res://Animations/VictoryAnimation/Victoria_18.png" id="175_51a0c"]
 [ext_resource type="Texture2D" uid="uid://7gjopgrjywln" path="res://Animations/VictoryAnimation/Victoria_19.png" id="176_cqvvm"]
+[ext_resource type="Texture2D" uid="uid://cl0nram6ri6us" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_1.png" id="177_144ni"]
+[ext_resource type="Texture2D" uid="uid://cfoc80jutnwj3" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_2.png" id="178_vm2ri"]
+[ext_resource type="Texture2D" uid="uid://h0tso8sg75ip" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_3.png" id="179_reygs"]
+[ext_resource type="Texture2D" uid="uid://ieh3cq51n8a8" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_4.png" id="180_tlp2u"]
+[ext_resource type="Texture2D" uid="uid://dc82qnbris7b7" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_5.png" id="181_wx2j7"]
+[ext_resource type="Texture2D" uid="uid://1tv3ae650f1s" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_6.png" id="182_0jame"]
+[ext_resource type="Texture2D" uid="uid://dgaeffya5fmqi" path="res://Animations/EndGameAnimation/FondoDerrotaGanar_7.png" id="183_obsuk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ovafv"]
 animations = [{
@@ -588,6 +595,35 @@ animations = [{
 "speed": 14.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_74dxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("177_144ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_vm2ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_reygs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_tlp2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_wx2j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_0jame")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_obsuk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6lvi0"]
 animations = [{
 "frames": [{
@@ -789,6 +825,24 @@ texture_filter = 1
 position = Vector2(1264.12, 255.531)
 scale = Vector2(4.875, 4.42125)
 sprite_frames = SubResource("SpriteFrames_b05pg")
+frame = 15
+frame_progress = 1.0
+
+[node name="BossCriticalAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(686, 654)
+scale = Vector2(4.875, 4.42125)
+sprite_frames = SubResource("SpriteFrames_b05pg")
+frame = 15
+frame_progress = 1.0
+
+[node name="BossMissAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(750, 653)
+scale = Vector2(3.39231, 3.00062)
+sprite_frames = SubResource("SpriteFrames_0fjpc")
 frame = 15
 frame_progress = 1.0
 
@@ -1042,6 +1096,7 @@ theme_override_fonts/font = ExtResource("9_fevyy")
 text = "¡No tienes energía suficiente!"
 
 [node name="FogAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.109804)
 texture_filter = 1
 position = Vector2(959.75, 540.25)
@@ -1107,6 +1162,12 @@ theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 27
 text = "EVENTO ACTIVO: VIENTO"
 
+[node name="FondoFin" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(19.2, 10.8)
+sprite_frames = SubResource("SpriteFrames_74dxy")
+frame_progress = 0.615933
+
 [node name="LoseAnimation" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
@@ -1115,6 +1176,23 @@ scale = Vector2(18.265, 18.125)
 sprite_frames = SubResource("SpriteFrames_6lvi0")
 frame = 22
 frame_progress = 1.0
+
+[node name="VictoryAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(960, -32)
+scale = Vector2(20.15, 21.49)
+sprite_frames = SubResource("SpriteFrames_w7d74")
+frame = 19
+frame_progress = 1.0
+
+[node name="UIBlocker" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
 
 [node name="Volver" type="Button" parent="."]
 visible = false
@@ -1157,6 +1235,8 @@ text = "Hola"
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/MissAnimation" to="Boss" method="_on_miss_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/CriticalAnimation" to="Boss" method="_on_critical_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/BossCriticalAnimation" to="Boss" method="_on_boss_critical_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/BossMissAnimation" to="Boss" method="_on_boss_miss_animation_animation_finished"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
@@ -1167,5 +1247,5 @@ text = "Hola"
 [connection signal="pressed" from="Saltar" to="Boss" method="_on_saltar_pressed"]
 [connection signal="timeout" from="timer/TimerBot" to="." method="_on_timer_bot_timeout"]
 [connection signal="animation_finished" from="LoseAnimation" to="." method="_on_lose_animation_animation_finished"]
-[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
 [connection signal="animation_finished" from="VictoryAnimation" to="." method="_on_victory_animation_animation_finished"]
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

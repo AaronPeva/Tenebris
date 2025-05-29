@@ -151,14 +151,14 @@ func empezar_turno():
 			var probabilidad := randi() % 100
 			print("Probabilidad de evento:", probabilidad)
 
-			if probabilidad < 99:
+			if probabilidad < 5:
 				niebla_azul_empezar()
 				Global.evento_activo = "niebla"
 				Global.niebla_activa = true
 				contador_turnos_inactivos = 0
 				print("🌫 Niebla activada")
 
-			elif probabilidad < 99:
+			elif probabilidad < 18:
 				viento_empezar()
 				Global.evento_activo = "viento"
 				Global.viento_activo = true
@@ -196,20 +196,28 @@ func viento_finalizar():
 	Global.viento_activo = false
 	
 func _derrota():
+	$UIBlocker.visible = true
 	$LoseAnimation.visible = true
 	$LoseAnimation.play()
+	$FondoFin.visible = true
+	$FondoFin.play()
 	await get_tree().create_timer(1.5).timeout
 	$Volver.visible = true
+
 
 
 func _on_volver_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
 
 func _victoria():
+	$UIBlocker.visible = true
 	$VictoryAnimation.visible = true
 	$VictoryAnimation.play()
+	$FondoFin.visible = true
+	$FondoFin.play()
 	await get_tree().create_timer(1.5).timeout
 	$Volver.visible = true
+
 
 func _on_victory_animation_animation_finished() -> void:
 	pass

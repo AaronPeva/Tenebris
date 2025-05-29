@@ -1,6 +1,6 @@
 extends "res://Scripts/card.gd"
 
-var Curar = 1
+var Curar = 5
 
 func actualizar_texto():
 	descripcion_texto = "MANZANA"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i5rgydt4omd"
-path="res://.godot/imported/R1Card.png-d1a8939217cc1e25a9f8fa17f8bd6ebc.ctex"
+uid="uid://cfoc80jutnwj3"
+path="res://.godot/imported/FondoDerrotaGanar_2.png-9807a524febd878d1ad34a83af965c82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Cartas/R1Card.png"
-dest_files=["res://.godot/imported/R1Card.png-d1a8939217cc1e25a9f8fa17f8bd6ebc.ctex"]
+source_file="res://Animations/EndGameAnimation/FondoDerrotaGanar_2.png"
+dest_files=["res://.godot/imported/FondoDerrotaGanar_2.png-9807a524febd878d1ad34a83af965c82.ctex"]
 
 [params]
 
