@@ -3,6 +3,7 @@ extends Node2D
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 4
 const DEFAULT_CARD_MOVE_SPEED = 0.2
+const CardDatabase = preload("res://Scripts/CardDatabase.gd")
 
 @onready var area = $"../Area/Area2D/AreaImage"
 var screen_size
@@ -35,7 +36,6 @@ func start_drag(card):
 			card_being_dragged = card
 			card.scale = Vector2(0.475, 0.475)
 			card.highlight_card(true)
-
 
 
 func finish_drag():

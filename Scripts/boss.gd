@@ -11,6 +11,8 @@ var critico = false
 @onready var critical_sound = $CriticSound
 
 func _ready() -> void:
+	$BossCriticalAnimation.visible = false
+	$BossMissAnimation.visible = false
 	$BossAnimatedSprite.play()
 	$BossAnimatedSprite.visible = true
 	$AttackAnimation.visible = false
@@ -32,7 +34,8 @@ func _on_atacar_pressed() -> void:
 	await get_tree().create_timer(2.0).timeout
 	AnimacionAtacar()
 	await get_tree().create_timer(0.4).timeout
-	Global.hp_carta_jugador -= boss_damage
+	var damage_received = damage_boss_prob()
+	Global.hp_carta_jugador -= damage_received
 	if Global.hp_carta_jugador < 0:
 		Global.hp_carta_jugador = 0
 
@@ -40,7 +43,8 @@ func _on_saltar_pressed() -> void:
 	await get_tree().create_timer(2.0).timeout
 	AnimacionAtacar()
 	await get_tree().create_timer(0.5).timeout
-	Global.hp_carta_jugador -= boss_damage
+	var damage_received = damage_boss_prob()
+	Global.hp_carta_jugador -= damage_received
 	if Global.hp_carta_jugador < 0:
 		Global.hp_carta_jugador = 0
 
@@ -98,3 +102,31 @@ func _on_miss_animation_animation_finished() -> void:
 
 func _on_critical_animation_animation_finished() -> void:
 	$CriticalAnimation.visible = false
+
+func damage_boss_prob() -> int:
+	var prob = randi() % 100
+	var fallo_chance = 5
+	var crit_chance = 10
+
+	if prob < fallo_chance:
+		miss_boss()
+		return 0  # El boss falla
+	elif prob < crit_chance + fallo_chance:
+		critico_boss()
+		return boss_damage * 2  # Crítico
+	else:
+		return boss_damage  # Daño normal
+
+func critico_boss():
+	$BossCriticalAnimation.visible = true
+	$BossCriticalAnimation.play()
+
+func _on_boss_critical_animation_animation_finished() -> void:
+	$BossCriticalAnimation.visible = false
+
+func miss_boss():
+	$BossMissAnimation.visible = true
+	$BossMissAnimation.play()
+
+func _on_boss_miss_animation_animation_finished() -> void:
+	$BossMissAnimation.visible = false

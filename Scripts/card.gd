@@ -14,6 +14,7 @@ var valor
 @onready var area = get_node("/root/Main/Area/Area2D/AreaImage")
 @onready var text_energia = $Energy
 @onready var energia_general = get_node("/root/Main/EnergyNode/TextEnerg")
+@onready var info = ("/root/Main/CardInfo")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	valor = richtext.text.to_int()

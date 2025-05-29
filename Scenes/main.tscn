@@ -792,6 +792,24 @@ sprite_frames = SubResource("SpriteFrames_b05pg")
 frame = 15
 frame_progress = 1.0
 
+[node name="BossCriticalAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(686, 654)
+scale = Vector2(4.875, 4.42125)
+sprite_frames = SubResource("SpriteFrames_b05pg")
+frame = 15
+frame_progress = 1.0
+
+[node name="BossMissAnimation" type="AnimatedSprite2D" parent="Boss"]
+visible = false
+texture_filter = 1
+position = Vector2(750, 653)
+scale = Vector2(3.39231, 3.00062)
+sprite_frames = SubResource("SpriteFrames_0fjpc")
+frame = 15
+frame_progress = 1.0
+
 [node name="vidabot" type="TextureProgressBar" parent="."]
 show_behind_parent = true
 texture_filter = 1
@@ -1147,6 +1165,8 @@ frame_progress = 1.0
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/MissAnimation" to="Boss" method="_on_miss_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/CriticalAnimation" to="Boss" method="_on_critical_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/BossCriticalAnimation" to="Boss" method="_on_boss_critical_animation_animation_finished"]
+[connection signal="animation_finished" from="Boss/BossMissAnimation" to="Boss" method="_on_boss_miss_animation_animation_finished"]
 [connection signal="area_entered" from="Area/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="pressed" from="Atacar" to="." method="_on_atacar_pressed"]
