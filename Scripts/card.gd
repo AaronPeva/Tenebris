@@ -9,13 +9,16 @@ var starting_position
 var card_slot_card_is_in
 var being_removed = false
 var valor
+var descripcion_texto = "..."
 @onready var richtext = $Valor
 @onready var vidaBoss = get_node("/root/Main/Boss/BossAnimatedSprite/CanvasLayer/vidabot")
 @onready var area = get_node("/root/Main/Area/Area2D/AreaImage")
 @onready var text_energia = $Energy
 @onready var energia_general = get_node("/root/Main/EnergyNode/TextEnerg")
+@onready var info = get_node("/root/Main/InfoCard")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(info)
 	valor = richtext.text.to_int()
 	add_to_group("cartas")
 	get_parent().connect_card_signals(self) # Replace with function body.
@@ -24,6 +27,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
 
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self) # Replace with function body.
@@ -58,7 +62,18 @@ func gastar_energia():
 
 func highlight_card(dragged):
 	if dragged:
+		actualizar_texto()
+		info.text = descripcion_texto
+		info.visible = true
 		self.z_index = 2
+		print(info.text)
+	else:
+		info.text = descripcion_texto
+		info.visible = false
+
+func actualizar_texto():
+	pass
+
 
 func hacer_accion():
 	var energia_actual = energia_general.text.to_int()
