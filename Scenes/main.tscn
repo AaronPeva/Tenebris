@@ -774,6 +774,7 @@ script = ExtResource("1_6bp64")
 
 [node name="Boss" type="Node2D" parent="."]
 script = ExtResource("16_b3802")
+metadata/_edit_lock_ = true
 
 [node name="BossAnimatedSprite" type="AnimatedSprite2D" parent="Boss"]
 modulate = Color(0.786613, 0.508219, 0.891528, 1)
@@ -783,6 +784,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_ovafv")
 frame_progress = 0.219999
 script = SubResource("GDScript_stool")
+metadata/_edit_lock_ = true
 
 [node name="AttackAnimation" type="AnimatedSprite2D" parent="Boss"]
 visible = false
@@ -861,6 +863,7 @@ texture_under = ExtResource("18_wl4bb")
 texture_over = ExtResource("19_6h1fc")
 texture_progress = ExtResource("20_vxl7x")
 script = ExtResource("100_ci23i")
+metadata/_edit_lock_ = true
 
 [node name="vidalabel" type="Label" parent="vidabot"]
 texture_filter = 1
@@ -879,9 +882,11 @@ theme_override_font_sizes/font_size = 37
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="Area" type="Node2D" parent="."]
 top_level = true
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Area"]
 top_level = true
@@ -907,12 +912,15 @@ metadata/_edit_lock_ = true
 [node name="InputManager" type="Node2D" parent="."]
 position = Vector2(7.62939e-06, 3.05176e-05)
 script = ExtResource("6_56th6")
+metadata/_edit_lock_ = true
 
 [node name="CardManager" type="Node2D" parent="."]
 script = ExtResource("1_3bc8y")
+metadata/_edit_lock_ = true
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_lxjeb")
+metadata/_edit_lock_ = true
 
 [node name="Deck" type="Node2D" parent="."]
 position = Vector2(128, 936)
@@ -925,15 +933,18 @@ z_index = -2
 texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("5_bvle5")
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Deck"]
 scale = Vector2(3, 3)
 collision_layer = 2
 collision_mask = 2
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D"]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_ilbd4")
+metadata/_edit_lock_ = true
 
 [node name="Restantes" type="Label" parent="Deck"]
 texture_filter = 1
@@ -943,6 +954,8 @@ offset_right = 50.5
 offset_bottom = 41.5
 theme_override_fonts/font = ExtResource("9_fevyy")
 text = "1"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Atacar" type="Button" parent="."]
 texture_filter = 1
@@ -1020,6 +1033,7 @@ modulate = Color(1, 1, 1, 0.0705882)
 position = Vector2(360, 32)
 scale = Vector2(1.7825, 1.0075)
 texture = ExtResource("117_cmq5c")
+metadata/_edit_lock_ = true
 
 [node name="Fondo" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -1053,6 +1067,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_k12tt")
@@ -1167,6 +1182,7 @@ position = Vector2(960, 540)
 scale = Vector2(19.2, 10.8)
 sprite_frames = SubResource("SpriteFrames_74dxy")
 frame_progress = 0.615933
+metadata/_edit_lock_ = true
 
 [node name="LoseAnimation" type="AnimatedSprite2D" parent="."]
 visible = false

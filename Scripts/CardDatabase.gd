@@ -5,7 +5,7 @@ const CARDS = {
 	"C4": [1, 3, 10,"res://Scripts/cardsconsumes/Mascara.gd"],
 	"C5": [1, 0, 10, "res://Scripts/cardsconsumes/Cactus.gd"],
 	"E1": [1, 2, 1,"res://Scripts/cardsconsumes/Monster.gd"],
-	"E2": [1, 1, 1,"res://Scripts/cardsconsumes/Ruleta.gd"],
+	"E2": [1, 1, 99,"res://Scripts/cardsconsumes/Ruleta.gd"],
 	"R1": [1, 1, 5,"res://Scripts/cardsconsumes/manzana_dorada.gd"],
 	"R2": [1, 2, 5,"res://Scripts/cardsconsumes/TNT.gd"],
 	"R3": [1, 2, 5, "res://Scripts/cardsconsumes/Durum.gd"],
