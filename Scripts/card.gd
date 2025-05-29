@@ -11,7 +11,7 @@ var being_removed = false
 var valor
 var descripcion_texto = "..."
 @onready var richtext = $Valor
-@onready var vidaBoss = get_node("/root/Main/Boss/BossAnimatedSprite/CanvasLayer/vidabot")
+@onready var vidaBoss = get_node("/root/Main/vidabot")
 @onready var area = get_node("/root/Main/Area/Area2D/AreaImage")
 @onready var text_energia = $Energy
 @onready var energia_general = get_node("/root/Main/EnergyNode/TextEnerg")

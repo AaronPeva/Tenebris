@@ -1212,7 +1212,7 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="VictoryAnimation" type="AnimatedSprite2D" parent="."]
+[node name="VictoryAnimation2" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(960, -32)
