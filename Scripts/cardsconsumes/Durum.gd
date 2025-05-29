@@ -1,7 +1,7 @@
 extends "res://Scripts/card.gd"
 
-var Autodaño = 5
-var Curar = 10
+var Autodaño = 10
+var Curar = 15
 
 func accion_consumible():
 	super.accion_consumible()

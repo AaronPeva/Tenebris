@@ -2,7 +2,10 @@ extends Node2D
 
 @onready var energ = $TextEnerg
 var ya_sumado = false
-var coste = Global.attack_cost
+
+func _ready():
+	energ.text = "4"
+	actualizar_color(3)
 
 func _process(delta):
 	if Global.puede_jugar and not ya_sumado:
@@ -34,8 +37,8 @@ func actualizar_color(valor):
 
 func _on_atacar_pressed() -> void:
 	var valor_actual = int(energ.text)
-	if valor_actual >= coste:
-		valor_actual -= coste
+	if valor_actual >= Global.attack_cost:
+		valor_actual -= Global.attack_cost
 		energ.text = str(valor_actual)
 		actualizar_color(valor_actual)
 		# Aquí sigue la lógica del ataque, animaciones, daño, etc.

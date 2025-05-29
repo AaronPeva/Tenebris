@@ -1,7 +1,6 @@
 extends Node2D
 
 var boss_damage = 5
-var player_damage = Global.attack_damage
 var fallado = false
 var critico = false
 @onready var miss_label = $Miss
@@ -22,6 +21,7 @@ func _ready() -> void:
 	
 	
 func _on_atacar_pressed() -> void:
+	print(Global.attack_cost) 
 	var final_damage = await damage_prob()
 	if not fallado:
 		AnimacionDolido()
@@ -90,10 +90,10 @@ func damage_prob() -> int:
 	elif prob < crit_chance:
 		AnimacionCritico()
 		critico = true
-		return player_damage * 2  # crítico
+		return Global.attack_damage * 2  # crítico
 
 	else:
-		return player_damage  # daño normal
+		return Global.attack_damage  # daño normal
 
 
 func _on_miss_animation_animation_finished() -> void:
