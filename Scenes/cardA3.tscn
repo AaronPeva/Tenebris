@@ -50,7 +50,7 @@ position = Vector2(0, 3.05176e-05)
 scale = Vector2(12.3478, 12.9032)
 texture = ExtResource("2_fspfb")
 
-[node name="Attack" type="RichTextLabel" parent="."]
+[node name="Energy" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 0.65098, 1)
 texture_filter = 1
 offset_left = 23.333
@@ -63,7 +63,8 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Energy" type="RichTextLabel" parent="."]
+[node name="Attack" type="RichTextLabel" parent="."]
+modulate = Color(0.537255, 0.662745, 0.854902, 1)
 texture_filter = 1
 offset_left = -117.0
 offset_top = 93.667
