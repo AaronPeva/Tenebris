@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://5vhmfc3nxngg"]
 
-[ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/MENU.tres.gd" id="1_bfpus"]
-[ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/menucroquis.png" id="2_ra4qy"]
-[ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
-[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="5_cb33x"]
+[ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/opciones/MENU.tres.gd" id="1_bfpus"]
+[ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/Menu + Opciones/menucroquis.png" id="2_ra4qy"]
+[ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/font/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/font/blood_crow/bloodcrow.ttf" id="5_cb33x"]
 [ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Audios/menu.mp3" id="6_06sv8"]
 
 [sub_resource type="FontVariation" id="FontVariation_ey08u"]
@@ -65,10 +65,10 @@ text = "JUGAR"
 flat = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-offset_left = 961.0
-offset_top = 523.0
-offset_right = 1137.0
-offset_bottom = 638.0
+offset_left = 935.151
+offset_top = 520.606
+offset_right = 1111.15
+offset_bottom = 635.606
 
 [node name="personajes" type="Button" parent="VBoxContainer2"]
 texture_filter = 1
@@ -103,6 +103,17 @@ text = "SALIR"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_06sv8")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 903.636
+offset_top = 457.576
+offset_right = 1174.64
+offset_bottom = 571.576
+rotation = 0.0065929
+theme_override_fonts/font = ExtResource("5_cb33x")
+theme_override_font_sizes/font_size = 48
+text = "TENEBRIS"
 
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer2/personajes" to="." method="_on_personajes_pressed"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://r4qyes1tb6ki"]
 
 [ext_resource type="Texture2D" uid="uid://3lub2llomfpe" path="res://Imagenes/Cartas/C4Card.png" id="1_4uvki"]
-[ext_resource type="Script" uid="uid://dk6trr3vacudi" path="res://Scripts/card.gd" id="1_rr71g"]
-[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_4g0oj"]
+[ext_resource type="Script" uid="uid://dk6trr3vacudi" path="res://Scripts/card/card.gd" id="1_rr71g"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="3_4g0oj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sj8v"]
 size = Vector2(260, 374)
@@ -24,6 +24,7 @@ texture = ExtResource("1_4uvki")
 shape = SubResource("RectangleShape2D_0sj8v")
 
 [node name="Valor" type="RichTextLabel" parent="."]
+visible = false
 offset_left = -105.0
 offset_top = 82.5
 offset_right = -25.0
@@ -35,12 +36,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Energy" type="RichTextLabel" parent="."]
-offset_left = 25.0
-offset_top = 82.5
-offset_right = 105.0
-offset_bottom = 162.5
+texture_filter = 1
+offset_left = -85.0
+offset_top = 65.0
+offset_right = 95.0
+offset_bottom = 205.0
 theme_override_fonts/normal_font = ExtResource("3_4g0oj")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 87
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1

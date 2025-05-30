@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=3 uid="uid://di7o0gqtgt1tx"]
 
-[ext_resource type="Script" uid="uid://dscfq53ppgeeo" path="res://Scenes/card_a_2.gd" id="1_n8fu4"]
+[ext_resource type="Script" uid="uid://dscfq53ppgeeo" path="res://Scripts/card/card_a_2.gd" id="1_n8fu4"]
 [ext_resource type="Texture2D" uid="uid://bsojv00g0k0hd" path="res://Imagenes/Cartas/Carta activa linux.png" id="2_qppwr"]
-[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_4ktdh"]
-[ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Cartas/BoxVidav3.png" id="4_cup1i"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="3_4ktdh"]
+[ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Main/BoxVidav3.png" id="4_cup1i"]
 [ext_resource type="Texture2D" uid="uid://d3th7vs16jqye" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_1.png" id="5_k1v52"]
 [ext_resource type="Texture2D" uid="uid://bp5wfbfqfgmlw" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_2.png" id="6_1f4tw"]
 [ext_resource type="Texture2D" uid="uid://mrggiqua1jkv" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_3.png" id="7_6347u"]
 [ext_resource type="Texture2D" uid="uid://cbtd51iwonmyx" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_4.png" id="8_2q8h3"]
 [ext_resource type="Texture2D" uid="uid://dj5yi3tdye8et" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_5.png" id="9_kokri"]
-[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/progress_bar.gd" id="10_gnsy5"]
+[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/game/progress_bar.gd" id="10_gnsy5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xw7k7"]
 animations = [{
