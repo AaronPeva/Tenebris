@@ -1,4 +1,4 @@
-[gd_scene load_steps=201 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=198 format=3 uid="uid://c4d8aa1saijwy"]
 
 [ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
 [ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
@@ -17,9 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Audios/batalla2.mp3" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://ceaollq64qx32" path="res://Animations/IdleAnimation/PolitoedIdle_1.png" id="16_kwxat"]
 [ext_resource type="Texture2D" uid="uid://biflsj1bktb44" path="res://Animations/IdleAnimation/PolitoedIdle_2.png" id="17_aa8k8"]
-[ext_resource type="Texture2D" uid="uid://cicgw83dm8j6l" path="res://Imagenes/Frame2.png" id="17_b3802"]
 [ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
-[ext_resource type="Texture2D" uid="uid://bwd63iyk6w0gf" path="res://Imagenes/Frame1.png" id="18_fevyy"]
 [ext_resource type="Texture2D" uid="uid://bp4dbl4f0eboe" path="res://Animations/AttackAnimation/PolitoedAttack_1.png" id="18_kqrg6"]
 [ext_resource type="Texture2D" uid="uid://cqd7tkl1t5ce1" path="res://Imagenes/rellenosinvidaboss3.png" id="18_wl4bb"]
 [ext_resource type="Texture2D" uid="uid://vjl0re5elrr6" path="res://Imagenes/bordevidaboss3.png" id="19_6h1fc"]
@@ -513,20 +511,6 @@ size = Vector2(7.7037, 10.6667)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1mrv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hibaj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_fevyy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_b3802")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xjjvj"]
 animations = [{
@@ -1080,26 +1064,6 @@ script = ExtResource("18_b3802")
 [node name="TimerBot" type="Timer" parent="timer"]
 wait_time = 5.0
 
-[node name="Pene" type="AnimatedSprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(1840, 1016)
-scale = Vector2(6.9, 7.7)
-sprite_frames = SubResource("SpriteFrames_hibaj")
-autoplay = "default"
-frame_progress = 0.718181
-speed_scale = 7.0
-metadata/_edit_lock_ = true
-
-[node name="LabelPene" type="Label" parent="."]
-visible = false
-offset_left = 1765.0
-offset_top = 1055.0
-offset_right = 1914.0
-offset_bottom = 1086.0
-text = "print print patapim"
-metadata/_edit_lock_ = true
-
 [node name="EnergiaInsuficiente" type="Label" parent="."]
 visible = false
 texture_filter = 1
@@ -1227,15 +1191,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
-
-[node name="VictoryAnimation2" type="AnimatedSprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(960, -32)
-scale = Vector2(20.15, 21.49)
-sprite_frames = SubResource("SpriteFrames_w7d74")
-frame = 19
-frame_progress = 1.0
 
 [node name="InfoCard" type="Label" parent="."]
 visible = false
