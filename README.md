@@ -27,7 +27,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 
 ### Requisitos
 
-- [Godot Engine](https://godotengine.org/) (recomendado: última versión estable)
+- [Godot Engine](https://godotengine.org/) (recomendado: última versión estable/4.4.1)
 - Git
 
 ### Pasos para probar el juego
@@ -37,7 +37,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
    git clone https://github.com/AaronPeva/Tenebris.git
    ```
 2. **Abre el proyecto en Godot Engine.**
-3. **Ejecuta la escena principal** (`Main.tscn` o la escena indicada en la documentación del proyecto).
+3. **Ejecuta la escena principal** (`Menu.tscn`).
 4. ¡Empieza a jugar!
 
 ---
@@ -45,9 +45,9 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 ## 📁 Estructura del proyecto
 
 - `src/`: Código fuente en GDScript.
-- `gap/`: Scripts y utilidades en GAP.
-- `assets/`: Recursos gráficos, sonidos y capturas de pantalla.
-- `docs/`: Documentación y diseños adicionales (si existen).
+- `scripts/`: Scripts y utilidades en GAP.
+- `imagenes/` y `audios/`: Recursos gráficos, sonidos y capturas de pantalla.
+- `animaciones`: Diseños adicionales.
 - `README.md`: Este archivo.
 
 ---
@@ -55,7 +55,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 ## ⚡ Ejemplo de una partida
 
 1. Empiezas con una mano de cartas y cierta cantidad de energía.
-2. En tu turno, juegas cartas gastando energía. Algunas cartas se descartan tras usarse.
+2. En tu turno, juegas cartas gastando energía y ataca con tu carta activa. Algunas cartas se descartan tras usarse.
 3. El oponente realiza sus movimientos.
 4. El objetivo es reducir la vida del oponente a cero antes de que él lo logre contigo.
 5. ¡Planifica tus jugadas y gestiona tus recursos!
@@ -64,7 +64,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 
 ## 🎲 Modos y posibilidades
 
-- **Modo un jugador**: Enfréntate contra la IA y supera diferentes desafíos.
+- **Modo un jugador**: Enfréntate contra la IA y supera el desafío.
 
 ---
 
@@ -73,10 +73,10 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 ¿Quieres crear tus propias cartas, enemigos o reglas?  
 El proyecto está diseñado para ser fácil de modificar. Puedes:
 
-- Añadir nuevas cartas editando los archivos en `src/cards/`.
-- Crear nuevos enemigos en `src/enemies/`.
-- Modificar el sistema de energía desde `src/game_systems/energy.gd`.
-- Mejorar la interfaz en `src/ui/`.
+- Añadir nuevas cartas editando los archivos en `res://scripts/card/`.
+- Crear nuevos enemigos en `res://scripts/game/`.
+- Modificar el sistema de energía desde `res://scripts/game/energy_node.gd`.
+- Modifica las escenas desde `res://scenes/`.
 
 ¡Las posibilidades son infinitas!
 
