@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://5vhmfc3nxngg"]
 
-[ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/MENU.tres.gd" id="1_bfpus"]
-[ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/menucroquis.png" id="2_ra4qy"]
-[ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
-[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="5_cb33x"]
+[ext_resource type="Script" uid="uid://dqg2oacvv3v3n" path="res://Scripts/opciones/MENU.tres.gd" id="1_bfpus"]
+[ext_resource type="Texture2D" uid="uid://ivjgptih4plk" path="res://Imagenes/Menu + Opciones/menucroquis.png" id="2_ra4qy"]
+[ext_resource type="FontFile" uid="uid://whdaurma16rq" path="res://Imagenes/font/blood_crow/bloodcrowl.ttf" id="4_ckvkf"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/font/blood_crow/bloodcrow.ttf" id="5_cb33x"]
 [ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Audios/menu.mp3" id="6_06sv8"]
 
 [sub_resource type="FontVariation" id="FontVariation_ey08u"]

@@ -1,22 +1,23 @@
-extends "res://Scripts/card.gd"
+extends "res://Scripts/card/card.gd"
 
 var Curar1 = 5
 var Curar2 = 10
 var Curar3 = 15
 
+func actualizar_texto():
+	descripcion_texto = "Restaura una cantidad aleatoria de vida entre 5 y 15 puntos."
+
+
 func accion_consumible():
 	super.accion_consumible()
 	randomize()
 
-	var resultado = randi() % 3 # Resultado será 0, 1 o 2
+	var resultado = randi() % 3 
 
 	match resultado:
 		0:
 			Global.hp_carta_jugador += Curar1
-			print("Te curaste ", Curar1, " de vida. Como un mini escudo, pero humilde.")
 		1:
 			Global.hp_carta_jugador += Curar2
-			print("Te curaste ", Curar2, " de vida. Nivel intermedio, estamos en zona segura.")
 		2:
 			Global.hp_carta_jugador += Curar3
-			print("¡Bidón legendario activado! +", Curar3, " de vida, estás ready pa rushear.")

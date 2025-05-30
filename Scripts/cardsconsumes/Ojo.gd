@@ -1,8 +1,9 @@
-extends "res://Scripts/card.gd"
+extends "res://Scripts/card/card.gd"
 
-@onready var main_scene = get_node("/root/Main")  # O la ruta que tenga
+@onready var main_scene = get_node("/root/Main")
 
-
+func actualizar_texto():
+	descripcion_texto = "Elimina el evento activo del campo, neutralizando su efecto."
 
 func accion_consumible():
 	super.accion_consumible()

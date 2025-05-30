@@ -1,10 +1,10 @@
-extends "res://Scripts/card.gd"
+extends "res://Scripts/card/card.gd"
 
 var Recuperacion_energia = 1
 
 
 func actualizar_texto():
-	descripcion_texto = "PLATANO"
+	descripcion_texto = "Aumenta tu energía en +1."
 
 func accion_consumible():
 	super.accion_consumible()

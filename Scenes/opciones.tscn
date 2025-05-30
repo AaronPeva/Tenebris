@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://np855hr7rhml"]
 
-[ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones.gd" id="1_3hjeq"]
-[ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/OPCIONES.png" id="1_6gp1c"]
-[ext_resource type="Script" uid="uid://b8jyayraesft2" path="res://Scripts/OptionsMenu.gd" id="2_6ip24"]
-[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="4_3on1o"]
-[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="5_fkidl"]
+[ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones/opciones.gd" id="1_3hjeq"]
+[ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/Menu + Opciones/OPCIONES.png" id="1_6gp1c"]
+[ext_resource type="Script" uid="uid://b8jyayraesft2" path="res://Scripts/opciones/OptionsMenu.gd" id="2_6ip24"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="4_3on1o"]
+[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/Main/ButtonSeleccionar.png" id="5_fkidl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8gyjq"]
 blend_mode = 4
@@ -91,6 +91,7 @@ theme_override_font_sizes/font_size = 1
 
 [node name="Aplicar" type="Button" parent="OptionsMenu"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 743.0
 offset_top = 422.0
 offset_right = 1008.0
@@ -107,6 +108,7 @@ expand_icon = true
 
 [node name="Salir" type="Button" parent="OptionsMenu"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 30.0
 offset_top = 953.0
 offset_right = 186.0

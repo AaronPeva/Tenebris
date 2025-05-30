@@ -1,31 +1,28 @@
-[gd_scene load_steps=201 format=3 uid="uid://c4d8aa1saijwy"]
+[gd_scene load_steps=197 format=3 uid="uid://c4d8aa1saijwy"]
 
-[ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/card_manager.gd" id="1_3bc8y"]
-[ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/main.gd" id="1_6bp64"]
-[ext_resource type="Script" uid="uid://cuig5d2jqtspk" path="res://Scripts/PlayerHand.gd" id="3_lxjeb"]
-[ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/Deck.gd" id="4_q8rok"]
-[ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Mazo.png" id="5_bvle5"]
-[ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/inputManager.gd" id="6_56th6"]
-[ext_resource type="Script" uid="uid://g8jnrs0pdtwh" path="res://Scripts/energy_node.gd" id="8_d1ilt"]
-[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="9_fevyy"]
-[ext_resource type="Texture2D" uid="uid://cb151iva26sr7" path="res://Imagenes/Boladefinitiva.png" id="10_gdwd6"]
-[ext_resource type="Texture2D" uid="uid://r3xs72hnw071" path="res://Imagenes/fondoprototipo8.png" id="11_qnggo"]
-[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/blood_crow/bloodcrow.ttf" id="12_6iyac"]
-[ext_resource type="Texture2D" uid="uid://djklb4rcalrqm" path="res://Imagenes/lineagod.png" id="14_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/ButtonSeleccionar.png" id="15_wsu2k"]
-[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scripts/boss.gd" id="16_b3802"]
+[ext_resource type="Script" uid="uid://cnsvfypuwvxpe" path="res://Scripts/game/card_manager.gd" id="1_3bc8y"]
+[ext_resource type="Script" uid="uid://bpu8v3l7ypyef" path="res://Scripts/game/main.gd" id="1_6bp64"]
+[ext_resource type="Script" uid="uid://cuig5d2jqtspk" path="res://Scripts/game/PlayerHand.gd" id="3_lxjeb"]
+[ext_resource type="Script" uid="uid://by6d8x0k7yyuy" path="res://Scripts/game/Deck.gd" id="4_q8rok"]
+[ext_resource type="Texture2D" uid="uid://by8glhlb0gih1" path="res://Imagenes/Main/Mazo.png" id="5_bvle5"]
+[ext_resource type="Script" uid="uid://l3gkvyqn1lao" path="res://Scripts/opciones/inputManager.gd" id="6_56th6"]
+[ext_resource type="Script" uid="uid://g8jnrs0pdtwh" path="res://Scripts/game/energy_node.gd" id="8_d1ilt"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="9_fevyy"]
+[ext_resource type="Texture2D" uid="uid://cb151iva26sr7" path="res://Imagenes/Main/Boladefinitiva.png" id="10_gdwd6"]
+[ext_resource type="Texture2D" uid="uid://r3xs72hnw071" path="res://Imagenes/Main/fondoprototipo8.png" id="11_qnggo"]
+[ext_resource type="FontFile" uid="uid://bl3u516fpt1a4" path="res://Imagenes/font/blood_crow/bloodcrow.ttf" id="12_6iyac"]
+[ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/Main/ButtonSeleccionar.png" id="15_wsu2k"]
+[ext_resource type="Script" uid="uid://4sc8u2sl4cfo" path="res://Scripts/game/boss.gd" id="16_b3802"]
 [ext_resource type="AudioStream" uid="uid://dw1datquo7ip1" path="res://Audios/batalla2.mp3" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://ceaollq64qx32" path="res://Animations/IdleAnimation/PolitoedIdle_1.png" id="16_kwxat"]
 [ext_resource type="Texture2D" uid="uid://biflsj1bktb44" path="res://Animations/IdleAnimation/PolitoedIdle_2.png" id="17_aa8k8"]
-[ext_resource type="Texture2D" uid="uid://cicgw83dm8j6l" path="res://Imagenes/Frame2.png" id="17_b3802"]
-[ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/bot.gd" id="18_b3802"]
-[ext_resource type="Texture2D" uid="uid://bwd63iyk6w0gf" path="res://Imagenes/Frame1.png" id="18_fevyy"]
+[ext_resource type="Script" uid="uid://cjptolixx1cnl" path="res://Scripts/game/bot.gd" id="18_b3802"]
 [ext_resource type="Texture2D" uid="uid://bp4dbl4f0eboe" path="res://Animations/AttackAnimation/PolitoedAttack_1.png" id="18_kqrg6"]
-[ext_resource type="Texture2D" uid="uid://cqd7tkl1t5ce1" path="res://Imagenes/rellenosinvidaboss3.png" id="18_wl4bb"]
-[ext_resource type="Texture2D" uid="uid://vjl0re5elrr6" path="res://Imagenes/bordevidaboss3.png" id="19_6h1fc"]
+[ext_resource type="Texture2D" uid="uid://cqd7tkl1t5ce1" path="res://Imagenes/Main/rellenosinvidaboss3.png" id="18_wl4bb"]
+[ext_resource type="Texture2D" uid="uid://vjl0re5elrr6" path="res://Imagenes/Main/bordevidaboss3.png" id="19_6h1fc"]
 [ext_resource type="Texture2D" uid="uid://50mo6oj7xq6o" path="res://Animations/AttackAnimation/PolitoedAttack_2.png" id="19_nwwfm"]
 [ext_resource type="Texture2D" uid="uid://c8uelexn5k0qu" path="res://Animations/AttackAnimation/PolitoedAttack_3.png" id="20_s8vy0"]
-[ext_resource type="Texture2D" uid="uid://bsgne4ucl0u8c" path="res://Imagenes/rellenovidaboss3.png" id="20_vxl7x"]
+[ext_resource type="Texture2D" uid="uid://bsgne4ucl0u8c" path="res://Imagenes/Main/rellenovidaboss3.png" id="20_vxl7x"]
 [ext_resource type="Texture2D" uid="uid://cyxqipwk5dm2q" path="res://Animations/AttackAnimation/PolitoedAttack_4.png" id="21_jut3y"]
 [ext_resource type="Texture2D" uid="uid://c5mxibw27kwly" path="res://Animations/AttackAnimation/PolitoedAttack_5.png" id="22_v2nl5"]
 [ext_resource type="Texture2D" uid="uid://dwx1n854m7ovq" path="res://Animations/AttackAnimation/PolitoedAttack_6.png" id="23_dmskm"]
@@ -103,7 +100,7 @@
 [ext_resource type="Texture2D" uid="uid://bivdmwjhx04g8" path="res://Animations/CriticalAnimation/criticalanimacion_3.png" id="98_gdwd6"]
 [ext_resource type="Texture2D" uid="uid://cix1gf3o7owbg" path="res://Animations/CriticalAnimation/criticalanimacion_4.png" id="99_cmq5c"]
 [ext_resource type="Texture2D" uid="uid://ofpjhwnoh6ye" path="res://Animations/CriticalAnimation/criticalanimacion_5.png" id="100_7t1gx"]
-[ext_resource type="Script" uid="uid://cqvj2l0iol0kt" path="res://Scripts/vidabot.gd" id="100_ci23i"]
+[ext_resource type="Script" uid="uid://cqvj2l0iol0kt" path="res://Scripts/game/vidabot.gd" id="100_ci23i"]
 [ext_resource type="Texture2D" uid="uid://desl4fy2a2mgy" path="res://Animations/CriticalAnimation/criticalanimacion_6.png" id="101_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://dxlpfnmem6k0g" path="res://Animations/CriticalAnimation/criticalanimacion_7.png" id="102_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://bpnb6o47312jw" path="res://Animations/CriticalAnimation/criticalanimacion_8.png" id="103_xjjvj"]
@@ -116,11 +113,11 @@
 [ext_resource type="Texture2D" uid="uid://c5hrsxtos4ic5" path="res://Animations/CriticalAnimation/criticalanimacion_15.png" id="110_rlvdk"]
 [ext_resource type="Texture2D" uid="uid://3dpge3j0pr80" path="res://Animations/CriticalAnimation/criticalanimacion_16.png" id="111_t6wb6"]
 [ext_resource type="Texture2D" uid="uid://hdc01ot627am" path="res://Animations/CriticalAnimation/criticalanimacion_17.png" id="112_fvjqb"]
-[ext_resource type="Texture2D" uid="uid://dv1f1i41pkbil" path="res://Imagenes/AreaCartas.png" id="115_xjjvj"]
-[ext_resource type="Texture2D" uid="uid://cl2tl0kjasqq8" path="res://Imagenes/bolablanca.png" id="117_cmq5c"]
+[ext_resource type="Texture2D" uid="uid://dv1f1i41pkbil" path="res://Imagenes/Main/AreaCartas.png" id="115_xjjvj"]
+[ext_resource type="Texture2D" uid="uid://cl2tl0kjasqq8" path="res://Imagenes/Main/bolablanca.png" id="117_cmq5c"]
 [ext_resource type="Texture2D" uid="uid://bw1mguje1h8pa" path="res://Animations/FogAnimation/Niebla_1.png" id="118_mfvrx"]
 [ext_resource type="Texture2D" uid="uid://bqo3mbra3mv4" path="res://Animations/FogAnimation/Niebla_2.png" id="119_ilwxp"]
-[ext_resource type="Texture2D" uid="uid://cfr17y6r1htmo" path="res://Imagenes/Niebla_3.png" id="120_ilwxp"]
+[ext_resource type="Texture2D" uid="uid://cfr17y6r1htmo" path="res://Imagenes/Main/Niebla_3.png" id="120_ilwxp"]
 [ext_resource type="Texture2D" uid="uid://ful3m7mvoa6u" path="res://Animations/WindAnimation/Viento_1.png" id="122_ci23i"]
 [ext_resource type="Texture2D" uid="uid://bdnd5hoehgdug" path="res://Animations/WindAnimation/Viento_2.png" id="123_myryv"]
 [ext_resource type="Texture2D" uid="uid://bbfg8w7fj8emq" path="res://Animations/WindAnimation/Viento_3.png" id="124_bpr0e"]
@@ -513,20 +510,6 @@ size = Vector2(7.7037, 10.6667)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1mrv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k12tt"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hibaj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_fevyy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_b3802")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xjjvj"]
 animations = [{
@@ -1044,12 +1027,6 @@ scale = Vector2(17.9439, 17.7049)
 texture = ExtResource("11_qnggo")
 metadata/_edit_lock_ = true
 
-[node name="LineaTotalmenteInecesaria" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(960, 548)
-scale = Vector2(96, 5.6)
-texture = ExtResource("14_jkdf5")
-
 [node name="Saltar" type="Button" parent="."]
 texture_filter = 1
 offset_left = 40.0
@@ -1079,26 +1056,6 @@ script = ExtResource("18_b3802")
 
 [node name="TimerBot" type="Timer" parent="timer"]
 wait_time = 5.0
-
-[node name="Pene" type="AnimatedSprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(1840, 1016)
-scale = Vector2(6.9, 7.7)
-sprite_frames = SubResource("SpriteFrames_hibaj")
-autoplay = "default"
-frame_progress = 0.718181
-speed_scale = 7.0
-metadata/_edit_lock_ = true
-
-[node name="LabelPene" type="Label" parent="."]
-visible = false
-offset_left = 1765.0
-offset_top = 1055.0
-offset_right = 1914.0
-offset_bottom = 1086.0
-text = "print print patapim"
-metadata/_edit_lock_ = true
 
 [node name="EnergiaInsuficiente" type="Label" parent="."]
 visible = false
@@ -1178,6 +1135,7 @@ theme_override_font_sizes/font_size = 27
 text = "EVENTO ACTIVO: VIENTO"
 
 [node name="FondoFin" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 scale = Vector2(19.2, 10.8)
 sprite_frames = SubResource("SpriteFrames_74dxy")
@@ -1228,24 +1186,15 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="VictoryAnimation2" type="AnimatedSprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(960, -32)
-scale = Vector2(20.15, 21.49)
-sprite_frames = SubResource("SpriteFrames_w7d74")
-frame = 19
-frame_progress = 1.0
-
 [node name="InfoCard" type="Label" parent="."]
 visible = false
-offset_left = 1414.0
-offset_top = 490.0
-offset_right = 1794.0
-offset_bottom = 580.0
+offset_left = 1570.0
+offset_top = 481.0
+offset_right = 1874.0
+offset_bottom = 583.0
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 35
-text = "Hola"
+autowrap_mode = 2
 
 [connection signal="animation_finished" from="Boss/AttackAnimation" to="Boss" method="_on_attack_animation_animation_finished"]
 [connection signal="animation_finished" from="Boss/HurtAnimation" to="Boss" method="_on_hurt_animation_animation_finished"]
