@@ -9,6 +9,7 @@ var starting_position
 var card_slot_card_is_in
 var being_removed = false
 var descripcion_texto = "..."
+@onready var boss = get_node("/root/Main/Boss")
 @onready var richtext = $Valor
 @onready var vidaBoss = get_node("/root/Main/vidabot")
 @onready var area = get_node("/root/Main/Area/Area2D/AreaImage")
