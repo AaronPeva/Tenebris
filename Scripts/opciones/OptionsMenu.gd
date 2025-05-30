@@ -11,7 +11,6 @@ func _ready():
 	_load_settings()
 	volume_slider.value_changed.connect(_on_volume_changed)
 	fullscreen_checkbox.toggled.connect(_on_fullscreen_checkbox_toggled)
-	aplicar_btn.pressed.connect(_on_aplicar_pressed)
 	salir_btn.pressed.connect(_on_salir_pressed)
 
 func _on_volume_changed(value: float):
@@ -23,8 +22,6 @@ func _on_fullscreen_checkbox_toggled(toggled_on: bool):
 	_apply_fullscreen()
 	_save_settings()
 
-func _on_aplicar_pressed():
-	_save_settings()
 
 func _on_salir_pressed():
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")

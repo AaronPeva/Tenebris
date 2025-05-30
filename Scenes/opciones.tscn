@@ -89,23 +89,6 @@ offset_bottom = 28.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 1
 
-[node name="Aplicar" type="Button" parent="OptionsMenu"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 743.0
-offset_top = 422.0
-offset_right = 1008.0
-offset_bottom = 518.0
-focus_mode = 0
-theme_override_fonts/font = ExtResource("4_3on1o")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rl6jw")
-text = "Aplicar"
-icon = ExtResource("5_fkidl")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
 [node name="Salir" type="Button" parent="OptionsMenu"]
 texture_filter = 1
 layout_mode = 0
@@ -123,5 +106,4 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="OptionsMenu/Aplicar" to="OptionsMenu" method="_on_aplicar_pressed"]
 [connection signal="pressed" from="OptionsMenu/Salir" to="OptionsMenu" method="_on_salir_pressed"]
