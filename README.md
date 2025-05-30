@@ -16,7 +16,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 - **Cartas consumibles:** Al usar algunas cartas, estas se descartan y no vuelven a tu mano, lo que añade una capa de gestión de recursos y planificación.
 - **Variedad de cartas:** Diferentes tipos de cartas con efectos únicos: ataque, curación, efectos especiales, y más.
 - **Turnos estratégicos:** El juego se desarrolla por turnos, lo que permite pensar y anticipar las jugadas del rival.
-- **Enemigos y desafíos:** Enfréntate a distintos enemigos, cada uno con mecánicas y dificultades propias.
+- **Enemigos y desafíos:** Enfréntate al enemigo principal, con mecánicas y dificultad balanceadas.
 - **Fácil de modificar y expandir:** El código está pensado para que puedas crear nuevas cartas, enemigos o reglas fácilmente.
 - **Rejugabilidad:** Cada partida puede ser diferente gracias a la variedad de cartas y enemigos, permitiendo experimentar con diferentes estrategias y combinaciones.
 - **Inspiración y comunidad:** El proyecto está inspirado en juegos de cartas modernos y en la comunidad de Godot, promoviendo el aprendizaje abierto y la colaboración.
