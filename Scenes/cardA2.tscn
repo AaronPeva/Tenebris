@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://di7o0gqtgt1tx"]
+[gd_scene load_steps=13 format=3 uid="uid://c1ff5rpcjvuwx"]
 
 [ext_resource type="Script" uid="uid://dscfq53ppgeeo" path="res://Scripts/card/card_a_2.gd" id="1_n8fu4"]
 [ext_resource type="Texture2D" uid="uid://bsojv00g0k0hd" path="res://Imagenes/Cartas/Carta activa linux.png" id="2_qppwr"]
@@ -51,26 +51,28 @@ scale = Vector2(12.3478, 12.9032)
 texture = ExtResource("2_qppwr")
 
 [node name="Attack" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 0.65098, 1)
 texture_filter = 1
-offset_left = 23.3333
-offset_top = 83.6667
+offset_left = 23.333
+offset_top = 93.667
 offset_right = 116.333
-offset_bottom = 162.667
+offset_bottom = 172.667
 theme_override_fonts/normal_font = ExtResource("3_4ktdh")
 theme_override_font_sizes/normal_font_size = 60
-text = "2"
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Energy" type="RichTextLabel" parent="."]
+modulate = Color(0.537255, 0.662745, 0.854902, 1)
 texture_filter = 1
 offset_left = -117.0
-offset_top = 83.667
+offset_top = 93.667
 offset_right = -19.0
-offset_bottom = 161.667
+offset_bottom = 171.667
 theme_override_fonts/normal_font = ExtResource("3_4ktdh")
 theme_override_font_sizes/normal_font_size = 60
-text = "2"
+text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 

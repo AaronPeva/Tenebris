@@ -15,6 +15,7 @@ var max_clicks = 2
 var clicks_actuales = 0
 var viento_activo = false
 var evento_activo = null
+
 func _process(delta: float) -> void:
 	if Global.hp_carta_jugador < 0:
 		Global.hp_carta_jugador = 0
