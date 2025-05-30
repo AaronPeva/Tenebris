@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bx1aedafwd2kt"]
+[gd_scene load_steps=15 format=3 uid="uid://bx1aedafwd2kt"]
 
 [ext_resource type="Script" uid="uid://cbhk6xw7nbjog" path="res://Scripts/opciones/SelectorPersonajes.gd" id="1_sckeb"]
 [ext_resource type="Texture2D" uid="uid://yquepcxd832i" path="res://Imagenes/Menu + Opciones/fondoselector.png" id="2_1qmb7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcoxs3gseptjn" path="res://Imagenes/Menu + Opciones/Flechaderecha.png" id="5_pnyfv"]
 [ext_resource type="Texture2D" uid="uid://dibyqqtg3wqck" path="res://Imagenes/Menu + Opciones/Flechaizquierda.png" id="6_1qmb7"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/Main/ButtonSeleccionar.png" id="6_qdaqw"]
+[ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Audios/menu.mp3" id="8_yd055"]
 
 [sub_resource type="FontVariation" id="FontVariation_1qmb7"]
 base_font = ExtResource("3_pnyfv")
@@ -131,6 +132,10 @@ offset_right = 323.0
 offset_bottom = 516.0
 texture = SubResource("CompressedTexture2D_1qmb7")
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_yd055")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Panel/Seleccionar" to="." method="_on_select_button_pressed"]

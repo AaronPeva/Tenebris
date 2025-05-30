@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://np855hr7rhml"]
+[gd_scene load_steps=10 format=3 uid="uid://np855hr7rhml"]
 
 [ext_resource type="Script" uid="uid://cba6hnpkfy0gk" path="res://Scripts/opciones/opciones.gd" id="1_3hjeq"]
 [ext_resource type="Texture2D" uid="uid://o2saisjoqx58" path="res://Imagenes/Menu + Opciones/OPCIONES.png" id="1_6gp1c"]
 [ext_resource type="Script" uid="uid://b8jyayraesft2" path="res://Scripts/opciones/OptionsMenu.gd" id="2_6ip24"]
 [ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="4_3on1o"]
 [ext_resource type="Texture2D" uid="uid://djlndu3xweili" path="res://Imagenes/Main/ButtonSeleccionar.png" id="5_fkidl"]
+[ext_resource type="AudioStream" uid="uid://buixbt3qyupl" path="res://Audios/menu.mp3" id="6_fkidl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8gyjq"]
 blend_mode = 4
@@ -105,5 +106,9 @@ icon = ExtResource("5_fkidl")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fkidl")
+autoplay = true
 
 [connection signal="pressed" from="OptionsMenu/Salir" to="OptionsMenu" method="_on_salir_pressed"]
