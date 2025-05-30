@@ -6,7 +6,7 @@ const CARDS = {
 	"C5": [0, 9, "res://Scripts/cardsconsumes/Cactus.gd"],
 	"C6": [2, 9, "res://Scripts/cardsconsumes/Diana.gd"],
 	"C7": [2, 9, "res://Scripts/cardsconsumes/Arbusto.gd"],
-	"C8": [0, 1000, "res://Scripts/cardsconsumes/Caja_misteriosa.gd"],
+	"C8": [0, 9, "res://Scripts/cardsconsumes/Caja_misteriosa.gd"],
 	"R1": [1, 4,"res://Scripts/cardsconsumes/manzana_dorada.gd"],
 	"R2": [2, 4,"res://Scripts/cardsconsumes/TNT.gd"],
 	"R3": [2, 4, "res://Scripts/cardsconsumes/Durum.gd"],
