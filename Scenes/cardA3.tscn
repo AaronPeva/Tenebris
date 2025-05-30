@@ -1,14 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://4t8pney5s5xp"]
+[gd_scene load_steps=13 format=3 uid="uid://4t8pney5s5xp"]
 
+[ext_resource type="Script" uid="uid://dvy1dkufn6grh" path="res://Scripts/card_a_3.gd" id="1_4nnr2"]
 [ext_resource type="Texture2D" uid="uid://cfv3kroa05h78" path="res://Imagenes/Cartas/Carta activa gimpmamado.png" id="2_fspfb"]
-[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/font/Minecraft.ttf" id="3_6pwpo"]
-[ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Main/BoxVidav3.png" id="4_8avu7"]
+[ext_resource type="FontFile" uid="uid://kklfu28kmp1f" path="res://Imagenes/pixelfont/Minecraft.ttf" id="3_6pwpo"]
+[ext_resource type="Texture2D" uid="uid://duy10x8s17ned" path="res://Imagenes/Cartas/BoxVidav3.png" id="4_8avu7"]
 [ext_resource type="Texture2D" uid="uid://d3th7vs16jqye" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_1.png" id="5_kns4g"]
 [ext_resource type="Texture2D" uid="uid://bp5wfbfqfgmlw" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_2.png" id="6_yct4n"]
 [ext_resource type="Texture2D" uid="uid://mrggiqua1jkv" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_3.png" id="7_vh4j7"]
 [ext_resource type="Texture2D" uid="uid://cbtd51iwonmyx" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_4.png" id="8_g60j7"]
 [ext_resource type="Texture2D" uid="uid://dj5yi3tdye8et" path="res://Animations/BoxHurtAnimation/BoxVidaHurt_5.png" id="9_jywon"]
-[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/game/progress_bar.gd" id="10_r7cld"]
+[ext_resource type="Script" uid="uid://berck2ln8cnke" path="res://Scripts/progress_bar.gd" id="10_r7cld"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xw7k7"]
 animations = [{
@@ -40,6 +41,7 @@ size = Vector2(260, 374)
 z_index = -1
 position = Vector2(179, 847)
 scale = Vector2(0.6, 0.6)
+script = ExtResource("1_4nnr2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -49,26 +51,27 @@ scale = Vector2(12.3478, 12.9032)
 texture = ExtResource("2_fspfb")
 
 [node name="Attack" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 0.65098, 1)
 texture_filter = 1
-offset_left = 23.3333
-offset_top = 83.6667
+offset_left = 23.333
+offset_top = 93.667
 offset_right = 116.333
-offset_bottom = 162.667
+offset_bottom = 172.667
 theme_override_fonts/normal_font = ExtResource("3_6pwpo")
 theme_override_font_sizes/normal_font_size = 60
-text = "2"
+text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Energy" type="RichTextLabel" parent="."]
 texture_filter = 1
 offset_left = -117.0
-offset_top = 83.667
+offset_top = 93.667
 offset_right = -19.0
-offset_bottom = 161.667
+offset_bottom = 171.667
 theme_override_fonts/normal_font = ExtResource("3_6pwpo")
 theme_override_font_sizes/normal_font_size = 60
-text = "2"
+text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
