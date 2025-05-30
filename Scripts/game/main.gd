@@ -142,6 +142,10 @@ func niebla_azul_finalizar():
 func empezar_turno():
 	if Global.puede_jugar:
 		Global.max_clicks += 1
+		Global.fallo_actual = Global.fallo_base
+		Global.critico_actual = Global.critico_base
+		Global.boss_fallo_actual = Global.boss_fallo_base
+		Global.boss_critico_actual = Global.boss_critico_base
 		if Global.evento_activo == null:
 			var probabilidad := randi() % 100
 			if probabilidad < 5:

@@ -77,8 +77,8 @@ func _on_hurt_animation_animation_finished() -> void:
 	
 func damage_prob() -> int:
 	var prob = randi() % 100
-	var fallo_chance = 10
-	var crit_chance = 10
+	var fallo_chance = Global.fallo_actual
+	var crit_chance = Global.critico_actual
 	if Global.niebla_activa:
 		fallo_chance += 30
 	if Global.viento_activo:
@@ -105,8 +105,8 @@ func _on_critical_animation_animation_finished() -> void:
 
 func damage_boss_prob() -> int:
 	var prob = randi() % 100
-	var fallo_chance = 5
-	var crit_chance = 10
+	var fallo_chance = Global.boss_fallo_actual
+	var crit_chance = Global.boss_critico_actual
 
 	if prob < fallo_chance:
 		miss_boss()

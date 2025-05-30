@@ -23,18 +23,6 @@ texture = ExtResource("1_4uvki")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0sj8v")
 
-[node name="Valor" type="RichTextLabel" parent="."]
-visible = false
-offset_left = -105.0
-offset_top = 82.5
-offset_right = -25.0
-offset_bottom = 162.5
-theme_override_fonts/normal_font = ExtResource("3_4g0oj")
-theme_override_font_sizes/normal_font_size = 50
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Energy" type="RichTextLabel" parent="."]
 texture_filter = 1
 offset_left = -85.0

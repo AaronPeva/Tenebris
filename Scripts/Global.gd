@@ -15,6 +15,14 @@ var max_clicks = 2
 var clicks_actuales = 0
 var viento_activo = false
 var evento_activo = null
+var fallo_base := 10
+var critico_base := 10
+var fallo_actual := fallo_base
+var critico_actual := critico_base
+var boss_fallo_base := 5
+var boss_critico_base := 10
+var boss_fallo_actual := boss_fallo_base
+var boss_critico_actual := boss_critico_base
 
 func _process(delta: float) -> void:
 	if Global.hp_carta_jugador < 0:
