@@ -12,6 +12,7 @@ extends Node2D
 @onready var FogTitle = $FogTitle
 @onready var area = $Area/Area2D/AreaImage
 @onready var vidabot = $vidabot
+var ya_mostro_derrota = false
 var contador_turnos_inactivos := 0
 var evento_chequeado := false
 var derrota_activada := false
@@ -184,6 +185,9 @@ func viento_finalizar():
 	Global.viento_activo = false
 	
 func _derrota():
+	var hand = get_node_or_null("PlayerHand")
+	if hand:
+		hand.clear_hand()
 	$UIBlocker.visible = true
 	$LoseAnimation.visible = true
 	$LoseAnimation.play()
@@ -197,7 +201,11 @@ func _derrota():
 func _on_volver_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/MENU.tscn")
 
+
 func _victoria():
+	var hand = get_node_or_null("PlayerHand")
+	if hand:
+		hand.clear_hand()
 	$UIBlocker.visible = true
 	$VictoryAnimation.visible = true
 	$VictoryAnimation.play()

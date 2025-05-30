@@ -30,6 +30,7 @@ func _load_settings():
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _on_jugar_pressed() -> void:
+	Global.reset()
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_personajes_pressed() -> void:

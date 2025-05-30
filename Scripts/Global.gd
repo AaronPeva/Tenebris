@@ -3,7 +3,6 @@ extends Node
 var main = preload("res://Scenes/main.tscn")
 var escena_seleccionada = "res://Scenes/cardA1.tscn"
 var puede_jugar = true
-
 var hp_carta_jugador = 100
 var attack_cost = 2
 var attack_damage = 5
@@ -23,6 +22,21 @@ var boss_fallo_base := 5
 var boss_critico_base := 10
 var boss_fallo_actual := boss_fallo_base
 var boss_critico_actual := boss_critico_base
+
+
+func reset():
+	max_clicks = 2
+	clicks_actuales = 0
+	viento_activo = false
+	evento_activo = null
+	niebla_activa = false
+	puede_jugar = true
+	hp_carta_jugador = 100
+	fallo_base = 10
+	critico_base = 10
+	boss_critico_base = 10
+	boss_fallo_base = 5
+
 
 func _process(delta: float) -> void:
 	if Global.hp_carta_jugador < 0:

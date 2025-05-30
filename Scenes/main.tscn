@@ -1171,10 +1171,10 @@ metadata/_edit_lock_ = true
 [node name="Volver" type="Button" parent="."]
 visible = false
 texture_filter = 1
-offset_left = 848.0
-offset_top = 752.0
-offset_right = 1048.0
-offset_bottom = 904.0
+offset_left = 862.0
+offset_top = 754.0
+offset_right = 1062.0
+offset_bottom = 906.0
 focus_mode = 0
 theme_override_fonts/font = ExtResource("9_fevyy")
 theme_override_font_sizes/font_size = 49

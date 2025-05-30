@@ -45,3 +45,9 @@ func remove_card_from_hand(card):
 
 func is_hand_full() -> bool:
 	return player_hand.size() >= MAX_HAND_SIZE
+
+func clear_hand():
+	for card in player_hand:
+		if is_instance_valid(card):
+			card.queue_free()
+	player_hand.clear()
