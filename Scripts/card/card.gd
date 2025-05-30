@@ -8,7 +8,6 @@ var energy_consume = 1
 var starting_position
 var card_slot_card_is_in
 var being_removed = false
-var valor
 var descripcion_texto = "..."
 @onready var richtext = $Valor
 @onready var vidaBoss = get_node("/root/Main/vidabot")
@@ -18,10 +17,8 @@ var descripcion_texto = "..."
 @onready var info = get_node("/root/Main/InfoCard")
 
 func _ready() -> void:
-	valor = richtext.text.to_int()
 	add_to_group("cartas")
 	get_parent().connect_card_signals(self) 
-
 
 
 func _process(delta: float) -> void:
