@@ -36,7 +36,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
    ```bash
    git clone https://github.com/AaronPeva/Tenebris.git
    ```
-2. **Abre el proyecto en Godot Engine.**
+2. **Abre el proyecto en Godot Engine o abre directamente el ejecutable desde la carpeta `Tenebris`.**
 3. **Ejecuta la escena principal** (`Menu.tscn`).
 4. ¡Empieza a jugar!
 
