@@ -14,7 +14,7 @@ Un juego de cartas por turnos donde la estrategia, la gestión de energía y las
 
 - **Sistema de energía:** Cada turno recibes una cantidad limitada de energía. Jugar cartas cuesta energía, así que tendrás que priorizar tus jugadas.
 - **Cartas consumibles:** Al usar algunas cartas, estas se descartan y no vuelven a tu mano, lo que añade una capa de gestión de recursos y planificación.
-- **Variedad de cartas:** Diferentes tipos de cartas con efectos únicos: ataque, defensa, curación, efectos especiales, y más.
+- **Variedad de cartas:** Diferentes tipos de cartas con efectos únicos: ataque, curación, efectos especiales, y más.
 - **Turnos estratégicos:** El juego se desarrolla por turnos, lo que permite pensar y anticipar las jugadas del rival.
 - **Enemigos y desafíos:** Enfréntate a distintos enemigos, cada uno con mecánicas y dificultades propias.
 - **Fácil de modificar y expandir:** El código está pensado para que puedas crear nuevas cartas, enemigos o reglas fácilmente.
